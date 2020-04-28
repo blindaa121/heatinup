@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import { signin, signout, signup } from './util/session_api_util'
+import { signin, signout, signup } from './actions/session_actions'
 import configureStore from './store/store'
 
 document.addEventListener('DOMContentLoaded', () => {
