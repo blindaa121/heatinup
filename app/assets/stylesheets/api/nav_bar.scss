@@ -1,0 +1,15 @@
+.nav-bar .btn {
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+    padding: 50px 90px 50px 90px;
+}
+
+.logo {
+    font-size: 35px;
+}
