@@ -1,0 +1,15 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.splash-container > h1 {
+    font-size: 45px
+}
+
+.air-home {
+    width: 900px;
+    border-bottom: 2px solid lightgrey;
+}
+
