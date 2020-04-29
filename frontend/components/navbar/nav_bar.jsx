@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default ({ currentUser, logout }) => {
     const display = currentUser ? (
         <div>
-            <button onClick={logout}>Logout</button>
+            <button className="logout" onClick={logout}>Logout</button>
         </div>
     ) : (
         <div className="nav-bar-links">
@@ -15,10 +15,8 @@ export default ({ currentUser, logout }) => {
         return (
             <header className="nav-bar">
             <Link className="logo" to="/">H E A T</Link>
-            {console.log(currentUser)}
-            {/* styles link here */}
-            {/* collections */}
-            {/* cart link here*/}
+            <Link className="sneakers-bar" to="/">Sneakers</Link>
+            <Link className="sneakers-bar" to="/sneakers">Shop All</Link>
             <div>
                 {display}
             </div>

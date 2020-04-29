@@ -24,6 +24,27 @@
     padding: 50px 90px 50px 90px;
 }
 
+.logout {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color: grey
+}
+
+.sneakers-bar {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color: grey
+}
+
+.sneakers-bar:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
+}
+
 .logo {
     font-size: 35px;
     text-decoration: none;

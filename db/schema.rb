@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_27_191026) do
+ActiveRecord::Schema.define(version: 2020_04_29_194819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "sneakers", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.date "release_date", null: false
+    t.string "sku", null: false
+    t.string "brand", null: false
+    t.string "upper_material", null: false
+    t.string "main_color", null: false
+    t.string "colorway", null: false
+    t.string "designer", null: false
+    t.string "silhouette", null: false
+    t.string "technology", null: false
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["brand"], name: "index_sneakers_on_brand"
+    t.index ["category"], name: "index_sneakers_on_category"
+    t.index ["designer"], name: "index_sneakers_on_designer"
+    t.index ["name"], name: "index_sneakers_on_name", unique: true
+    t.index ["release_date"], name: "index_sneakers_on_release_date"
+    t.index ["silhouette"], name: "index_sneakers_on_silhouette"
+    t.index ["sku"], name: "index_sneakers_on_sku", unique: true
+    t.index ["technology"], name: "index_sneakers_on_technology"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
