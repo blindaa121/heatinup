@@ -12031,3 +12031,723 @@ Migrating to CreateSneakers (20200429194819)
   ↳ db/seeds.rb:87
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mSneaker Load (5.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  [1m[36mSneaker Load (1.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSneaker Destroy (1.9ms)[0m  [1m[31mDELETE FROM "sneakers" WHERE "sneakers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSneaker Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sneakers" WHERE "sneakers"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSneaker Destroy (0.3ms)[0m  [1m[31mDELETE FROM "sneakers" WHERE "sneakers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSneaker Destroy (1.0ms)[0m  [1m[31mDELETE FROM "sneakers" WHERE "sneakers"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-04-29 15:57:28 -0700
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bryanlinda/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "x5a2qmgeCNRFJShMWTyWsw=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (127.4ms)
+Completed 200 OK in 647ms (Views: 569.9ms | ActiveRecord: 65.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-29 16:00:40 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "x5a2qmgeCNRFJShMWTyWsw=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "M3hZ4fI94bgoeCk6LD3U/w=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (7.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "M3hZ4fI94bgoeCk6LD3U/w=="], ["updated_at", "2020-04-29 23:00:40.857877"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (8.6ms)
+Completed 200 OK in 50ms (Views: 26.8ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/api/user" for ::1 at 2020-04-29 16:00:52 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oBChQJcw2zbgB+Chdk97/A=="], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 241ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/user" for ::1 at 2020-04-29 16:00:57 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "NkOTgPzGY8sfIW9DAZvZ0Q=="], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 232ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-04-29 16:01:08 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["updated_at", "2020-04-29 23:01:08.834634"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 271ms (Views: 33.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:03:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 510ms (Views: 506.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:04:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 181ms (Views: 167.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:05:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 484ms (Views: 478.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:05:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 71ms (Views: 60.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:05:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 503ms (Views: 499.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-29 16:06:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 172ms (Views: 133.6ms | ActiveRecord: 28.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-29 16:06:54 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "58vCmUYOU0XSjOl1cCmtRg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "sQTyl3q9aG+35CGc4RQGGg=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "sQTyl3q9aG+35CGc4RQGGg=="], ["updated_at", "2020-04-29 23:06:54.260879"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.5ms)
+Completed 200 OK in 35ms (Views: 18.6ms | ActiveRecord: 8.3ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSneaker Load (1.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 12 Retro 'Flu Game' 2016"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "130690 002"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.6ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 12 Retro 'Flu Game' 2016"], ["description", "The Air Jordan 12 Retro ‘Flu Game’ 2016 celebrates Michael Jordan’s legendary performance in Game 5 of the 1997 NBA Finals. Battling flu-like symptoms, Jordan lead the Bulls to a 3-2 series lead over the Utah Jazz with 38 points, 7 rebounds, 5 assists, 3 steals, and 1 block. Previously retroed in 2003 and 2009, this 2016 version stays faithful to the OG design with its black tumbled leather upper and varsity red on the mudguard and outsole."], ["release_date", "2016-05-28"], ["sku", "130690 002"], ["brand", "Air Jordan"], ["upper_material", "Leather"], ["main_color", "Black"], ["colorway", "Black/Varsity Red"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 12"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.516728"], ["updated_at", "2020-04-29 23:09:20.516728"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 4 Retro OG 'Bred' 2019"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "308497 060"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 4 Retro OG 'Bred' 2019"], ["description", "The 2019 edition of the Air Jordan 4 ‘Bred’ celebrates the 30th anniversary of the classic silhouette, appearing in the same colorway that Michael Jordan wore when he sank ‘The Shot’ during the first round of the 1989 NBA playoffs. It’s rendered in a build that’s faithful to the original, complete with a black nubuck upper, visible Air Sole cushioning underfoot and Nike Air branding on the heel."], ["release_date", "2019-05-04"], ["sku", "308497 060"], ["brand", "Air Jordan"], ["upper_material", "Nubuck"], ["main_color", "Black"], ["colorway", "Black/Cement Grey-Summit White-Fire Red"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 4"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.521162"], ["updated_at", "2020-04-29 23:09:20.521162"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 14 Retro 'Last Shot' 2018"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "487471 003"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 14 Retro 'Last Shot' 2018"], ["description", "Michael Jordan fans will always remember the Air Jordan 14 as the shoe Jordan was wearing when he hit the winning jumper in Game 6 of the 1998 NBA Finals. The legendary sneaker was reissued again in June 2018. All of the model’s original elements remain for this updated ‘Last Shot’ iteration, including black leather uppers and red Jumpman detailing on the heel and tongue. Its distinct, Ferrari-style medallion on the midfoot continues to serve as the standout feature of the iconic silhouette."], ["release_date", "2018-06-13"], ["sku", "487471 003"], ["brand", "Air Jordan"], ["upper_material", "Leather"], ["main_color", "Black"], ["colorway", "Black/Varsity Red"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 14"], ["technology", "Zoom Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.525255"], ["updated_at", "2020-04-29 23:09:20.525255"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 6 Retro 'Infrared' 2019"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "130690 002"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 11 Retro 'Space Jam' 2016"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "378037 003"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 11 Retro 'Space Jam' 2016"], ["description", "The Air Jordan 11 Retro ‘Space Jam’ 2016 commemorates the 20th anniversary of the movie ‘Space Jam.’ Worn by Michael Jordan as a Player Exclusive (PE) in both the movie and the 1995 NBA Playoffs, the 2016 retro ended up being Nike’s largest and most successful shoe launch ever. This 2016 sneaker is a more faithful reproduction of the original PE than the 2000 and 2009 retros. The sneaker also swaps the traditional #23 for MJ’s comeback #45 on the heel, a first for an Air Jordan 11 retail release."], ["release_date", "2016-12-09"], ["sku", "378037 003"], ["brand", "Air Jordan"], ["upper_material", "Leather"], ["main_color", "Black"], ["colorway", "Black/Concord-White"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 11"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.539186"], ["updated_at", "2020-04-29 23:09:20.539186"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 11 Retro 'Bred' 2019"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "378037 061"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 11 Retro 'Bred' 2019"], ["description", "The Air Jordan 11 Retro 'Bred' 2019 brings back an original colorway initially debuted in 1995. The Tinker Hatfield-designed silhouette features Chicago Bulls colors, with black mesh on the upper sitting atop shiny black patent leather. A white midsole melds nicely with a translucent Varsity Red outsole, and is the same colorway that Michael Jordan wore during the 1996 NBA championship playoff run. This retro was distributed in December 2019 with OG detailing, including high-cut patent leather, signature Jumpman branding and MJ's number 23 stamped on the heel."], ["release_date", "2019-12-14"], ["sku", "378037 061"], ["brand", "Air Jordan"], ["upper_material", "Patent Leather"], ["main_color", "Red"], ["colorway", "Black/White/Varsity Red"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 11"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.543300"], ["updated_at", "2020-04-29 23:09:20.543300"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 8 Retro 'Playoff' 2013"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "305381 061"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 8 Retro 'Playoff' 2013"], ["description", "The Nike Air Jordan 8 Retro 'Playoff' 2013 is a retro re-release of the sneaker worn by Michael Jordan during Game 6 of the 1993 NBA Finals against the Phoenix Suns. The win sealed Michael Jordan and the Bulls' first three-peat NBA Championship and gave Jordan his third-straight Finals MVP. Staying faithful to the original design, the 'Playoff' features a black nubuck suede upper with white, black, and True Red graphical overlays at the ankles. The most noticeable difference between the 1993 model and the 2013 retro is the True Red heel tab found on the OG '93 sneakers has been changed to black on the 2013 retro. The Air Jordan 8 Retro 'Playoff' was also retro released in 2007."], ["release_date", "2013-06-29"], ["sku", "305381 061"], ["brand", "Air Jordan"], ["upper_material", "Durabuck"], ["main_color", "Black"], ["colorway", "Black/Varsity Red-White-Bright Concord"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 8"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.546971"], ["updated_at", "2020-04-29 23:09:20.546971"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 7 Retro 'Raptor' 2012"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "304775 018"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 7 Retro 'Raptor' 2012"], ["description", "The Nike Air Jordan 7 Retro 'Raptor' 2012 offers a version of the OG 1992 colorway that's also been retro-released in 2002 and 2009. The design combines a black nubuck upper with True Red and Club Purple accents. Released in September 2012, the colorway gets its nickname from its similarity to the Toronto Raptors team colors."], ["release_date", "2012-09-01"], ["sku", "304775 018"], ["brand", "Air Jordan"], ["upper_material", "Nubuck"], ["main_color", "Black"], ["colorway", "Black/Tr Rd-Drk Chrcl-Clb Prpl"], ["designer", "Tinker Hatfield"], ["silhouette", "Air Jordan 7"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.550674"], ["updated_at", "2020-04-29 23:09:20.550674"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 1 Retro High OG 'Chicago' 2015"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "555088 101"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Create (0.7ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "release_date", "sku", "brand", "upper_material", "main_color", "colorway", "designer", "silhouette", "technology", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Air Jordan 1 Retro High OG 'Chicago' 2015"], ["description", "The Air Jordan 1 Retro High OG 'Chicago' 2015 colorway was designed to avoid Jordan's $5,000-per game fines from the NBA after the original black and red colorway was banned. The 'Chicago' was first retroed in 1994 and stayed true to the 1985 design. Further retros were released in 2013 with small changes to the design, and again in 2015 with the original branding details: the Nike Air logo on the tongue and the original clean heel without the Jumpman logo."], ["release_date", "2015-05-29"], ["sku", "555088 101"], ["brand", "Air Jordan"], ["upper_material", "Leather"], ["main_color", "Red"], ["colorway", "White/Black-Varsity Red"], ["designer", "Peter Moore"], ["silhouette", "Air Jordan 1"], ["technology", "Air"], ["category", "Lifestyle"], ["created_at", "2020-04-29 23:09:20.555938"], ["updated_at", "2020-04-29 23:09:20.555938"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."name" = $1 LIMIT $2[0m  [["name", "Air Jordan 3 Retro '88' 2013"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "sneakers" WHERE "sneakers"."sku" = $1 LIMIT $2[0m  [["sku", "378037 003"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:158
+  [1m[36mSneaker Load (1.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+Started POST "/api/session" for ::1 at 2020-04-29 16:35:36 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "CzugF3iXa88xqlN37JLMvg=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CzugF3iXa88xqlN37JLMvg=="], ["updated_at", "2020-04-29 23:35:36.961185"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 240ms (Views: 8.0ms | ActiveRecord: 5.2ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-29 16:35:57 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CzugF3iXa88xqlN37JLMvg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "S4kWwRIVTOqIx2k8SgZfYQ=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "S4kWwRIVTOqIx2k8SgZfYQ=="], ["updated_at", "2020-04-29 23:35:57.572380"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 18ms (Views: 8.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-29 17:39:30 -0700
+Processing by Api::SneakersController#index as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (30.6ms)
+Completed 200 OK in 90ms (Views: 30.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:40:47 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.4ms)
+  Rendered api/sneakers/show.json.jbuilder (3.2ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/sneakers/1" for ::1 at 2020-04-29 17:41:18 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"1"}
+  [1m[36mSneaker Load (6.2ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (5.8ms)
+  Rendered api/sneakers/show.json.jbuilder (9.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.2ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for nil:NilClass:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219693140540'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219693140540'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/2" for ::1 at 2020-04-29 17:41:22 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"2"}
+  [1m[36mSneaker Load (22.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (4.8ms)
+  Rendered api/sneakers/show.json.jbuilder (7.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 22.4ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for nil:NilClass:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219691480940'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219691480940'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/3" for ::1 at 2020-04-29 17:41:25 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"3"}
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (6.0ms)
+  Rendered api/sneakers/show.json.jbuilder (7.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for nil:NilClass:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219681989200'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219681989200'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/4" for ::1 at 2020-04-29 17:41:28 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"4"}
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (4.1ms)
+  Rendered api/sneakers/show.json.jbuilder (5.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for nil:NilClass:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219681533860'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219681533860'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:41:30 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.6ms)
+  Rendered api/sneakers/show.json.jbuilder (2.4ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:41:48 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (10.9ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.5ms)
+  Rendered api/sneakers/show.json.jbuilder (2.1ms)
+Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:44:36 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (4.5ms)
+  Rendered api/sneakers/show.json.jbuilder (5.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for 5:Integer
+Did you mean?  i:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219651004480'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219651004480'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:44:41 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.2ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (4.5ms)
+  Rendered api/sneakers/show.json.jbuilder (6.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined method `id' for 5:Integer
+Did you mean?  i:
+  app/views/api/sneakers/show.json.jbuilder:2:in `block in _app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219680142160'
+  app/views/api/sneakers/show.json.jbuilder:1:in `_app_views_api_sneakers_show_json_jbuilder__800426002366892893_70219680142160'
+  app/controllers/api/sneakers_controller.rb:5:in `show'
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:44:47 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.9ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.4ms)
+  Rendered api/sneakers/show.json.jbuilder (2.0ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/" for ::1 at 2020-04-29 17:45:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/1" for ::1 at 2020-04-29 17:45:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/1"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/user" for ::1 at 2020-04-29 17:45:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/sneakers" for ::1 at 2020-04-29 17:46:35 -0700
+Processing by Api::SneakersController#index as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (7.1ms)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-29 17:47:39 -0700
+Processing by Api::SneakersController#index as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-29 17:47:41 -0700
+Processing by Api::SneakersController#index as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (18.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (20.2ms)
+Completed 200 OK in 31ms (Views: 12.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:47:48 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (0.7ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.4ms)
+  Rendered api/sneakers/show.json.jbuilder (4.2ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:48:07 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (11.1ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.6ms)
+  Rendered api/sneakers/show.json.jbuilder (3.1ms)
+Completed 200 OK in 23ms (Views: 10.7ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:49:24 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (11.5ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.6ms)
+  Rendered api/sneakers/show.json.jbuilder (2.8ms)
+Completed 200 OK in 26ms (Views: 13.8ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:49:25 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (19.2ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.7ms)
+  Rendered api/sneakers/show.json.jbuilder (2.8ms)
+Completed 200 OK in 36ms (Views: 15.4ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:49:26 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (13.4ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.4ms)
+  Rendered api/sneakers/show.json.jbuilder (2.1ms)
+Completed 200 OK in 30ms (Views: 15.3ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:49:27 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (2.6ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.5ms)
+  Rendered api/sneakers/show.json.jbuilder (2.6ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/sneakers/5" for ::1 at 2020-04-29 17:49:29 -0700
+Processing by Api::SneakersController#show as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}, "id"=>"5"}
+  [1m[36mSneaker Load (2.0ms)[0m  [1m[34mSELECT  "sneakers".* FROM "sneakers" WHERE "sneakers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/sneakers_controller.rb:4
+  Rendering api/sneakers/show.json.jbuilder
+  Rendered api/sneakers/_sneaker.json.jbuilder (0.4ms)
+  Rendered api/sneakers/show.json.jbuilder (2.1ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-04-29 17:50:36 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Ap5HXOld4duU8l2pn25jHQ=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ap5HXOld4duU8l2pn25jHQ=="], ["updated_at", "2020-04-30 00:50:37.106933"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 279ms (Views: 10.6ms | ActiveRecord: 18.1ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-29 17:51:05 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Ap5HXOld4duU8l2pn25jHQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "lWEXQzel7Opb+BmZCj/i4A=="], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lWEXQzel7Opb+BmZCj/i4A=="], ["updated_at", "2020-04-30 00:51:05.380918"], ["id", 7]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mSneaker Load (1.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
