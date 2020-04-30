@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import Splash from '../splash'
-const mSTP = ({session, entities: { users }}) => {
+import Splash from './splash'
+import { fetchSneakers } from '../../actions/sneakers_actions'
+
+const mSTP = (state) => {
     return {
-        currentUser: users[session.id]
+        sneakers: Object.values(state.entities.sneakers)
     }
 }
 
 const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
+    fetchSneakers: () => dispatch(fetchSneakers())
 });
 
 export default connect(mSTP, mDTP)(Splash)

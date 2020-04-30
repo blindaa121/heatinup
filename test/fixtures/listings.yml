@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sneaker_id: 1
+  size: 1.5
+  price: 1
+
+two:
+  sneaker_id: 1
+  size: 1.5
+  price: 1
