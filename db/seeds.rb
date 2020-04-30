@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+#demo_user 
+demo_user = User.create(username: 'demo_user', password: 'password')
+
 # The Last Dance (Array of Air Jordan sneaker objects)
 Sneaker.destroy_all
 
@@ -24,7 +28,7 @@ the_last_dance = [
         silhouette: "Air Jordan 12",
         technology: "Air",
         category: "Lifestyle"
-    ,}
+    },
     {
         name: "Air Jordan 4 Retro OG 'Bred' 2019",
         description: "The 2019 edition of the Air Jordan 4 ‘Bred’ celebrates the 30th anniversary of the classic silhouette, appearing in the same colorway that Michael Jordan wore when he sank ‘The Shot’ during the first round of the 1989 NBA playoffs. It’s rendered in a build that’s faithful to the original, complete with a black nubuck upper, visible Air Sole cushioning underfoot and Nike Air branding on the heel.",
