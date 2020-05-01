@@ -61,13 +61,13 @@ the_last_dance = [
         name: "Air Jordan 6 Retro 'Infrared' 2019",
         description: "The 2019 edition of the Air Jordan 6 Retro ‘Infrared’ is true to the original colorway, which Michael Jordan wore when he captured his first NBA title. Dressed primarily in black nubuck with a reflective 3M layer underneath, the mid-top features Infrared accents on the midsole, heel tab and lace lock. Nike Air branding adorns the heel and sockliner, an OG detail last seen on the 2000 retro.",
         release_date: "2016-05-28",
-        sku: "130690 002",
+        sku: "130690 001",
         brand: "Air Jordan",
         upper_material: "Leather",
         main_color: "Black",
         colorway: "Black/Varsity Red",
         designer: "Tinker Hatfield",
-        silhouette: "Air Jordan 16",
+        silhouette: "Air Jordan 6",
         technology: "Air",
         category: "Lifestyle"
     },
@@ -142,10 +142,24 @@ the_last_dance = [
         category: "Lifestyle"
     },
     {
+        name: "Air Jordan 13 Retro 'Flint' 2020",
+        description: "Released in the spring of 2020, the Air Jordan 13 Retro 'Flint' 2020 brings back an OG colorway in grey and 'French Blue.' Including its late-90s debut, this is the fourth time the cool colorway has been executed on the AJ13. Unlike the last iteration rolled out in 2010, this version features the reflective detailing that made the original unique. Constructed with smooth grey suede and 'cat's-paw' traction underfoot, this sneaker is a blend of streamlined style and raw power.",
+        release_date: "2020-05-30",
+        sku: "414571 404",
+        brand: "Air Jordan",
+        upper_material: "Textile",
+        main_color: "Blue",
+        colorway: "Navy/Carolina Blue/Flint Grey/White",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 13",
+        technology: "Zoom",
+        category: "Lifestyle"
+    },
+    {
         name: "Air Jordan 3 Retro '88' 2013",
         description: "In 2013, the Jordan Brand released the Air Jordan 3 Retro 88 commemorating the 25th anniversary of Jordan's free-throw line dunk. The sneaker even launched at 3:51 pm, the exact time Jordan took off and sealed his victory. This was the first Jordan Retro to feature NIKE AIR branding on the heel since the first 1994 retros.",
         release_date: "2016-12-09",
-        sku: "378037 003",
+        sku: "378037 005",
         brand: "Air Jordan",
         upper_material: "Leather",
         main_color: "Black",
@@ -154,10 +168,94 @@ the_last_dance = [
         silhouette: "Air Jordan 11",
         technology: "Air",
         category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 11 Retro Low 'Concord-Bred'",
+        description: "The Air Jordan 11 Retro Low 'Concord-Bred' combines two iconic OG colorways of the original mid-top silhouette. The upper replicates the look of the ‘Concord’ Air Jordan 11, featuring a white leather upper with a signature patent leather overlay in contrasting black and unexpected red branding elements at the tongue and heel. A white foam midsole gives way to a semi-translucent red rubber outsole, borrowed from the ‘Bred’ Air Jordan 11.",
+        release_date: "2020-06-20",
+        sku: "AV2187 160",
+        brand: "Air Jordan",
+        upper_material: "Patent Leather",
+        main_color: "White",
+        colorway: "Black/Concord-White",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 11",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 5 Retro 'Fire Red' 2020",
+        description: "The 2020 edition of the Air Jordan 5 Retro ‘Fire Red’ brings back the OG colorway of the classic silhouette on the occasion of its 30th anniversary. The build is faithful to the original, featuring a white leather upper with a silver reflective tongue and Nike Air branding on the heel. The black midsole, embellished with red shark tooth detailing inspired by a WWII P-51 Mustang fighter plane, is reinforced by an icy translucent outsole.",
+        release_date: "2020-05-02",
+        sku: "DA1911 102",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Red",
+        colorway: "True White/Fire Red/Black/Metallic Silver",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 5",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 5 Retro '88' 2013",
+        description: "In 2013, the Jordan Brand released the Air Jordan 3 Retro 88 commemorating the 25th anniversary of Jordan's free-throw line dunk. The sneaker even launched at 3:51 pm, the exact time Jordan took off and sealed his victory. This was the first Jordan Retro to feature NIKE AIR branding on the heel since the first 1994 retros.",
+        release_date: "2016-12-09",
+        sku: "378037 002",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Concord-White",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 11",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 1 Retro High OG 'Royal Toe'",
+        description: "The Air Jordan 1 Retro High OG 'Royal Toe' applies a familiar blend of colors to the iconic silhouette. The all-leather upper features a white base with contrasting black overlays and pops of Game Royal at the collar, toe box and rubber outsole. A lightly padded nylon tongue in black is topped with a Nike Air tongue tag, while the classic Jordan Wings logo appears in white on the lateral collar flap.",
+        release_date: "2020-05-09",
+        sku: "555088 041",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Blue",
+        colorway: "Black/White/Game Royal/Black",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 2 Retro 'Chicago Home'",
+        description: "Produced in Italy, the Air Jordan 2 comes with faux lizard skin on the upper, a full-length Nike Air midsole, and a Swoosh-less design. The sneaker was revolutionary in that it was one of the first basketball shoes to feature a soft midsole from heel to toe. After it's original release in 1987, the Air Jordan 2 saw its first retro in 1994. Rumor has it the original molds were lost or stolen and the sneaker wouldn't retro until 2004. The sneaker returned to shelves in 2008 as part of the Jordan 21/2 Collezione 'Countdown' Pack, again in 2010, and most recently in 2014.",
+        release_date: "2014-06-07",
+        sku: "385475 102",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Black-Vrsty Red-Cmnt Gry",
+        designer: "Bruce Kilgore",
+        silhouette: "Air Jordan 2",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 2 Retro '2004'",
+        description: "In 1986, Bruce Kilgore defied conventional footwear design with the Air Jordan 2. He stripped the shoe of intricacies and focused instead on the asymmetrical and textural aspects while still maintaining maximum performance elements. Re-released in 2004, the Air Jordan 2 Retro ‘2004’ sports the original color scheme, with a white leather upper and black detailing on the laces, lining and midsole. The colorway is highlighted by the Varsity Red accents on the heel counter, outsole, lining and tab.",
+        release_date: "2004-03-27",
+        sku: "308308 161",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "White",
+        colorway: "White/Varsity Red-Black",
+        designer: "Bruce Kilgore",
+        silhouette: "Air Jordan 2",
+        technology: "Air",
+        category: "Lifestyle"
     }
 ]
 
 
 the_last_dance.each do |sneaker|    
-    Sneaker.create(sneaker)
+    Sneaker.create!(sneaker)
 end
