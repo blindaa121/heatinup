@@ -1,11 +1,11 @@
 import React from 'react';
-
-const SneakerPanelIndexItem  = ({ sneakers }) => {
+import { Link } from 'react-router-dom'
+const SneakerPanelIndexItem  = ({ sneaker }) => {
     return (
-        <div>
-            {
-                sneakers.map(sneakers => sneakers.name)
-            }
+        <div className="sneakerpanel-item">
+            <a href={`#/sneakers/${sneaker.id}`}><img id="sneaker-img"src={window.panelitemImg}></img></a>
+            <br/>
+            <Link id="sneakerName" to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
         </div>
     )
 }

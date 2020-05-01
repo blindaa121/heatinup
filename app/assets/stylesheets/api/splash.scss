@@ -14,3 +14,42 @@
     border-bottom: 2px solid lightgrey;
 }
 
+/*Sneaker Panel*/
+
+.thelastdance {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 50px;
+}
+
+.sneaker-panel-items {
+    display: flex;
+    width: 1250px;
+
+}
+
+.sneakerpanel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sneakerpanel-item > img {
+    width: 100px;
+}
+
+#sneakerName {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#sneaker-img {
+    width: 250px;
+}
+

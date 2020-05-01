@@ -15464,3 +15464,1737 @@ Processing by Api::SneakersController#index as JSON
 Completed 200 OK in 66ms (Views: 31.7ms | ActiveRecord: 32.7ms)
 
 
+Started GET "/" for ::1 at 2020-04-30 17:45:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 17:45:11 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (18.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (21.0ms)
+Completed 200 OK in 31ms (Views: 11.6ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 17:45:20 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (81.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (84.3ms)
+Completed 200 OK in 99ms (Views: 16.4ms | ActiveRecord: 81.9ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 17:46:17 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.9ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:05:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 289ms (Views: 283.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:05:18 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (4.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (13.4ms)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:08:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:08:39 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (68.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (71.6ms)
+Completed 200 OK in 85ms (Views: 14.9ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:09:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 420ms (Views: 416.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:09:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 468ms (Views: 464.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:09:46 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (35.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (38.0ms)
+Completed 200 OK in 50ms (Views: 14.4ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:23:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 428ms (Views: 425.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:23:58 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.2ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:24:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 568ms (Views: 565.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:24:40 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (4.7ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:24:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 433ms (Views: 430.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:25:00 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (2.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.8ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:25:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 743ms (Views: 741.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:25:22 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (56.4ms)
+Completed 200 OK in 79ms (Views: 77.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:28:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 432ms (Views: 425.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:28:02 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (93.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (100.8ms)
+Completed 200 OK in 115ms (Views: 20.9ms | ActiveRecord: 93.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:31:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 408ms (Views: 404.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:31:16 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (72.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (79.6ms)
+Completed 200 OK in 98ms (Views: 24.7ms | ActiveRecord: 72.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:32:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 385ms (Views: 382.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:32:41 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.2ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:35:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 386ms (Views: 382.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:35:53 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (102.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (107.7ms)
+Completed 200 OK in 129ms (Views: 26.2ms | ActiveRecord: 102.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:38:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 363ms (Views: 358.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:38:07 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (2.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.6ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:42:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 117ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:42:29 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.9ms)
+Completed 200 OK in 82ms (Views: 79.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:44:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 451ms (Views: 446.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:44:45 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (16.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (20.9ms)
+Completed 200 OK in 36ms (Views: 19.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:47:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 126ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:47:44 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (17.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (21.0ms)
+Completed 200 OK in 37ms (Views: 19.2ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:48:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:48:31 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (6.9ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:48:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:48:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (22.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (24.1ms)
+Completed 200 OK in 34ms (Views: 12.0ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:48:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 391ms (Views: 388.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:48:44 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (26.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (30.8ms)
+Completed 200 OK in 42ms (Views: 15.1ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:49:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:49:02 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (6.2ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:49:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:49:06 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (12.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (14.9ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:50:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:50:02 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (25.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (33.4ms)
+Completed 200 OK in 51ms (Views: 25.2ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:50:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:50:13 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (40.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (45.1ms)
+Completed 200 OK in 95ms (Views: 54.7ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:51:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:51:42 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (11.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (14.8ms)
+Completed 200 OK in 41ms (Views: 28.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:52:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:52:27 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (119.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (122.6ms)
+Completed 200 OK in 138ms (Views: 18.4ms | ActiveRecord: 119.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:53:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 401ms (Views: 398.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:53:48 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (74.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (76.5ms)
+Completed 200 OK in 93ms (Views: 17.8ms | ActiveRecord: 74.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:54:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:54:01 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (26.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (32.0ms)
+Completed 200 OK in 47ms (Views: 20.9ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:54:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:54:18 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (5.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (11.4ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:54:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:54:40 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (22.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (25.9ms)
+Completed 200 OK in 42ms (Views: 18.8ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:55:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:55:06 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (40.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (44.7ms)
+Completed 200 OK in 55ms (Views: 14.6ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:55:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:55:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (16.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (25.4ms)
+Completed 200 OK in 49ms (Views: 32.7ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:55:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 113ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:55:43 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (6.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (14.4ms)
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:56:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:56:11 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (9.4ms)
+Completed 200 OK in 30ms (Views: 26.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:56:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:56:28 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (54.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (56.9ms)
+Completed 200 OK in 66ms (Views: 11.6ms | ActiveRecord: 54.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-04-30 19:56:54 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "2bAkZf41gqfeyoSq9oLYIw=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (19.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2bAkZf41gqfeyoSq9oLYIw=="], ["updated_at", "2020-05-01 02:56:54.541414"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 291ms (Views: 13.1ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:56:54 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.6ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-04-30 19:57:40 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2bAkZf41gqfeyoSq9oLYIw=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "x5oi2BerwoIywHyD6hyLCQ=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "x5oi2BerwoIywHyD6hyLCQ=="], ["updated_at", "2020-05-01 02:57:40.362206"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 19:58:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 19:59:22 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (6.2ms)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:00:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:00:38 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (20.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (23.3ms)
+Completed 200 OK in 40ms (Views: 19.0ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:01:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 465ms (Views: 460.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:01:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (17.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (20.4ms)
+Completed 200 OK in 41ms (Views: 23.7ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:01:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:01:42 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (10.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (12.2ms)
+Completed 200 OK in 19ms (Views: 9.0ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:02:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:02:22 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.1ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:02:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:02:47 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (9.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (11.8ms)
+Completed 200 OK in 86ms (Views: 75.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:02:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:02:56 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:04:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:04:17 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (7.5ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:04:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:04:19 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (9.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (11.2ms)
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:06:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:06:07 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (161.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (163.0ms)
+Completed 200 OK in 183ms (Views: 21.1ms | ActiveRecord: 161.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:06:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:06:21 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (6.8ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:07:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:07:30 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (9.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (11.6ms)
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:07:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:07:39 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (76.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (80.0ms)
+Completed 200 OK in 90ms (Views: 13.4ms | ActiveRecord: 76.5ms)
+
+
+Started GET "/sneakers/4" for ::1 at 2020-04-30 20:10:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/sneakers/4"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sneakers/2" for ::1 at 2020-04-30 20:10:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/sneakers/2"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-04-30 20:13:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:13:17 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (40.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (66.2ms)
+Completed 200 OK in 85ms (Views: 43.4ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:13:25 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (1.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:14:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 126ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:14:20 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (11.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (16.4ms)
+Completed 200 OK in 32ms (Views: 20.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:14:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 89ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:14:32 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.5ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:19:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 300ms (Views: 297.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:19:08 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.8ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:19:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:19:24 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.9ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:27:14 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (4.5ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:28:56 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (4.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:31:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 424ms (Views: 418.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:31:59 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.3ms)
+Completed 200 OK in 147ms (Views: 144.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:33:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:33:58 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (15.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (17.9ms)
+Completed 200 OK in 30ms (Views: 14.2ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:34:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:34:13 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:34:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:34:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (4.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:34:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:34:34 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.7ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:34:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:34:35 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.9ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:35:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 94ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:35:16 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (32.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (52.5ms)
+Completed 200 OK in 110ms (Views: 74.9ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:35:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:35:18 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (1.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (3.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:37:44 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:39:28 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (3.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.2ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:44:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 129ms (Views: 124.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:44:04 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.7ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:44:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 98ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:44:48 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (20.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (22.6ms)
+Completed 200 OK in 37ms (Views: 16.5ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:45:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:45:11 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (10.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (14.7ms)
+Completed 200 OK in 65ms (Views: 53.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:46:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 153ms (Views: 145.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:46:35 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (20.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (24.2ms)
+Completed 200 OK in 46ms (Views: 24.5ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:46:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:46:55 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (17.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (19.4ms)
+Completed 200 OK in 27ms (Views: 9.8ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:47:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:47:10 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (102.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (106.4ms)
+Completed 200 OK in 125ms (Views: 22.7ms | ActiveRecord: 102.1ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:47:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:47:20 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (57.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (59.7ms)
+Completed 200 OK in 75ms (Views: 16.5ms | ActiveRecord: 57.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:47:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:47:57 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (22.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (25.9ms)
+Completed 200 OK in 45ms (Views: 22.4ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:52:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:52:34 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (4.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.8ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:54:19 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (9.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (11.5ms)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:54:28 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.6ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:57:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 153ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:57:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (4.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (6.6ms)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2020-04-30 20:57:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 20:57:43 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (64.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (66.9ms)
+Completed 200 OK in 79ms (Views: 14.4ms | ActiveRecord: 64.8ms)
+
+
+Started POST "/api/user" for ::1 at 2020-04-30 21:03:27 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blindaa", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "blindaa"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "fvPUa6GLzLNOZ9k9VGAVuQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "blindaa"], ["password_digest", "$2a$12$Y.hWnofiH65SdLtiS3D8DuRvpIZLwhLekC8Zpyxe4CYDU0cSqUOhq"], ["session_token", "fvPUa6GLzLNOZ9k9VGAVuQ=="], ["created_at", "2020-05-01 04:03:28.003270"], ["updated_at", "2020-05-01 04:03:28.003270"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "blindaa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "GsFEbtc8lk92tqQlhh0oTg=="], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "GsFEbtc8lk92tqQlhh0oTg=="], ["updated_at", "2020-05-01 04:03:28.020566"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 273ms (Views: 10.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-04-30 21:03:28 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (2.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (5.2ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:49:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "GsFEbtc8lk92tqQlhh0oTg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 371ms (Views: 348.2ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:49:18 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (6.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (10.1ms)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 6.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-01 08:49:21 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "GsFEbtc8lk92tqQlhh0oTg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "blindaa"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "N4anKtFERKwNdWZ4lnmfsw=="], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "N4anKtFERKwNdWZ4lnmfsw=="], ["updated_at", "2020-05-01 15:49:21.545361"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-01 08:49:35 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "sUtEVdeBw10cIbetGyfc9Q=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "sUtEVdeBw10cIbetGyfc9Q=="], ["updated_at", "2020-05-01 15:49:35.531188"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 238ms (Views: 8.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:49:35 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (2.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (7.5ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:50:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sUtEVdeBw10cIbetGyfc9Q=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 523ms (Views: 515.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:50:01 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (17.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (19.8ms)
+Completed 200 OK in 29ms (Views: 11.7ms | ActiveRecord: 17.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-01 08:50:03 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sUtEVdeBw10cIbetGyfc9Q=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "FT5OLfwz1TWs72/yZ9F/8Q=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FT5OLfwz1TWs72/yZ9F/8Q=="], ["updated_at", "2020-05-01 15:50:03.881193"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:50:08 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-01 08:50:16 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo_user"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Gmla07g1UWf8H8wmMR6UFw=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Gmla07g1UWf8H8wmMR6UFw=="], ["updated_at", "2020-05-01 15:50:16.365693"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 237ms (Views: 7.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:50:16 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-05-01 08:50:19 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Gmla07g1UWf8H8wmMR6UFw=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo_user"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "BKpePcaSlTEvM7rmm70Ygw=="], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "BKpePcaSlTEvM7rmm70Ygw=="], ["updated_at", "2020-05-01 15:50:19.236803"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-01 08:50:26 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"blindaa", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "blindaa"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 220ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-01 08:50:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "blindaa1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 401 Unauthorized in 232ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/user" for ::1 at 2020-05-01 08:50:45 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "blindaa1"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tT0hcLRfAfNoIRFAljDMMQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 228ms (Views: 0.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/api/session" for ::1 at 2020-05-01 08:50:55 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"blindaa1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "blindaa1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "blindaa1"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["updated_at", "2020-05-01 15:50:56.187490"], ["id", 2]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 238ms (Views: 7.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:50:56 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (5.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (7.1ms)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:51:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 137ms (Views: 131.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:51:45 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (76.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (78.1ms)
+Completed 200 OK in 99ms (Views: 22.1ms | ActiveRecord: 76.1ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:51:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:51:56 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (108.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (111.1ms)
+Completed 200 OK in 132ms (Views: 23.6ms | ActiveRecord: 108.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:52:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:52:20 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (7.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (10.9ms)
+Completed 200 OK in 28ms (Views: 20.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:52:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:52:33 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (23.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (26.6ms)
+Completed 200 OK in 35ms (Views: 11.3ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:53:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:53:18 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (2.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 08:54:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 08:54:37 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (10.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (15.9ms)
+Completed 200 OK in 33ms (Views: 21.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 09:19:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "E5k4QsK0HZ12kDUlGhybqg=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 525ms (Views: 467.9ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/api/sneakers" for ::1 at 2020-05-01 09:19:14 -0700
+Processing by Api::SneakersController#index as JSON
+  Rendering api/sneakers/index.json.jbuilder
+  [1m[36mSneaker Load (79.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/views/api/sneakers/index.json.jbuilder:1
+  Rendered api/sneakers/index.json.jbuilder (286.7ms)
+Completed 200 OK in 306ms (Views: 39.3ms | ActiveRecord: 260.7ms)
+
+
