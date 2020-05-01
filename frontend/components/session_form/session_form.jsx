@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
       return (
          <div className="session-form-container">
                <div className="shoe_pane">
-                  <img src="/assets/login_breds.jpeg" alt="bred"></img>
+                  <img src={window.bredURL} alt="bred"></img>
                </div>
 
                <div className="session-input-container">

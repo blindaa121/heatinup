@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SneakerPanelContainer from '../sneaker_panel/sneaker_panel_container';
+// import SneakerPanelContainer from '../sneaker_panel/sneaker_panel_container';
 // import NavBarContainer from ''
 class Splash extends React.Component {
     constructor(props) {
@@ -8,16 +8,17 @@ class Splash extends React.Component {
         // this.fetchSneakers = this.fetchSneakers.bind(this)
     }
 
-    componentDidMount() {
+    componentDidMount(){
         this.props.fetchSneakers()
     };
 
     render() {
         return (
             <div className="splash-container">
-                <img className="air-home" src="/assets/bo2ewj3dpcajmb6yqmpd.webp"></img>
+                <img className="air-home" src={window.splashURL}></img>
                 {/* <NavBarContainer /> */}
-                <SneakerPanelContainer />
+                {/* <SneakerPanelContainer /> */}
+                <h1>UNDER CONSTRUCTION</h1>
             </div> 
         )    
     }

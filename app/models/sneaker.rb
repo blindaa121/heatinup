@@ -3,6 +3,8 @@ class Sneaker < ApplicationRecord
     validates :colorway, :designer, :silhouette, :technology, :category, presence: true
     validates :name, :sku, presence: true, uniqueness: true
 
+    has_one_attached :photo
+
     has_many :listings,
         foreign_key: :sneaker_id,
         class_name: 'Listing'
