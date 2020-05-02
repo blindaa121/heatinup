@@ -260,11 +260,11 @@ require 'open-uri'
 # create a user
 
 # create a File from the url
-file1 = open('https://sneaker-photos.s3-us-west-1.amazonaws.com/flu_game_12s.jpeg')
+# file1 = open('https://sneaker-photos.s3-us-west-1.amazonaws.com/flu_game_12s.jpeg')
 
 # attach to user
 
 the_last_dance.each_with_index do |sneaker, idx|    
     sneaker = Sneaker.create!(sneaker)
-    sneaker.photo.attach(io: file${idx}, filename: 'file1.jpg') 
+    # sneaker.photo.attach(io: file${idx}, filename: 'file1.jpg') 
 end
