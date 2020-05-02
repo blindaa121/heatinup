@@ -11,15 +11,15 @@ class SneakerIndex extends React.Component {
     }
 
     render () {
-        
-        const { sneaker } = this.props;
-        if (!sneaker) return null;
+
+        const { sneakers } = this.props;
+        if (!sneakers) return null;
 
         return (
             <div>
                 <h1>Shop All Sneakers!</h1>
                 <div>
-                    <SneakerIndexItem sneaker={sneaker}/>
+                    {sneakers.map(sneaker => <SneakerIndexItem key={sneaker.id} sneaker={sneaker} />)} 
                 </div>
             </div>
         )

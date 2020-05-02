@@ -4,8 +4,8 @@ import React from 'react';
 const SneakerItemIndex = ({ sneaker }) => {
     return (
         <div>
-            <img src={window.bred11s}/>
-            {sneaker.name}
+            <img src={window.bred11s}></img>
+                {sneaker.name}
         </div>
     )
 }

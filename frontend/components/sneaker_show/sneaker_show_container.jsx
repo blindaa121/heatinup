@@ -11,4 +11,4 @@ const mDTP = dispatch => ({
     fetchSneaker: (sneakerId) => dispatch(fetchSneaker(sneakerId))
 });
 
-export default connect(mSTP, mDTP)(SneakerShow);
+export default connect(mSTP, mDTP)(SneakerShow); 

@@ -22,6 +22,7 @@
 
 .product-details {
     text-align: center;
+    padding-bottom: 100px;
     font-family: GT-Sectra-Book;
     font-size: 26px;
     width: 1000px
@@ -64,4 +65,32 @@
     font-size: 16px;
     color: grey;
     letter-spacing: 1.5px;
+}
+
+.sneaker-details {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    height: 300px;
+    width: 1200px;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.sneaker-details p {
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    color: silver;
+    text-transform: uppercase;
+}
+
+#colorway {
+    display: flex;
+    flex-direction: column;
+    // height: 20px;
+    justify-content: space-between;
 }
