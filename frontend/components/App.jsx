@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/nav_bar_container';
 import SplashContainer from './splash/splash_container';
 import SneakerShowContainer from './sneaker_show/sneaker_show_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_utl'
+import SneakersContainer from './sneakers/sneakers_container'
 
 const App = () => (
     <div>
@@ -13,6 +14,7 @@ const App = () => (
         <Switch> 
             <Route exact path="/" component={SplashContainer} />
             <Route path='/sneakers/:sneakerId' component={SneakerShowContainer} />
+            <Route path='/sneakers' component={SneakersContainer} />
             <AuthRoute path='/signup' component={SignUpFormContainer} />
             <AuthRoute path='/login' component={LogInFormContainer} />
             <Route path='*' component={SplashContainer} />

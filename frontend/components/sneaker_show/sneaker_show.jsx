@@ -22,8 +22,6 @@ class SneakerShow extends React.Component {
 
                     <div className='leftShoe-pane'>
                         <img src={window.bred4s}></img>
-                        <br/>
-                        <p id='sneaker-brand'>{sneaker.brand}</p>
                     </div>
 
                     <div className='rightShoe-pane'>

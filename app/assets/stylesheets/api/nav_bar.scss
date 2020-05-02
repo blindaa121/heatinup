@@ -1,29 +1,30 @@
-.nav-bar-links {
-    display: flex;
-    justify-content: space-evenly;
-    float: right;
-    width: 400px
-}
+// .nav-bar-links {
+//     display: flex;
+//     justify-content: space-evenly;
+//     float: right;
+//     width: 400px
+// }
 
-.nav-bar .btn {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Arimo', sans-serif;
-    color: grey
-}
+// .nav-bar .btn {
+//     text-decoration: none;
+//     font-size: 20px;
+//     font-family: 'Arimo', sans-serif;
+//     color: grey
+// }
 
-.nav-bar .btn:hover {
-    color: black;
-    text-decoration: underline;
-}
+// .nav-bar .btn:hover {
+//     color: black;
+//     text-decoration: underline;
+// }
 
-.nav-bar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-bottom: 2px solid lightgrey;
-    padding: 50px 90px 50px 90px;
-}
+// .nav-bar {
+//     display: flex;
+//     // position: fixed;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     border-bottom: 2px solid lightgrey;
+//     padding: 50px 90px 50px 90px;
+// }
 
 .logout {
     text-decoration: none;
@@ -39,22 +40,114 @@
     color: black;
 }
 
-.sneakers-bar {
+// .sneakers-bar {
+//     text-decoration: none;
+//     font-size: 20px;
+//     font-family: 'Arimo', sans-serif;
+//     color: grey
+// }
+
+// .sneakers-bar:hover {
+//     text-decoration: underline;
+//     font-size: 20px;
+//     font-family: 'Arimo', sans-serif;
+//     color:black
+// }
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*Updated NAV*/
+
+.loggedOut-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgrey;
+    padding: 50px 90px 50px 90px;
+}
+
+.loggedIn-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgrey;
+    padding: 50px 90px 50px 90px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
     text-decoration: none;
     font-size: 20px;
     font-family: 'Arimo', sans-serif;
     color: grey
 }
 
-.sneakers-bar:hover {
+.signup {
+    text-decoration: none;
+    color: grey;
+}
+
+.signup:hover {
     text-decoration: underline;
     font-size: 20px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
 
-.logo {
-    font-size: 35px;
+.login {
     text-decoration: none;
-    color: black;
+    color: grey;
+}
+
+.login:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
+}
+
+.sneakers {
+    text-decoration: none;
+    color: grey;
+}
+
+.sneakers:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
+}
+
+.shopall {
+    text-decoration: none;
+    color: grey
+}
+
+.shopall:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
+}
+
+.styles {
+    text-decoration: none;
+    color: grey
+}
+
+.styles:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
 }
