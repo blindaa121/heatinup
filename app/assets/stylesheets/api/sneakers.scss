@@ -1,3 +1,67 @@
 // Place all the styles related to the api/sneakers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sneakerComponent {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: 100px auto 30px auto;
+    width: 800px;
+    height: 900px;
+    border: 2px solid lightgray;
+    border-radius: 2px;
+}
+
+.outer-sneakerComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-details {
+    text-align: center;
+    font-family: GT-Sectra-Book;
+    font-size: 26px;
+    width: 1000px
+}
+
+.product-details h1 {
+    margin: 100px 0 20px 0;
+    font-size: 35px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.leftShoe-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid lightgray;
+    border-top-left-radius: 50px;
+    width: 400px;
+    font-size: 25px;
+}
+
+.rightShoe-pane {
+    display: flex;
+    // font-family: 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+.rightShoe-pane h1 {
+    font-size: 50px;
+    padding: 20px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.rightShoe-pane p {
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 1.5px;
+}

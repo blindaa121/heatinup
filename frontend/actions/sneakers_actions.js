@@ -8,10 +8,13 @@ const receiveSneakers = sneakers => ({
     sneakers
 });
 
-const receiveSneaker = sneaker => ({
-    type: RECEIVE_SNEAKER,
-    sneaker
-});
+const receiveSneaker = sneaker => {
+    // debugger
+    return ({
+        type: RECEIVE_SNEAKER,
+        sneaker
+    })
+}
 
 export const fetchSneakers = () => dispatch => (
     SneakerAPIUtil.fetchSneakers()
