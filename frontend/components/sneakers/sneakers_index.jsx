@@ -18,7 +18,7 @@ class SneakerIndex extends React.Component {
         return (
             <div>
                 <h1>Shop All Sneakers!</h1>
-                <div>
+                <div className='show-all'>
                     {sneakers.map(sneaker => <SneakerIndexItem key={sneaker.id} sneaker={sneaker} />)} 
                 </div>
             </div>

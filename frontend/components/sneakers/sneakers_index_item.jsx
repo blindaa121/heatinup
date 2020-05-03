@@ -1,11 +1,12 @@
 import React from 'react';
 // import SneakerIndex from './sneakers_index/'
+import { Link } from 'react-router-dom';
 
 const SneakerItemIndex = ({ sneaker }) => {
     return (
-        <div>
+        <div className='sneakerItem'>
             <img src={sneaker.photoUrl}></img>
-                {sneaker.name}
+            <Link to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
         </div>
     )
 }

@@ -19,14 +19,15 @@
 .thelastdance {
     margin-top: 75px;
     margin-bottom: 75px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 50px;
 }
 
 .sneaker-panel-items {
     display: flex;
-    width: 1200px;
-
+    width: 1300px;
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
 }
 
 .sneakerpanel-item {
@@ -35,12 +36,16 @@
     align-items: center;
 }
 
+.sneakerpanel-item:hover {
+    text-decoration: underline;
+}
+
 .sneakerpanel-item > img {
     width: 100px;
 }
 
 #sneakerName {
-    margin-top: 75px;
+    margin-top: 20px;
     margin-bottom: 75px;
     font-family: 'Heebo', sans-serif;
     font-size: 20px;

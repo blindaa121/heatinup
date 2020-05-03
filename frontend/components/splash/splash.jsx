@@ -18,7 +18,6 @@ class Splash extends React.Component {
                 <img className="air-home" src={window.splashURL}></img>
                 {/* <NavBarContainer /> */}
                 <SneakerPanelContainer />
-                <h1>UNDER CONSTRUCTION!</h1>
             </div> 
         )    
     }

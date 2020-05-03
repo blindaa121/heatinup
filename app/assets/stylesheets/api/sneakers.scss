@@ -94,3 +94,14 @@
     // height: 20px;
     justify-content: space-between;
 }
+
+.sneakerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-all {
+    display: inline-flex;
+    width: 900px;
+}
