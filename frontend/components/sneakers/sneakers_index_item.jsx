@@ -6,7 +6,8 @@ const SneakerItemIndex = ({ sneaker }) => {
     return (
         <div className='sneakerItem'>
             <img src={sneaker.photoUrl}></img>
-            <Link to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
+            <span>{sneaker.brand}</span>
+            <Link className='sneakerLink' to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
         </div>
     )
 }
