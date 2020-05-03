@@ -8,8 +8,8 @@
     /* flex-direction: column; */
     justify-content: space-between;
     margin: 100px auto 30px auto;
-    width: 800px;
-    height: 900px;
+    width: 1200px;
+    height: 750px;
     border: 2px solid lightgray;
     border-radius: 2px;
 }
@@ -41,8 +41,12 @@
     justify-content: center;
     border-right: 2px solid lightgray;
     border-top-left-radius: 50px;
-    width: 400px;
+    width: 770px;
     font-size: 25px;
+}
+
+.shoePane-img {
+    width: 450px
 }
 
 .rightShoe-pane {
@@ -52,7 +56,7 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    width: 400px;
+    width: 770px;
 }
 
 .rightShoe-pane h1 {
@@ -95,6 +99,8 @@
     justify-content: space-between;
 }
 
+/*SHOW ALL SNEAKERS PAGE*/
+
 .outerSneakerdiv {
     display: flex;
     flex-direction: column;
@@ -121,7 +127,7 @@
 .sneakerItem {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     padding: 4rem;
@@ -130,11 +136,20 @@
     border: 1px solid lightgrey;
 }
 
+.sneakerItem:hover {
+    text-decoration: underline;
+    border: 1px solid darkslategray;
+}
+
 .sneakerLink {
     text-decoration: none;
     font-family: 'Heebo', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
+}
+
+.sneakerLink:hover {
+    text-decoration: underline;
 }
 
 // .sneakerItem {

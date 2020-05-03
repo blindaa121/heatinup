@@ -4,6 +4,7 @@
     font-size: 20px;
     font-family: 'Arimo', sans-serif;
     color: grey;
+    transition: .5s;
     border: 0;
     padding: 0;
 }
@@ -53,6 +54,7 @@
 
 .signup {
     text-decoration: none;
+    transition: .5s;
     color: grey;
 }
 
@@ -65,6 +67,7 @@
 
 .login {
     text-decoration: none;
+    transition: .5s;
     color: grey;
 }
 
@@ -77,6 +80,7 @@
 
 .sneakers {
     text-decoration: none;
+    transition: .5s;
     color: grey;
 }
 
@@ -87,8 +91,16 @@
     color:black
 }
 
+.sneakers:active {
+    text-decoration: underline;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+    color:black
+}
+
 .shopall {
     text-decoration: none;
+    transition: .5s;
     color: grey
 }
 
@@ -101,7 +113,8 @@
 
 .styles {
     text-decoration: none;
-    color: grey
+    transition: .5s;
+    color: grey;
 }
 
 .styles:hover {
