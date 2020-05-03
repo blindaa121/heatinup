@@ -21,7 +21,7 @@ class SneakerShow extends React.Component {
                 <div className='sneakerComponent'>
 
                     <div className='leftShoe-pane'>
-                        <img src={window.bred4s}></img>
+                        <img src={sneaker.photoUrl}></img>
                     </div>
 
                     <div className='rightShoe-pane'>
