@@ -15,6 +15,7 @@
 }
 
 .outer-sneakerComponent {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +74,7 @@
 }
 
 .rightShoe-pane p {
-    font-size: 16px;
+    font-size: 18px;
     color: grey;
     letter-spacing: 1.5px;
 }
@@ -95,20 +96,16 @@
 .sneaker-details p {
     font-family: 'Heebo', sans-serif;
     font-size: 14px;
+    letter-spacing: 1px;
     color: silver;
     text-transform: uppercase;
 }
 
-#colorway {
-    display: flex;
-    flex-direction: column;
-    // height: 20px;
-    justify-content: space-between;
-}
 
 /*SHOW ALL SNEAKERS PAGE*/
 
 .outerSneakerdiv {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
