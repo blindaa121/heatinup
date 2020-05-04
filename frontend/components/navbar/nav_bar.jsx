@@ -10,6 +10,7 @@ export default ({ currentUser, logout }) => {
             <div className='links'>
                 <Link className="sneakers" to="/">Sneakers</Link>
                 <Link className="shopall" to="/sneakers">Shop All</Link>
+                <Link className="styles">Styles</Link>
                 <Link className="signup" to="/signup">Sign Up</Link>
                 <Link className="login" to="/login">Log In</Link>
             </div>
