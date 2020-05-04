@@ -9,6 +9,7 @@ class Api::ListingsController < ApplicationController
 
     def show 
         @listing = Listing.find_by(id: params[:id])
+        render :show
     end 
 
     def index 

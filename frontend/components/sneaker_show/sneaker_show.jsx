@@ -22,16 +22,15 @@ class SneakerShow extends React.Component {
 
                     <div className='leftShoe-pane'>
                         <img className='shoePane-img' src={sneaker.photoUrl}></img>
+                        <span className='sneaker-footer'>{sneaker.brand} / {sneaker.silhouette} / {sneaker.name}</span>
                     </div>
 
                     <div className='rightShoe-pane'>
                         <h1>{sneaker.name}</h1>
                         <br/>
                         <p>SKU: {sneaker.sku}</p>   
-                    </div> 
-                    
+                    </div>
                 </div>
-
                     <div className='product-details'>
                         <h1>Product Details</h1>
                         <br/>
