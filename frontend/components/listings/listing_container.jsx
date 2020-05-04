@@ -1,4 +1,4 @@
-import { connect } from react-redux;
+import { connect } from 'react-redux';
 import ListingIndex from './listing_index'
 
 const mSTP = (state, ownProps) => ({
@@ -7,7 +7,8 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = dispatch => ({
-
+    fetchSneaker: sneakerId => dispatch(fetchSneaker(sneakerId)),
+    fetchListings: sneakerId => dispatch(fetchListings(sneakerId))
 })
 
 export default connect(mSTP, mDTP)(ListingIndex) 

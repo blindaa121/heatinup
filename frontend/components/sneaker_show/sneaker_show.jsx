@@ -1,6 +1,8 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import SneakerShowContainer from './sneaker_show_container'
 import SneakerDetails from './sneaker_details'
+import { Link } from 'react-router-dom';
 
 class SneakerShow extends React.Component {
     constructor(props) {
@@ -8,14 +10,14 @@ class SneakerShow extends React.Component {
     };
 
     componentDidMount() {
-        // debugger
         this.props.fetchSneaker(this.props.match.params.sneakerId)
+        window.scrollTo(0,0);
     };
     
     render () {
-        const { sneaker } = this.props;
+        const { sneaker, listings } = this.props;
         if (!sneaker) return null;
-        // debugger
+        // if (!listings) return null;
         return (
             <div className='outer-sneakerComponent'>
                 <div className='sneakerComponent'>
@@ -28,7 +30,8 @@ class SneakerShow extends React.Component {
                     <div className='rightShoe-pane'>
                         <h1>{sneaker.name}</h1>
                         <br/>
-                        <p>SKU: {sneaker.sku}</p>   
+                        <p>SKU: {sneaker.sku}</p>  
+                        <Link to={`/sneakers/${sneaker.id}/listings`}>Buy New</Link> 
                     </div>
                 </div>
                     <div className='product-details'>
