@@ -17,7 +17,7 @@ class SneakerShow extends React.Component {
     
     render () {
         const { sneaker, listings } = this.props;
-        debugger
+        // debugger
         if (!sneaker) return null;
         if (!listings) return null;
         return (
@@ -33,7 +33,13 @@ class SneakerShow extends React.Component {
                         <h1>{sneaker.name}</h1>
                         <br/>
                         <p>SKU: {sneaker.sku}</p>  
-                        <ListingIndexContainer/>
+                        {/* <ListingIndexContainer/> */}
+                        {/* if logic, checks for state. if true then render index
+                        otherwise render null */}
+                        {/* Buy New Button will go here. When clicked, it should show the ListingIndexContainer which shows
+                        the size and price for that sneaker. */}
+                        <button className='buy-new-btn'>Buy New</button>
+                        {/* button will change state */}
                     </div>
                 </div>
                     <div className='product-details'>
