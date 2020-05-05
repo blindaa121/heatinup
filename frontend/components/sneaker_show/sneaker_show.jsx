@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import SneakerShowContainer from './sneaker_show_container'
-import SneakerDetails from './sneaker_details'
+import SneakerShowContainer from './sneaker_show_container';
+import SneakerDetails from './sneaker_details';
+import ListingIndexContainer from '../listings/listing_container'
 import { Link } from 'react-router-dom';
 
 class SneakerShow extends React.Component {
@@ -16,8 +17,9 @@ class SneakerShow extends React.Component {
     
     render () {
         const { sneaker, listings } = this.props;
+        debugger
         if (!sneaker) return null;
-        // if (!listings) return null;
+        if (!listings) return null;
         return (
             <div className='outer-sneakerComponent'>
                 <div className='sneakerComponent'>
@@ -31,7 +33,7 @@ class SneakerShow extends React.Component {
                         <h1>{sneaker.name}</h1>
                         <br/>
                         <p>SKU: {sneaker.sku}</p>  
-                        <Link to={`/sneakers/${sneaker.id}/listings`}>Buy New</Link> 
+                        <ListingIndexContainer/>
                     </div>
                 </div>
                     <div className='product-details'>

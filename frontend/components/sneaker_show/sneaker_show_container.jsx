@@ -4,7 +4,7 @@ import { fetchSneaker } from '../../actions/sneakers_actions'
 
 const mSTP = (state, ownProps) => ({
     sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
-    // listings: state.entities.listings
+    listings: state.entities.listings
 });
 
 

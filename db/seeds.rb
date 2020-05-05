@@ -1207,20 +1207,142 @@ fear_of_god = [
     },
 ]
 
-
+styles_page = [
+    {
+        name: "Air Jordan 1 Retro High OG 'Shattered Backboard 3.0'",
+        description: "The Air Jordan 1 Retro High OG 'Shattered Backboard 3.0' revisits a coveted colorway inspired by a Michael Jordan backboard-breaking dunk that took place during a 1985 Nike exhibition game. The shoe's colorway of black, Pale Vanilla and Starfish matches the colors of the jersey MJ sported that day. Released in October 2019, this third edition of the sneaker features a crinkled, glossy patent leather upper that alludes to the hoop's broken glass, a fitting tribute to an early iconic moment.",
+        release_date: "2019-10-26",
+        sku: "555088 028",
+        brand: "Air Jordan",
+        upper_material: "Patent Leather",
+        main_color: "Black",
+        colorway: "Black/Pale Vanilla-Starfish",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 1 Retro High OG NRG 'Gold Top 3'",
+        description: "The Nike Air Jordan Retro High OG NRG in ‘Gold Top 3’ was initially an exclusive release at ComplexCon, and then was subsequently released online for Cyber Monday 2017. The Air Jordan 1's coveted black and metallic gold patent colorway is re-imagined in this mis-matched patent leather construction, an homage to the Air Jordan 1 'Top 3' sneaker from 2016.",
+        release_date: "2017-11-27",
+        sku: "861428 001",
+        brand: "Air Jordan",
+        upper_material: "Patent Leather",
+        main_color: "Gold",
+        colorway: "Black/Black-Metallic Gold",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 1 Retro High OG 'Bred Toe'",
+        description: "Arriving in stores in February 2018, the Air Jordan 1 Retro High OG ‘Bred Toe’ is a new spin on a classic design. The Chicago Bulls-inspired colorway combines elements of the ‘Bred’ and ‘Black Toe’ editions of the Air Jordan 1, executed on a premium leather build. The high-top features a black Swoosh on the white quarter panel, along with contrasting pops of red on the toe box, heel, collar, and outsole. The shoe stays true to its OG 1985 roots with Nike Air branding on the tongue tag and sockliner.",
+        release_date: "2018-02-24",
+        sku: "555088 610",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Red",
+        colorway: "Gym Red/Summit White-Black",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 11 Retro 'Cool Grey' 2001",
+        description: "Michael Jordan wore the Air Jordan 11 Retro 'Cool Grey' 2001 multiple times, including when he won against the New York Knicks at Madison Square Garden as a member of the Washington Wizards. A new addition to the lineage of the Air Jordan 11, the high-performing mid-top features a Cool Grey nubuck upper with patent leather along the mudguard. The sneaker also boasts a quick lace system, carbon fiber sheath, and classic Jumpman branding at the heel.",
+        release_date: "2001-03-03",
+        sku: "136046 011",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Grey",
+        colorway: "Medium Grey/White-Cool Grey",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 11",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Air Jordan 1 Retro High OG 'Royal' 2017",
+        description: "In 1985 sports photographer, Chuck Kohn, photographed Michael Jordan wearing the Air Jordan 1 Royals. This photo turned Nike poster was the first time anyone saw Michael wearing the Air Jordan 1 sneakers. Ever. Known to be his favorite colorway, Jordan chose the Royals to be the first Air Jordan 1 available for purchase. They were also the only color-way out of the Top 3 Air Jordan 1 Retro colorways (‘Banned’ and ‘Chicago’) that he never wore on the court. Since 1985, the Royals have been released in 2001, 2013, and 2017.",
+        release_date: "2017-04-01",
+        sku: "555088 007",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Royal-White",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Travis Scott x Air Jordan 1 Retro High OG 'Mocha'",
+        description: "The Travis Scott x Air Jordan 1 Retro High features a new look on the iconic silhouette, thanks to an oversized backward-facing Swoosh on the lateral side. A traditionally oriented Swoosh graces the medial side of the upper, which is built with a blend of white leather and brown suede. Additional unique details include a double-layer construction on the collar and Scott’s crudely drawn face logo embossed on the heel.",
+        release_date: "2019-05-11",
+        sku: "CD4487 100",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Brown",
+        colorway: "Sail/Dark Mocha-University Red-Black",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Travis Scott x Air Jordan 6 Retro 'Olive'",
+        description: "The Travis Scott x Air Jordan 6 Retro 'Olive' represents a collaboration between the Houston based rapper and Jordan Brand. This take on the AJ 6, which Scott debuted while performing during halftime of Super Bowl 53, released in October 2019. It features a Medium Olive, black, Sail and University Red colorway along with several unique elements: a small pocket with a snap on the collar, a nubuck and suede upper, Scott's 'Cactus Jack' logo on the heel and a glow-in-the-dark translucent outsole.",
+        release_date: "2019-10-11",
+        sku: "CN1084 200",
+        brand: "Air Jordan",
+        upper_material: "Nubuck",
+        main_color: "Green",
+        colorway: "Medium Olive/Black-Sail-University Red",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 6",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Travis Scott x Air Jordan 1 Low 'Mocha'",
+        description: "Travis Scott and Jordan Brand collaborate on an Air Jordan 1 Low, taking similar design cues from the high-top version. An oversized backward facing Swoosh is featured prominently on the lateral side of the shoe, while a regular Swoosh graces the medial side. Black and Dark Mocha nubuck dominate the upper, with a few pops of University Red adding a nice contrast. Travis Scott details are subtly placed on the shoe, with the ‘Cactus Jack’ logo appearing on the tongue, medial side panel and sockliner. The back heel tabs feature intricately stitched logos, with the Air Jordan Wings on the right shoe and Scott’s crudely drawn face on the left shoe.",
+        release_date: "2019-07-19",
+        sku: "CQ4277 001",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Brown",
+        colorway: "Black/Dark Mocha-University Red-Sail",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+    {
+        name: "Travis Scott x Air Jordan 4 Retro 'Cactus Jack'",
+        description: "Music artist Travis Scott hails from Houston, where the Oilers used to take the field in red, white and blue uniforms. The Travis Scott x Air Jordan 4 Retro 'Cactus Jack' colorway pays tribute to the city’s bygone football team with a Durabuck leather upper dressed in University Blue and a Varsity Red insole. The black lace cage and a heel panel feature a light blue speckle pattern. Cactus Jack branding appears on the left heel in Varsity Red, with a matching Jumpman logo on the right.",
+        release_date: "2018-06-09",
+        sku: "308497 406",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Blue",
+        colorway: "University Blue/Varsity Red-Black",
+        designer: "Tinker Hatfield",
+        silhouette: "Air Jordan 4",
+        technology: "Air",
+        category: "Lifestyle"
+    },
+]
 
 require 'open-uri'
-
-# the_last_dance.each_with_index do |sneaker, idx|    
-#     sneaker = Sneaker.create!(sneaker)
-#     # sneaker.photo.attach(io: file${idx}, filename: 'file1.jpg') 
-# end
 
 the_last_dance.each { |sneaker| Sneaker.create!(sneaker) }
 off_white.each { |sneaker| Sneaker.create!(sneaker) }
 yeezy_collection.each { |sneaker| Sneaker.create!(sneaker) }
 fear_of_god.each { |sneaker| Sneaker.create!(sneaker) }
-
+styles_page.each { |sneaker| Sneaker.create!(sneaker) }
 
 Sneaker.all.each do |sneaker|
   sku = sneaker[:sku].split(" ").join("")
@@ -1230,4 +1352,24 @@ Sneaker.all.each do |sneaker|
     io: photo, 
     filename: "#{sku}.jpg"
   )
+end
+
+# Listings 
+sizes = [4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13]
+
+#Price generator 
+def price_generator(min, max) 
+    prices = []
+    (min..max).each do |price|
+        prices << price
+    end 
+    return prices.sample
+end
+
+#Listings generator 
+
+Sneaker.all.each do |sneaker|
+    sizes.each do |size|
+        Listing.create!({sneaker_id: sneaker[:id], size: size, price: price_generator(200,500), user_id: 1})
+    end
 end

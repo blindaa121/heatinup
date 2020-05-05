@@ -3,7 +3,7 @@ import ListingIndex from './listing_index'
 
 const mSTP = (state, ownProps) => ({
     listings: Object.values(state.entities.listings),
-    listing: state.entities.listings[ownProps.match.params.sneakerId]
+    // listing: state.entities.listings[ownProps.match.params.listingId]
 })
 
 const mDTP = dispatch => ({
