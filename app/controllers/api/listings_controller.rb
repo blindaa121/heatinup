@@ -1,11 +1,4 @@
 class Api::ListingsController < ApplicationController
-    def create 
-
-    end 
-
-    def destroy 
-
-    end 
 
     def show 
         @listing = Listing.find_by(id: params[:id])
@@ -22,4 +15,5 @@ class Api::ListingsController < ApplicationController
     def listing_params
         params.require(:listing).permit(:size, :price, :sneaker_id, :user_id)
     end
+    
 end
