@@ -7,6 +7,7 @@ import SplashContainer from './splash/splash_container';
 import SneakerShowContainer from './sneaker_show/sneaker_show_container'
 import SneakersContainer from './sneakers/sneakers_container'
 import { AuthRoute, ProtectedRoute } from '../util/route_utl'
+import Styles from './styles/styles'
 // import ListingsContainer from './listings/listing_container'
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
             {/* <Route path="sneakers/:sneakerId/listings/" component={ListingsContainer} /> */}
             <Route path='/sneakers/:sneakerId' component={SneakerShowContainer} />
             <Route path='/sneakers' component={SneakersContainer} />
+            <Route path='/styles' component={Styles} />
             <AuthRoute path='/signup' component={SignUpFormContainer} />
             <AuthRoute path='/login' component={LogInFormContainer} />
             <Route exact path="/" component={SplashContainer} />

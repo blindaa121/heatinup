@@ -4,7 +4,7 @@
 
 /*SESSION FORM */
 .outer-div {
-    margin-top: 0;
+    padding-top: 200px;
 }
 
 .session-form-container {
@@ -57,11 +57,6 @@
 
 .login-input:focus {
     outline: none;
-}
-
-.session-submit {
-    // margin-top: 15px;
-    /* padding-top: 50px; */
 }
 
 label > .username .password {
