@@ -9,14 +9,20 @@ class SneakerShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            showListings: false
         }
+
+        this.handleClick = this.handleClick.bind(this);
     };
 
     componentDidMount() {
         this.props.fetchSneaker(this.props.match.params.sneakerId)
         window.scrollTo(0,0);
     };
+
+    handleClick() {
+        this.setState({showListings: true})
+    }
     
     render () {
         const { sneaker, listings } = this.props;
@@ -33,17 +39,19 @@ class SneakerShow extends React.Component {
                     </div>
 
                     <div className='rightShoe-pane'>
-                        <h1>{sneaker.name}</h1>
-                        <br/>
-                        <p>SKU: {sneaker.sku}</p>  
-                        <ListingIndexContainer/>
-                        {/* if logic, checks for state. if true then render index
-                        otherwise render null */}
-                        {/* Buy New Button will go here. When clicked, it should show the ListingIndexContainer which shows
-                        the size and price for that sneaker. */}
-                        <button className='buy-new-btn'>Buy New</button>
-                        {/* button will change state */}
+                            {
+                            this.state.showListings ? <ListingIndexContainer/> : 
+                                (
+                                    <div>
+                                        <h1>{sneaker.name}</h1>
+                                        <br/>
+                                        <p>SKU: {sneaker.sku}</p>
+                                    </div>
+                                )
+                            }
+                            <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
                     </div>
+                    
                 </div>
                     <div className='product-details'>
                         <h1>Product Details</h1>

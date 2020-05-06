@@ -54,7 +54,8 @@
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    padding-bottom: 45px;
+    padding: 50px;
+    text-align: center;
 }
 
 .shoePane-img {
@@ -63,6 +64,7 @@
 
 .rightShoe-pane {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -80,6 +82,29 @@
     font-size: 18px;
     color: grey;
     letter-spacing: 1.5px;
+}
+
+.buy-new-btn {
+    position: absolute;
+    bottom: 0;
+    width: 600px;
+    height: 100px;
+    background: white;
+    border-top: 2px solid lightgrey;
+    border-bottom: none;
+    border-left: none;
+    padding: 0;
+    color: black;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+}
+
+.buy-new-btn:hover {
+    text-decoration: underline;
+}
+
+.buy-new-btn:focus {
+    outline: none;
 }
 
 .sneaker-details {

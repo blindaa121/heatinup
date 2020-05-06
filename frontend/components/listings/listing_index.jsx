@@ -12,7 +12,6 @@ class ListingIndex extends React.Component {
 
     render () {
         const { sneaker, listings } = this.props;
-        debugger;
         return (
             <div className='listing-container'>
                 <span>Listings go here after clicking Buy New</span>
