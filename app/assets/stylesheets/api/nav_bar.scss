@@ -1,7 +1,7 @@
 
 .logout {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color: grey;
     transition: .5s;
@@ -14,9 +14,13 @@
     color: black;
 }
 
+.logout:focus {
+    outline: none;
+}
+
 .logo {
     display: flex;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
     color: black;
 }
@@ -34,7 +38,7 @@
     z-index: 5;
     border-bottom: 2px solid lightgrey;
     background-color: white;
-    padding: 50px 110px 50px 110px;
+    padding: 35px 90px 35px 90px;
 }
 
 .loggedIn-navbar {
@@ -46,18 +50,18 @@
     width: 100%;
     border-bottom: 2px solid lightgrey;
     background-color: white;
-    padding: 50px 90px 50px 90px;
+    padding: 35px 90px 35px 90px;
 }
 
 .links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 500px;
+    width: 400px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
-    padding-right: 200px;
+    padding-right: 150px;
     color: grey
 }
 
@@ -69,7 +73,7 @@
 
 .signup:hover {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
@@ -82,7 +86,7 @@
 
 .login:hover {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
@@ -95,14 +99,14 @@
 
 .sneakers:hover {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
 
 .sneakers:active {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
@@ -115,7 +119,7 @@
 
 .shopall:hover {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
@@ -128,7 +132,7 @@
 
 .styles:hover {
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Arimo', sans-serif;
     color:black
 }
