@@ -6,6 +6,10 @@ class ListingIndex extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        // this.fetchListings(sneaker.id)
+    }
+
     render () {
         const { sneaker, listings } = this.props;
         debugger;

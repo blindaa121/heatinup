@@ -36,7 +36,7 @@ class SneakerShow extends React.Component {
                         <h1>{sneaker.name}</h1>
                         <br/>
                         <p>SKU: {sneaker.sku}</p>  
-                        {/* <ListingIndexContainer/> */}
+                        <ListingIndexContainer/>
                         {/* if logic, checks for state. if true then render index
                         otherwise render null */}
                         {/* Buy New Button will go here. When clicked, it should show the ListingIndexContainer which shows

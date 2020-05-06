@@ -5,11 +5,8 @@
 /*SESSION FORM */
 .outer-div {
     display: flex;
-    align-self: center;
-    // justify-content: center;
-    width: 1000px;
+    justify-content: center;
     padding-top: 200px;
-    padding-left: 200px;
     border: 2px sold lightgrey;
 }
 
@@ -17,25 +14,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0px auto 30px auto;
+    // margin: 0px auto 30px auto;
     width: 500px;
     height: 800px;
     border: 2px solid lightgray;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    /* padding: 50px;  */
-}
-
-.session-input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 500px;
-    height: 800px;
 }
 
 .demo-user {
-    // margin-left: 160px;
     height: 45px;
     width: 500px;
     font-size: 15px;
