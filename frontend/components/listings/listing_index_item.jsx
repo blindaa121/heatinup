@@ -10,7 +10,7 @@ const ListingIndexItem = ({ listing }) => {
             </div>
 
             <div className='listing-price'>
-                {`${listing.price}`}
+                ${listing.price}
             </div>
 
         </div>

@@ -89,24 +89,25 @@
 .listing-container {
     display: flex;
     flex-direction: column;
-    padding: 70px 20px 100px 20px;
+    padding: 50px 35px 100px 35px;
     overflow: auto;
 }
 
 .listings-header span {
-    color: lightgrey;
+    color: grey;
     height: 200px;
 }
 
 .listing-items {
     display: flex;
-    align-item: center;
+    align-items: center;
     padding-top: 35px;
     padding-bottom: 35px;
     height: 300px;
     justify-content: center;
     font-size: 30px;
     border-top: 2px solid lightgrey;
+    font-family: 'Arimo', sans-serif;
     // border-bottom: 2px solid lightgrey;
 }
 
@@ -116,7 +117,12 @@
 
 .listing-size {
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 45px;
+    // justify-content: flex-end;
+}
+
+.listing-price {
+
 }
 
 .buy-new-btn {

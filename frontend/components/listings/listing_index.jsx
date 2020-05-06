@@ -17,7 +17,7 @@ class ListingIndex extends React.Component {
                 
                 {
                     listings.map(listing => (
-                    <ListingIndexItem listing={listing} />
+                    <ListingIndexItem key={listing.id} listing={listing} />
                     // Index of individual listings. Listings should be clickable and directs user to that particular listings 
                     // which entails the sneaker info, price, size, condition. Users may add to cart depending if they are logged 
                     // in or not.
