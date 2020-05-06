@@ -40,7 +40,7 @@ class SneakerShow extends React.Component {
 
                     <div className='rightShoe-pane'>
                             {
-                            this.state.showListings ? <ListingIndexContainer/> : 
+                            this.state.showListings ? <ListingIndexContainer listings={listings}/> : 
                                 (
                                     <div>
                                         <h1>{sneaker.name}</h1>

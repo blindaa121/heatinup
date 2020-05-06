@@ -6,18 +6,18 @@ class ListingIndex extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
-        // this.fetchListings(sneaker.id)
-    }
-
     render () {
         const { sneaker, listings } = this.props;
         return (
             <div className='listing-container'>
-                <span>Listings go here after clicking Buy New</span>
+                <div className='listings-header'>
+                    <span>Buy New</span> 
+                    <h1>US Sizes</h1>
+                </div>
+                
                 {
                     listings.map(listing => (
-                    <li>{listing.size} {listing.price}</li>
+                    <ListingIndexItem listing={listing} />
                     // Index of individual listings. Listings should be clickable and directs user to that particular listings 
                     // which entails the sneaker info, price, size, condition. Users may add to cart depending if they are logged 
                     // in or not.

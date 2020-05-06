@@ -84,6 +84,41 @@
     letter-spacing: 1.5px;
 }
 
+// LISTING INDEX/ITEMS
+
+.listing-container {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 20px 100px 20px;
+    overflow: auto;
+}
+
+.listings-header span {
+    color: lightgrey;
+    height: 200px;
+}
+
+.listing-items {
+    display: flex;
+    align-item: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    height: 300px;
+    justify-content: center;
+    font-size: 30px;
+    border-top: 2px solid lightgrey;
+    // border-bottom: 2px solid lightgrey;
+}
+
+.listing-items:hover {
+    border: 2px solid black;
+}
+
+.listing-size {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
 .buy-new-btn {
     position: absolute;
     bottom: 0;
