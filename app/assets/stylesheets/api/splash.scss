@@ -1,7 +1,15 @@
 .splash-container {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    font-size: 20px;
+    // color: white;
+}
+
+.splash-text {
+    position: absolute;
+    color: white;
 }
 
 .splash-container > h1 {
