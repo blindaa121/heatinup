@@ -24,7 +24,7 @@
 .product-details {
     text-align: center;
     padding-bottom: 100px;
-    font-family: GT-Sectra-Book;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     width: 800px
 }
@@ -98,6 +98,10 @@
     height: 200px;
 }
 
+.listings-header h1 {
+    font-size: 45px;
+}
+
 .listing-items {
     display: flex;
     align-items: center;
@@ -105,7 +109,7 @@
     padding-bottom: 35px;
     height: 300px;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
     border-top: 2px solid lightgrey;
     font-family: 'Arimo', sans-serif;
     // border-bottom: 2px solid lightgrey;

@@ -9,7 +9,6 @@ const receiveSneakers = sneakers => ({
 });
 
 const receiveSneaker = sneaker => {
-    // debugger
     return ({
         type: RECEIVE_SNEAKER,
         sneaker
