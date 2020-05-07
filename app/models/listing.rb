@@ -8,5 +8,9 @@ class Listing < ApplicationRecord
     belongs_to :seller,
         foreign_key: :user_id,
         class_name: :User
+
+    has_many :cart_items,
+        foreign_key: :listing_id,
+        class_name: :CartItem
 end
 

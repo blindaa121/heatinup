@@ -7,5 +7,5 @@ class Sneaker < ApplicationRecord
 
     has_many :listings,
         foreign_key: :sneaker_id,
-        class_name: 'Listing'
+        class_name: :Listing
 end

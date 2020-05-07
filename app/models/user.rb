@@ -12,6 +12,10 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Listing
 
+    has_many :cart_items,
+        foreign_key: :user_id,
+        class_name: :Cart
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user 
