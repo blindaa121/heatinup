@@ -1,11 +1,11 @@
 .header-container {
-    padding-top: 240px;
+    padding-top: 200px;
 }
 
 .outerpic-div {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .header-container {
@@ -15,14 +15,13 @@
 }
 
 .header-container h1 {
-    font-size: 50px;
-    margin-bottom: 35px;
-    // font-family: 'Arimo', sans-serif
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 .header-container span {
-    font-size: 24px;
-    font-family: GT-Sectra-Book;
+    font-size: 12px;
+    font-family: 'Heebo', sans-serif;
     color: grey
 }
 
@@ -43,8 +42,6 @@
 .mid-section {
     display: flex;
     flex-direction: column;
-    
-    // padding:÷ 70px;
 }
 
 .mid-section img {
@@ -59,8 +56,6 @@
 .right-section {
     display: flex;
     flex-direction: column;
-    
-    // margin: 70px;
 }
 
 .right-section img {
