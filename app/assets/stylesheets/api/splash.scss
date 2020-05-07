@@ -18,16 +18,17 @@
 /*Sneaker Panel*/
 
 .thelastdance {
-    margin: 75px 0px 75px 30px;
+    margin: 75px 0px 75px 20px;
     font-family: 'Heebo', sans-serif;
     font-size: 35px;
 }
 
 .sneaker-panel-items {
     display: flex;
-    width: 1300px;
+    position: relative;
+    width: 1200px;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid lightgrey;
 }
 
 .sneakerpanel-item {
@@ -42,13 +43,27 @@
 
 .sneakerpanel-item > img {
     width: 100px;
+    transition: transform .2s;
 }
+
+.sneakerpanel-item > img:hover {
+    transform: scale(1.1);
+}
+
+// .left-section img {
+//     margin: 60px;
+//     transition: transform .2s;
+// }
+
+// .left-section img:hover {
+//     transform: scale(1.1);
+// }
 
 #sneakerName {
     margin-top: 20px;
     margin-bottom: 75px;
     font-family: 'Heebo', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     text-decoration: none;
     color: black;

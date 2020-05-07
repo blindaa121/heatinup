@@ -12,7 +12,7 @@ class SneakerPanelIndex2 extends React.Component {
         // debugger
         return (
         <div className="sneaker-panel">
-            <h1 className="thelastdance">OFF-WHITE Collection</h1>
+            <h1 className="thelastdance">OFF-WHITE COLLECTION</h1>
                 <div className="sneaker-panel-items">
                         {sneakers.map(sneaker => <SneakerPanelIndexItem key={sneaker.id} sneaker={sneaker} />)}
                 </div>      
