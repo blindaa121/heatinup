@@ -7,7 +7,6 @@ import SneakerPanelContainer3 from '../sneaker_panel/offwhite_panel/sneaker_pane
 class Splash extends React.Component {
     constructor(props) {
         super(props)
-        // this.fetchSneakers = this.fetchSneakers.bind(this)
     }
 
     componentDidMount(){
@@ -18,7 +17,6 @@ class Splash extends React.Component {
         return (
             <div className="splash-container">
                 <a href="#/sneakers/94"><img className="air-home" src={window.splashURL}></img></a>
-                {/* <NavBarContainer /> */}
                 <SneakerPanelContainer />
                 <br/>
                 <a href="#/sneakers/64"><img className="air-home" src={window.splashFOG}></img></a>

@@ -26,7 +26,6 @@ class SneakerShow extends React.Component {
     
     render () {
         const { sneaker, listings } = this.props;
-        // debugger
         if (!sneaker) return null;
         if (!listings) return null;
         return (

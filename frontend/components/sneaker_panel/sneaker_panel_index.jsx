@@ -9,7 +9,6 @@ class SneakerPanelIndex extends React.Component {
 
     render () {
         const { sneakers } = this.props;
-        // debugger
         return (
         <div className="sneaker-panel">
             <h1 className="thelastdance">THE LAST DANCE COLLECTION</h1>
