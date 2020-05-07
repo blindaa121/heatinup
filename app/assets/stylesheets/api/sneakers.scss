@@ -7,10 +7,10 @@
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
-    margin: 100px auto 30px auto;
+    margin: 60px auto 30px auto;
     width: 1200px;
-    height: 750px;
-    border: 2px solid lightgray;
+    height: 600px;
+    border: 1px solid lightgray;
     border-radius: 2px;
 }
 
@@ -42,7 +42,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 2px solid lightgray;
+    border-right: 1px solid lightgray;
     border-top-left-radius: 50px;
     width: 770px;
     font-size: 25px;
@@ -59,7 +59,7 @@
 }
 
 .shoePane-img {
-    width: 550px;
+    width: 450px;
 }
 
 .rightShoe-pane {
@@ -73,15 +73,16 @@
 }
 
 .rightShoe-pane h1 {
-    font-size: 50px;
-    padding: 20px;
+    font-size: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
     font-family: 'Heebo', sans-serif;
 }
 
 .rightShoe-pane p {
-    font-size: 18px;
+    font-size: 12px;
     color: grey;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.0px;
 }
 
 // LISTING INDEX/ITEMS
@@ -133,14 +134,15 @@
     position: absolute;
     bottom: 0;
     width: 600px;
-    height: 100px;
+    height: 50px;
     background: white;
-    border-top: 2px solid lightgrey;
+    border-top: 1px solid lightgrey;
     border-bottom: none;
     border-left: none;
+    border-right: none;
     padding: 0;
     color: black;
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Arimo', sans-serif;
 }
 
