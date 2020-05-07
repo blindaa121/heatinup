@@ -1,5 +1,5 @@
 class CartItem < ApplicationRecord
-    validates :user_id, :listing_id, presence: true, uniqueness: true
+    validates :user_id, :listing_id, presence: true
 
     belongs_to :listing,
         foreign_key: :listing_id,
