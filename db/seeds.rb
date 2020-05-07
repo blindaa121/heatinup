@@ -1334,6 +1334,20 @@ styles_page = [
         technology: "Air",
         category: "Lifestyle"
     },
+    {
+        name: "Air Jordan 1 Retro High OG 'Banned' 2016",
+        description: "Banned by the NBA in 1985, Michael Jordan was charged $5,000 per game for wearing the Air Jordan 1 ‘Black/Red' because they didn’t include the color white which was part of the Chicago Bulls’ official team colors. Used as a marketing tactic, Nike crafted the ‘Banned’ campaign around the sneakers to launch and promote the Air Jordan line. The sneaker was retroed in 1994, 2011, 2013 and 2016. The 2011 pair featured an ‘X’ on the heel paying homage to the 'Banned' nickname.",
+        release_date: "2016-09-02",
+        sku: "555088 001",
+        brand: "Air Jordan",
+        upper_material: "Leather",
+        main_color: "Black",
+        colorway: "Black/Varsity Red-White",
+        designer: "Peter Moore",
+        silhouette: "Air Jordan 1",
+        technology: "Air",
+        category: "Lifestyle"
+    },
 ]
 
 require 'open-uri'

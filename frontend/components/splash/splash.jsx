@@ -17,11 +17,11 @@ class Splash extends React.Component {
     render() {
         return (
             <div className="splash-container">
-                <img className="air-home" src={window.splashURL}></img>
+                <a href="#/sneakers/94"><img className="air-home" src={window.splashURL}></img></a>
                 {/* <NavBarContainer /> */}
                 <SneakerPanelContainer />
                 <br/>
-                <img className="air-home" src={window.splashFOG}></img>
+                <a href="#/sneakers/64"><img className="air-home" src={window.splashFOG}></img></a>
                 <SneakerPanelContainer2 />
                 <img className="air-home" src={window.splashTEN}></img>
                 <SneakerPanelContainer3 />
