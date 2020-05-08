@@ -34,6 +34,8 @@
     height: 50px;
     width: 300px;
     font-size: 12px;
+    border-left: none;
+    border-bottom: none;
 }
 
 .demo-user:hover {
@@ -109,6 +111,8 @@
     width: 300px;
     height: 50px;
     font-size: 12px;
+    border-right: none;
+    border-bottom: none;
 }
 
 .session-submit:focus {
@@ -141,6 +145,6 @@
     // height: 800px;
 }
 
-img {
-    width: 500px;
+.bred_login {
+    width: 475px;
 }

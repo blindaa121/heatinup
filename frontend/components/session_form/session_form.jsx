@@ -29,6 +29,10 @@ class SessionForm extends React.Component {
       this.setState({ username: 'demo_user', password: 'password' })
    }
 
+   componentWillUnmount() {
+      dispatch(this.props.clearErrors());
+   }
+
    renderErrors() {
       return (
          <ul className="error">
@@ -47,7 +51,7 @@ class SessionForm extends React.Component {
          <div className='outer-div'>
 
             <div className="shoe_pane">
-               <img src={window.bredURL} alt="bred"></img>
+               <img className ="bred_login" src={window.bredURL} alt="bred"></img>
             </div>
 
             <div className="session-form-container">
