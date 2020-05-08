@@ -58,7 +58,7 @@ end
 
 ## Listings 
 One of the main features of HEAT is to allow the user to view available sizes for a particular sneaker. Each listing would simply encompass and present their size and price, once the user clicks on the 'Buy Now' button. In order to achieve this, I needed to keep track of the local state of the Sneaker Show Component. 
-By creating a showListings function, which changed the local boolean state, I was able to provide the 'Buy Now' functionality to trigger and render the Listings Index Component. Since the goal to accomplish was to render the Listings Index Component within the same div element containing the SneakerShowComponent, I implemented the CSS overflow property to properly format the index and allow the user to scroll through listings.
+By creating a showListings function, which changed the local boolean state, I was able to provide the 'Buy Now' functionality to trigger and render the Listings Index Component. The main goal was to render the Listings Index Component within the same div element containing the SneakerShowComponent. This was accomplished by implementing the CSS overflow property to adequately format the index, allowing the user to scroll through listings.
 
 ```
 constructor(props) {
