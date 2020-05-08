@@ -1361,7 +1361,6 @@ styles_page.each { |sneaker| Sneaker.create!(sneaker) }
 Sneaker.all.each do |sneaker|
   sku = sneaker[:sku].split(" ").join("")
   photo = open("https://sneaker-photos.s3-us-west-1.amazonaws.com/#{sku}.jpg")
-
   sneaker.photo.attach(
     io: photo, 
     filename: "#{sku}.jpg"
