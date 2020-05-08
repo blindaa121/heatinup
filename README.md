@@ -6,7 +6,7 @@ Inspired by GOAT, HEAT is a global e-commerce service that allows sneaker enthus
 
 [Link to HEAT](https://heat-check.herokuapp.com/#/)
 
-# Technologies Used:
+# Technologies
 * React/Redux
 * HTML
 * CSS
