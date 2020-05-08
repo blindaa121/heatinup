@@ -7,7 +7,8 @@ class SneakerIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchSneakers()
+        this.props.fetchSneakers();
+        window.scrollTo(0, 0);
     }
 
     render () {
@@ -17,7 +18,8 @@ class SneakerIndex extends React.Component {
 
         return (
             <div className="outerSneakerdiv">
-                <h1>Shop All</h1>
+                <span className="collection-header">OFF-WHITE</span>
+                <p className="collection-description">Using RECONSTRUCT and GHOSTING approaches, Virgil shook the sneaker culture with his groundbreaking collaboration with Nike.</p>
                 <div className='show-all'>
                     {sneakers.map(sneaker => <SneakerIndexItem key={sneaker.id} sneaker={sneaker} />)} 
                 </div>

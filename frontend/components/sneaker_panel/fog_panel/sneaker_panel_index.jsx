@@ -11,13 +11,16 @@ class SneakerPanelIndex3 extends React.Component {
         const { sneakers } = this.props;
         return (
         <div className="sneaker-panel">
+
                 <div className="sneaker-panel-header">
                     <h1 className="thelastdance">FEAR OF GOD COLLECTION</h1>
                     <Link to="/collections/fog" className='see-all'>See All</Link>
                 </div>
+
                 <div className="sneaker-panel-items">
                         {sneakers.map(sneaker => <SneakerPanelIndexItem key={sneaker.id} sneaker={sneaker} />)}
-                </div>      
+                </div> 
+                     
         </div>
         )
     }
