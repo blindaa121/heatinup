@@ -7,43 +7,56 @@
     display: flex;
     justify-content: center;
     padding-top: 200px;
-    border: 2px sold lightgrey;
+    padding-left: 120px;
+    padding-bottom: 70px;
+    height: 686px;
+    width: 1200px;
+    border: 1px sold lightgrey;
 }
 
 .session-form-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // margin: 0px auto 30px auto;
-    width: 500px;
-    height: 800px;
-    border: 2px solid lightgray;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    width: 600px;
+    border: 1px solid lightgray;
+    border-top-right-radius: 3px;
+}
+
+.session-buttons {
+    display: flex;
+    align-items: center;
 }
 
 .demo-user {
-    height: 45px;
-    width: 500px;
-    font-size: 15px;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.demo-user:hover {
+    text-decoration: underline;
 }
 
 .login-form-box {
-    width: 500px;
+    width: 600px;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    padding-left: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-bottom: 20px;
 }
 
 .login-input {
     border: none;
-    border-bottom: 2px solid black;
-    width: 85%;
+    border-bottom: 1px solid black;
+    width: 100%;
     height: 25px;
     font-size: 20px;
     text-decoration: none;
@@ -53,24 +66,29 @@
     outline: none;
 }
 
-label > .username .password {
-    font-size: 20px;
+.username {
+    color: grey
+}
+
+.password {
+    color: grey
 }
 
 .sessionHeader {
-    margin: 100px 50px 100px 50px;
+    font-family: 'Heebo', sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    padding: 100px 50px 60px 50px;
+    font-size: 24px;
     text-align: center;
     line-height: 1.5;
-    letter-spacing: 4px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .sessionLink {
     text-align: center;
-    margin-top: 90px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 170px;
     text-decoration: none;
 }
 
@@ -88,11 +106,9 @@ label > .username .password {
 .session-submit {
     background-color: black;
     color: white;
-    width: 500px;
-    height: 100px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 22px
+    width: 300px;
+    height: 50px;
+    font-size: 12px;
 }
 
 .session-submit:focus {
@@ -117,14 +133,14 @@ label > .username .password {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     border-right: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 500px;
-    height: 800px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 600px;
+    // height: 800px;
 }
 
 img {
-    width: 325px;
+    width: 500px;
 }
