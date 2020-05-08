@@ -10,6 +10,8 @@ import SneakersContainer from './sneakers/sneakers_container'
 import Styles from './styles/styles'
 import ListingsContainer from './listings/listing_container'
 import CollectionContainer1 from './collections/the_last_dance/sneakers_container'
+import CollectionContainer2 from './collections/fear_of_god/sneakers_container'
+import CollectionContainer3 from './collections/off_white/sneakers_container'
 
 const App = () => (
     <div>
@@ -18,6 +20,8 @@ const App = () => (
             {/* <Route path="sneakers/:sneakerId/listings/:listingId" component={ListingsItemContainer} /> */}
             <Route path="/sneakers/:sneakerId/listings/" component={ListingsContainer} />
             <Route path='/collections/thelastdance' component={CollectionContainer1} />
+            <Route path='/collections/fog' component={CollectionContainer2} />
+            <Route path='/collections/offwhite' component={CollectionContainer3} />
             <Route path='/sneakers/:sneakerId' component={SneakerShowContainer} />
             <Route path='/sneakers' component={SneakersContainer} />
             <Route path='/styles' component={Styles} />

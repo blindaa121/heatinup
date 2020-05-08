@@ -25,6 +25,26 @@
 
 /*Sneaker Panel*/
 
+.sneaker-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.see-all {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 14px 57px 14px 57px;
+}   
+
+.see-all:hover {
+    text-decoration: underline;
+}
+
 .thelastdance {
     margin: 75px 0px 75px 0px;
     font-family: 'Heebo', sans-serif;
