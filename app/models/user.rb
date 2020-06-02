@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
     has_many :cart_items,
         foreign_key: :user_id,
-        class_name: :Cart
+        class_name: :CartItem
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

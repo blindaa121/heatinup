@@ -13,7 +13,12 @@ const receiveListing = listing => ({
     listing
 })
 
-export const fetchListings = sneakerId => dispatch => {
+export const fetchListings = sneakerId => dispatch => (
     ListingAPIUtil.fetchListings(sneakerId)
         .then(listings => dispatch(receiveListings(listings)))
-}
+);
+
+export const fetchListing = (sneakerId, listingId) => dispatch => (
+    ListingAPIUtil.fetchListing(sneakerId, listingId)
+        .then(listing => dispatch(receiveListing(listing)))
+)

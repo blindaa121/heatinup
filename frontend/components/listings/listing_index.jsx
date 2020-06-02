@@ -1,23 +1,25 @@
 import React from 'react';
 import ListingIndexItem from './listing_index_item';
-
+import { Link } from 'react-router-dom';
 class ListingIndex extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render () {
-        const { sneaker, listings } = this.props;
+        const { listings, sneaker } = this.props;
+        // console.log(sneaker.id)
         return (
             <div className='listing-container'>
                 <div className='listings-header'>
                     <span>Buy New</span> 
                     <h1>US Sizes</h1>
+                    {/* <Link to={`#/sneakers/${sneaker.id}`}>X</Link> */}
                 </div>
                 
                 {
                     listings.map(listing => (
-                    <ListingIndexItem key={listing.id} listing={listing} />))
+                    <ListingIndexItem key={listing.id} listing={listing} sneaker={sneaker}/>))
                 }
             </div>
         )

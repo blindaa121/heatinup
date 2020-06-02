@@ -2,7 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import SneakerShowContainer from './sneaker_show_container';
 import SneakerDetails from './sneaker_details';
-import ListingIndexContainer from '../listings/listing_container'
+import ListingIndexContainer from '../listings/listing_container';
+import ListingDetailContainer from '../listings/listing_details_container';
 import { Link } from 'react-router-dom';
 
 class SneakerShow extends React.Component {
@@ -39,7 +40,7 @@ class SneakerShow extends React.Component {
 
                     <div className='rightShoe-pane'>
                             {
-                            this.state.showListings ? <ListingIndexContainer listings={listings}/> : 
+                            this.state.showListings ? <ListingIndexContainer listings={listings} sneaker={sneaker}/> : 
                                 (
                                     <div>
                                         <h1>{sneaker.name}</h1>
@@ -59,6 +60,7 @@ class SneakerShow extends React.Component {
                     </div>
 
                     <SneakerDetails sneaker={sneaker}/>
+                    <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
             </div>
             
         ) 
