@@ -32,5 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dispatch = store.dispatch
     window.fetchSneakers = fetchSneakers
     window.fetchSneaker = fetchSneaker
+    window.signout = signout
 });
 
