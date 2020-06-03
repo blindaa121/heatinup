@@ -166,8 +166,14 @@
     width: 1200px;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Heebo', sans-serif;
+}
+
+#releaseDate, #sku, #brand, #upper-material, #main-color,
+#colorway {
+    // width: 120px;
+    height: 60px;
 }
 
 .sneaker-details p {
@@ -199,6 +205,7 @@
     width: 935px;
     // margin-left: 100px;
     padding-right: 380px;
+    padding-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
