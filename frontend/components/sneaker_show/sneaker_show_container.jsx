@@ -3,7 +3,6 @@ import SneakerShow  from './sneaker_show'
 import { fetchSneaker } from '../../actions/sneakers_actions' 
 
 const mSTP = (state, ownProps) => {
-    console.log(ownProps)
     return (
 
         {sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],

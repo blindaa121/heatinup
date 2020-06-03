@@ -8,7 +8,6 @@ class ListingIndex extends React.Component {
 
     render () {
         const { listings, sneaker } = this.props;
-        // console.log(sneaker.id)
         return (
             <div className='listing-container'>
                 <div className='listings-header'>
