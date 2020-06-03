@@ -15,12 +15,23 @@
     align-items: center;
     margin-left: 95px;
     margin-right: 95px;
-    font-size: 10px;
-    font-family: 'Heebo';
+    font-size: 11px;
+    font-family: 'Arimo';
     text-transform: uppercase;
     border-bottom: 1px solid grey;
     height: 50px;
     
+}
+
+.listing-item {
+    margin-top: 30px;
+    border-top: 1px solid grey;
+}
+
+.listing-cat {
+    letter-spacing: 1.5px;
+    color: black;
+    font-size: 11px;
 }
 
 .listing-price > h3 {

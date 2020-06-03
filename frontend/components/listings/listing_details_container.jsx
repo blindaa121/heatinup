@@ -9,7 +9,8 @@ const mSTP = (state, ownProps) => {
     return ({
         listings: Object.values(state.entities.listings),
         listing: state.entities.listings[ownProps.match.params.listingId],
-        sneaker: state.entities.sneakers[ownProps.match.params.sneakerId]
+        sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
+        currentUser: state.entities.users[state.session.currentUserId]
     })
 }
 

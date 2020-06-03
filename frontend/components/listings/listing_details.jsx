@@ -7,7 +7,7 @@ class ListingDetails extends React.Component {
     }
 
     render() {
-        const { sneaker, listing } = this.props;
+        const { sneaker, listing, currentUser } = this.props;
         if (!sneaker) return null;
         if (!listing) return null;
         return (
@@ -29,35 +29,35 @@ class ListingDetails extends React.Component {
                             </div>
 
                             <div className='listing-item'>
-                                <span>Item </span>
+                                <span className='listing-cat'>Item </span>
                                 <span>{sneaker.name}</span> 
                             </div>
 
                             <div className='listing-sz'>
-                                <span>Size</span> 
+                                <span className='listing-cat'>Size</span> 
                                 <span>{listing.size}</span>
                                 
                             </div>
 
                             <div className='listing-condition'>
-                                <span>Condition</span> 
+                                <span className='listing-cat'>Condition</span> 
                                 <span>New</span>
                             </div>
 
                             <div className='listing-box-condition'>
-                                <span>Box</span> Good Condition
+                                <span className='listing-cat'>Box</span>
+                                <span>Good Condition</span>
+                                
                             </div>
 
-                          
-                    
-                            
-                            
-                            
-                            
                         </div>
                        
+                        {
+                            currentUser ? <button onClick={() => this.handleClick()} className='buy-new-btn'>Check Out</button> : (
+                                <button onClick={() => this.handleClick()} className='buy-new-btn'>Sign In</button>
+                            )
+                        }
                         
-                        <button onClick={() => this.handleClick()} className='buy-new-btn'>Check Out</button>
                     </div>
 
                 </div>
