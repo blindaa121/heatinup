@@ -1,3 +1,30 @@
 // Place all the styles related to the api/listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.listing-details {
+    display: flex;
+    flex-direction: column;
+    // width: 450px;
+}
+
+.listing-item, .listing-sz, .listing-condition,
+.listing-box-condition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 95px;
+    margin-right: 95px;
+    font-size: 10px;
+    font-family: 'Heebo';
+    text-transform: uppercase;
+    border-bottom: 1px solid grey;
+    height: 50px;
+    
+}
+
+.listing-price > h3 {
+    color: grey;
+    font-size: 10px;
+    text-transform: uppercase;
+}

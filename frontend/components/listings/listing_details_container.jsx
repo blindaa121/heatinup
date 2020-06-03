@@ -5,7 +5,7 @@ import { fetchSneaker } from '../../actions/sneakers_actions';
 
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return ({
         listings: Object.values(state.entities.listings),
         listing: state.entities.listings[ownProps.match.params.listingId],

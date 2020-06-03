@@ -6,14 +6,8 @@ class ListingDetails extends React.Component {
         super(props);
     }
 
-    // componentDidMount() {
-    //     this.props.fetchListing(sneaker.id, listsings)
-    // }
-
     render() {
         const { sneaker, listing } = this.props;
-
-        debugger
         if (!sneaker) return null;
         if (!listing) return null;
         return (
@@ -26,8 +20,44 @@ class ListingDetails extends React.Component {
                     </div>
 
                     <div className='rightShoe-pane'>
-                        {listing.price} {listing.size}
-                        <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
+                        <div className='listing-details'>
+
+                            <div className='listing-price'>
+                                <h3>Lowest Price</h3>
+                                <br/>
+                                <span>${listing.price}</span>
+                            </div>
+
+                            <div className='listing-item'>
+                                <span>Item </span>
+                                <span>{sneaker.name}</span> 
+                            </div>
+
+                            <div className='listing-sz'>
+                                <span>Size</span> 
+                                <span>{listing.size}</span>
+                                
+                            </div>
+
+                            <div className='listing-condition'>
+                                <span>Condition</span> 
+                                <span>New</span>
+                            </div>
+
+                            <div className='listing-box-condition'>
+                                <span>Box</span> Good Condition
+                            </div>
+
+                          
+                    
+                            
+                            
+                            
+                            
+                        </div>
+                       
+                        
+                        <button onClick={() => this.handleClick()} className='buy-new-btn'>Check Out</button>
                     </div>
 
                 </div>
