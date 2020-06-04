@@ -161,7 +161,7 @@
     border: none;
 }
 
-.buy-new-btn > button:hover {
+.buy-new-btn:hover, .buy-new-btn > button:hover {
     text-decoration: underline;
     cursor: pointer;
 }
