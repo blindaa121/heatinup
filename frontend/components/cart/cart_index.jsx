@@ -11,8 +11,8 @@ class CartIndex extends React.Component {
     }
 
     render() {
-        const { cartItems } = this.props;
-        
+        const { cartItems, deleteCartItem } = this.props;
+
         return (
         <div className='outer-sneakerComponent'>
             <div className='sneakerComponent'>
@@ -21,20 +21,17 @@ class CartIndex extends React.Component {
                     <div className='cart-items'>
                         <h1>Cart Items</h1>
                         {
-                        cartItems.map(cartItem => (
-                            <CartIndexItem cartItem={cartItem} key={cartItem.id} />
-                        ))
+                            cartItems.map(cartItem => (<CartIndexItem cartItem={cartItem} deleteCartItem={deleteCartItem} key={cartItem.id} />))
                         }
                     </div>
                 </div>
 
                 <div className='rightShoe-pane'>
-    
-                                <div>
-                                    <h1>Order Summary</h1>
-                                    <br />
-                                    <p></p>
-                                </div>
+                    <div>
+                        <h1>Order Summary</h1>
+                        <br />
+                        <p></p>
+                    </div>
                     <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
                 </div>
 

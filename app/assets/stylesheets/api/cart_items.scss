@@ -3,7 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .cart-items {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: auto;
     width: 600px;
+    font-size: 14px;
+}
+
+.cart-img {
+    width: 125px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid grey;
+    width: 500px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
