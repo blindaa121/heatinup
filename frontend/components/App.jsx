@@ -14,6 +14,7 @@ import ListingDetailsContainer from './listings/listing_details_container'
 import CollectionContainer1 from './collections/the_last_dance/sneakers_container'
 import CollectionContainer2 from './collections/fear_of_god/sneakers_container'
 import CollectionContainer3 from './collections/off_white/sneakers_container'
+import CartContainer from './cart/cart_index_container'
 
 const App = () => (
     <div>
@@ -30,6 +31,7 @@ const App = () => (
             <AuthRoute path='/signup' component={SignUpFormContainer} />
             <AuthRoute path='/login' component={LogInFormContainer} />
             <Route exact path="/" component={SplashContainer} />
+            <ProtectedRoute path='/cart' component={CartContainer} />
             {/* <Route path='*' component={SplashContainer} /> */}
         </Switch>
     </div>

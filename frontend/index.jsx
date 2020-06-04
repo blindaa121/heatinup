@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom'
 import { signin, signout, signup } from './actions/session_actions'
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchSneakers } from './actions/sneakers_actions'
-import { fetchSneaker } from './actions/sneakers_actions'
-import { fetchListings } from './actions/listings_actions'
-import { fetchListing } from './actions/listings_actions'
+import { fetchSneaker, fetchSneakers } from './actions/sneakers_actions';
+import { fetchListings, fetchListing } from './actions/listings_actions';
+import { fetchCart, addCartItem, deleteCartItem } from './actions/cart_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -30,8 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.store = store 
     window.getState = store.getState
     window.dispatch = store.dispatch
+
+    // SNEAKER ACTIONS
     window.fetchSneakers = fetchSneakers
     window.fetchSneaker = fetchSneaker
     window.signout = signout
+    
+    // CART ACTIONS
+    window.fetchCart = fetchCart 
+    window.addCartItem = addCartItem 
+    window.deleteCartItem = deleteCartItem
 });
 

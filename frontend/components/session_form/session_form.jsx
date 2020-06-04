@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
 
             <div className="session-form-container">
                <h1 className="sessionHeader">{this.props.formType === 'login' ? "Log In" : "Create An Account" }</h1>
-                  <form class='session-form' onSubmit={this.handleSubmit}>
+                  <form className='session-form' onSubmit={this.handleSubmit}>
                      <br />
                      {this.renderErrors()}
 

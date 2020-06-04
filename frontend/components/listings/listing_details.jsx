@@ -1,9 +1,26 @@
 import React from 'react';
 import SneakerDetails from '../sneaker_show/sneaker_details'
+import { addCartItem } from '../../actions/cart_actions';
+import { Redirect } from 'react-router-dom';
 
 class ListingDetails extends React.Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    
+    componentDidMount() {
+        this.props.fetchSneaker(this.props.match.params.sneakerId)
+    }
+    
+    handleClick() {
+        let cartItem = {
+            user_id: this.props.currentUser.id,
+            listing_id: this.props.match.params.listingId
+        }
+        // debugger
+        this.props.addCartItem(cartItem);
+        this.props.fetchCart();
     }
 
     render() {
@@ -53,7 +70,7 @@ class ListingDetails extends React.Component {
                         </div>
                        
                         {
-                            currentUser ? <button onClick={() => this.handleClick()} className='buy-new-btn'>Check Out</button> : (
+                            currentUser ? <a className='buy-new-btn' href="#/cart"><button onClick={() => this.handleClick()}>Add to Cart</button></a> : (
                                 <button onClick={() => this.handleClick()} className='buy-new-btn'>Sign In</button>
                             )
                         }

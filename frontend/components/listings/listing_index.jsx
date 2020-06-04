@@ -18,7 +18,10 @@ class ListingIndex extends React.Component {
                 
                 {
                     listings.map(listing => (
-                    <ListingIndexItem key={listing.id} listing={listing} sneaker={sneaker}/>))
+                    <a href={`#/sneakers/${sneaker.id}/listings/${listing.id}`}>
+                        <ListingIndexItem key={listing.id} listing={listing} sneaker={sneaker}/>
+                    </a>
+                    ))
                 }
             </div>
         )

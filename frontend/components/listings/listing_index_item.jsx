@@ -8,16 +8,13 @@ const ListingIndexItem = ({ listing, sneaker }) => {
       
     return (
         <div className='listing-items'>
-
-                <div className='listing-size'>
-                    <a href={`#/sneakers/${sneaker.id}/listings/${listing.id}`}>{listing.size}</a>
-                </div>
-                
-                <div className='listing-price'>
-                    ${listing.price}
-                </div>
-            
-            
+                    <div className='listing-size'>
+                        {listing.size}
+                    </div>
+                    
+                    <div className='listing-price'>
+                        ${listing.price}
+                    </div>         
             <Route path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
         </div>
     )

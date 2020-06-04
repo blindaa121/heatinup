@@ -5,7 +5,7 @@ import { fetchListings } from '../../actions/listings_actions';
 
 const mSTP = (state, ownProps) => {
     return ({
-        listings: Object.values(state.entities.listings)
+        listings: Object.values(state.entities.listings),
     })
 }
 
