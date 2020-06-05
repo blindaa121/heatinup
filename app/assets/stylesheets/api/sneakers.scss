@@ -257,3 +257,19 @@
 .sneakerItem img {
     width: 150px;
 }
+
+
+//SEARCH
+
+.search-input {
+    border: none;
+    width: 500px;
+    height: 60px;
+    font-size: 60px;
+    font-family: 'Arimo';
+    border-bottom: 1px solid black;
+}
+
+.search-input:focus {
+    outline: none;
+}
