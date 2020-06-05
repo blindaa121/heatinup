@@ -29,7 +29,7 @@ class CartIndex extends React.Component {
                 <div className='rightCart-pane'>
                     <div className='order-summary'>
                         <h1 className='order-summary-header'>Order Summary</h1>
-                        <div>
+                        <div className=''>
                          {/* ship to */}
                         </div>
                         <div>

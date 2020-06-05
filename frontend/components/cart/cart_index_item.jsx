@@ -12,9 +12,9 @@ const CartItemIndex = ({ cartItem, deleteCartItem }) => {
                 <span>Size {cartItem.size}</span>
                 <span>${cartItem.price}</span>
 
-                <div className='delete-cart-item'>
+                <li className='delete-cart-list'>
                     <button className='delete-cart-item' onClick={()=>deleteCartItem(cartItem.id)}>X</button>
-                </div>
+                </li>
             </div>
 
         </div>
