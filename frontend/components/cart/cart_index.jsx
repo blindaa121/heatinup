@@ -46,22 +46,29 @@ class CartIndex extends React.Component {
                 <div className='rightCart-pane'>
                     <div className='order-summary'>
                         <h1 className='order-summary-header'>Order Summary</h1>
-                        <div className='order-shipping'>
+                        <div className='order-shipping order-details'>
                          {/* ship to */}
+                            <span>Ship To</span>
+                            <span>750 N King Rd</span>
                         </div>
-                        <div className='order-card-info'>
+                        <div className='order-card-info order-details'>
                          {/* card info */}
+                            <span>Payment</span>
+                            <span>2334</span>
                         </div>
-                        <div className='order-subtotal'>
-                        {
-                            subTotal + 10
-                        }
+                        <div className='order-subtotal order-details'>
+                            <span>Subtotal</span>
+                            <span>${subTotal}</span>
                         </div>
-                        <div className='order-shipping'>
+                        <div className='order-shipping order-details'>
                          {/* shipping */}
+                            <span>Shipping</span>
+                            <span>$12</span>
                         </div>
-                        <div className='order-total'>
+                        <div className='order-total order-details'>
                          {/* total */}
+                            <span>Total</span>
+                            <span>${subTotal + 12}</span>
                         </div>
                     </div>
                     {/* <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button> */}
