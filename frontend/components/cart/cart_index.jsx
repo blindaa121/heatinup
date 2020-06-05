@@ -21,7 +21,7 @@ class CartIndex extends React.Component {
         const { cartItems, deleteCartItem, subTotal } = this.props;
      
         return (
-        <div className='outer-sneakerComponent'>
+        <div className='outer-sneakerComponent outer-cartComponent'>
             <div className='sneakerComponent'>
 
                 <div className='leftCart-pane'>
@@ -49,12 +49,17 @@ class CartIndex extends React.Component {
                         <div className='order-shipping order-details'>
                          {/* ship to */}
                             <span>Ship To</span>
-                            <span>750 N King Rd</span>
+                            <span>3960 Landmark St, Culver City</span>
                         </div>
                         <div className='order-card-info order-details'>
                          {/* card info */}
                             <span>Payment</span>
-                            <span>2334</span>
+                                <span>
+                                    <i className="payment fab fa-cc-paypal"></i>
+                                    <i className="payment fab fa-cc-apple-pay"></i>
+                                    <i className="payment far fa-credit-card"></i>
+                                    2324
+                                </span>
                         </div>
                         <div className='order-subtotal order-details'>
                             <span>Subtotal</span>
@@ -89,9 +94,6 @@ class CartIndex extends React.Component {
                 </div>
 
             </div>
-
-            {/* <SneakerDetails sneaker={sneaker} />
-            <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} /> */}
         </div>
     ) 
 }

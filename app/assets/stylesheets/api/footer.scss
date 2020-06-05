@@ -1,0 +1,22 @@
+.footer-icon {
+    color: white;
+    width: 75px;
+    transition: .3s;
+}
+
+.footer-icon:hover {
+    color: grey;
+    transform: scale(1.1);
+}
+
+// .fa-linkedin, .fa-github {
+//     width: 75px;
+// }
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 175px;
+}

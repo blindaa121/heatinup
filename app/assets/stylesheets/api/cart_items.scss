@@ -191,10 +191,19 @@
     display: flex;
     justify-content: space-between;
     font-family: 'Arimo';
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     border-bottom: 1px solid grey;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.payment {
+    width: 25px;
+}
+
+.outer-cartComponent {
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
 }
