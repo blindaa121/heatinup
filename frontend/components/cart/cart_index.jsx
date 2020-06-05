@@ -54,7 +54,7 @@ class CartIndex extends React.Component {
                         </div>
                         <div className='order-subtotal'>
                         {
-                            subTotal
+                            subTotal + 10
                         }
                         </div>
                         <div className='order-shipping'>
