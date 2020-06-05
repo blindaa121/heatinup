@@ -64,15 +64,17 @@ class ListingDetails extends React.Component {
                             <div className='listing-box-condition'>
                                 <span className='listing-cat'>Box</span>
                                 <span>Good Condition</span>
-                                
                             </div>
 
+                            <span className='cancel-btn'>
+                                <a className='cancel-btn' href={`#/sneakers/${sneaker.id}`}>Cancel</a>
+                            </span>
                         </div>
                        
                         {
                             currentUser ? <a className='buy-new-btn' href="#/cart"><button onClick={() => this.handleClick()}>Add to Cart</button></a> : (
-                                <a className='buy-new-btn' href="#/login"><button>Sign In</button></a> 
-                            )
+                                                <a className='buy-new-btn' href="#/login"><button>Sign In</button></a> 
+                                            )
                         }
                         
                     </div>

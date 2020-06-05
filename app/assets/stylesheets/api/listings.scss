@@ -39,3 +39,19 @@
     font-size: 10px;
     text-transform: uppercase;
 }
+
+.cancel-btn {
+    text-decoration: none;
+    color: black;
+    font-family: 'Arimo';
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-top: 60px;
+    transition: .3s
+}
+
+.cancel-btn:hover {
+    color: red;
+    text-decoration: underline;
+}
