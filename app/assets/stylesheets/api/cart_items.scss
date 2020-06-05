@@ -27,5 +27,65 @@
 .cart-item-details {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     float: right;
+    text-align: right;
+    font-family: 'Arimo';
+    text-transform: uppercase;
+    font-size: 12px;
+    height: 95px;
+    letter-spacing: 1.5px;
+}
+
+.cart-items-header, .order-summary-header{
+    font-family: 'Arimo';
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid grey;
+    width: 500px;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.leftCart-pane {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    border-right: 1px solid lightgray;
+    border-top-left-radius: 50px;
+    width: 770px;
+    font-size: 25px;
+}
+
+.rightCart-pane {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    text-align: center;
+    width: 770px;
+}
+
+.delete-cart-item {
+    border: none;
+    background-color: white;
+    color: grey;
+    font-family: 'Arimo';
+    text-transform: uppercase;
+    align-self: right;
+    width: 10px;
+}
+
+.cart-icon {
+    color: grey;
+    transition: .5s;
+}
+
+.cart-icon:hover {
+    color: black;
 }

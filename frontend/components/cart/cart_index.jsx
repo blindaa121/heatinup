@@ -17,18 +17,33 @@ class CartIndex extends React.Component {
         <div className='outer-sneakerComponent'>
             <div className='sneakerComponent'>
 
-                <div className='leftShoe-pane'>
+                <div className='leftCart-pane'>
                     <div className='cart-items'>
-                        <h1>Cart Items</h1>
+                        <h1 className='cart-items-header'>Shopping Cart</h1>
                         {
                             cartItems.map(cartItem => (<CartIndexItem cartItem={cartItem} deleteCartItem={deleteCartItem} key={cartItem.id} />))
                         }
                     </div>
                 </div>
 
-                <div className='rightShoe-pane'>
-                    <div>
-                        <h1>Order Summary</h1>
+                <div className='rightCart-pane'>
+                    <div className='order-summary'>
+                        <h1 className='order-summary-header'>Order Summary</h1>
+                        <div>
+                         {/* ship to */}
+                        </div>
+                        <div>
+                         {/* card info */}
+                        </div>
+                        <div>
+                         {/* subtotal */}
+                        </div>
+                        <div>
+                         {/* shipping */}
+                        </div>
+                        <div>
+                         {/* total */}
+                        </div>
                         <br />
                         <p></p>
                     </div>

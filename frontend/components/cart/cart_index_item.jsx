@@ -6,12 +6,15 @@ const CartItemIndex = ({ cartItem, deleteCartItem }) => {
             <div className=''>
                 <a href={`#/sneakers/${cartItem.sneakerId}`}><img className='cart-img' src={cartItem.photoUrl} alt=""/></a>
             </div>
-            <button className='delete-cart-item' onClick={()=>deleteCartItem(cartItem.id)}>Remove</button>
             <div className='cart-item-details'>
                 <span>{cartItem.sneakerName}</span>
-                <span>{cartItem.size}</span>
-                <span>{cartItem.price}</span>
-                <span>{cartItem.sku}</span>
+                <span>SKU {cartItem.sku}</span>
+                <span>Size {cartItem.size}</span>
+                <span>${cartItem.price}</span>
+
+                <div className='delete-cart-item'>
+                    <button className='delete-cart-item' onClick={()=>deleteCartItem(cartItem.id)}>X</button>
+                </div>
             </div>
 
         </div>
