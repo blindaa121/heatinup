@@ -4,6 +4,9 @@ import SneakerIndexItem from './sneakers_index_item';
 class SneakerIndex extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            search: ''
+        }
     }
 
     componentDidMount() {
