@@ -29,7 +29,7 @@ export default ({ currentUser, logout }) => {
                 <Link className='shopall'to="/sneakers">Shop All</Link>
                 <Link className='styles' to="/styles">Styles</Link>
                 <button className="logout" onClick={logout}><a>Logout</a></button>
-                <a className='cart-icon' href="#/cart"><i class="fas fa-shopping-cart"></i></a>
+                <a className='cart-icon' href="#/cart"><i className="fas fa-shopping-cart"></i></a>
             </div>
         </div>
     )

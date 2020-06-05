@@ -18,12 +18,22 @@ class CartIndex extends React.Component {
             <div className='sneakerComponent'>
 
                 <div className='leftCart-pane'>
-                    <div className='cart-items'>
-                        <h1 className='cart-items-header'>Shopping Cart</h1>
-                        {
-                            cartItems.map(cartItem => (<CartIndexItem cartItem={cartItem} deleteCartItem={deleteCartItem} key={cartItem.id} />))
-                        }
+
+                    <div className='cart-items1'>
+
+                        <div className='cart-items'>
+                            <h1 className='cart-items-header'>Shopping Cart</h1>
+                            <h3 className='total-items'>Total Items: {cartItems.length}</h3>
+                        </div>
+
+                        <div className='cart-items-containter'>
+                            {
+                                cartItems.map(cartItem => (<CartIndexItem cartItem={cartItem} deleteCartItem={deleteCartItem} key={cartItem.id} />))
+                            }
+                        </div>
+
                     </div>
+
                 </div>
 
                 <div className='rightCart-pane'>
@@ -47,7 +57,21 @@ class CartIndex extends React.Component {
                         <br />
                         <p></p>
                     </div>
-                    <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
+                    {/* <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button> */}
+                    <div className='network-links'>
+                            <a className='linked-in' href="https://www.linkedin.com/in/bryan-linda-44389794/">
+                                <div className='linked-in-btn'>
+                                LinkedIn
+                                </div>
+                            </a>
+                        
+                            <a className='github' href="https://github.com/blindaa121/heatinup">
+                                <div className='github-btn'>
+                                    GitHub
+                                </div>
+                            </a>
+                    </div>
+
                 </div>
 
             </div>
