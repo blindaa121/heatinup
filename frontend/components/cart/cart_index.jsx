@@ -4,15 +4,22 @@ import CartIndexItem from './cart_index_item';
 class CartIndex extends React.Component {
     constructor(props) {
         super(props)
+        this.subTotal = this.subTotal.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchCart();
     }
 
-    render() {
-        const { cartItems, deleteCartItem } = this.props;
+    subTotal(cost) {
+        let subTotal = 0;
+        return subTotal += cost;
+    }
 
+    render() {
+
+        const { cartItems, deleteCartItem, subTotal } = this.props;
+     
         return (
         <div className='outer-sneakerComponent'>
             <div className='sneakerComponent'>
@@ -39,23 +46,23 @@ class CartIndex extends React.Component {
                 <div className='rightCart-pane'>
                     <div className='order-summary'>
                         <h1 className='order-summary-header'>Order Summary</h1>
-                        <div className=''>
+                        <div className='order-shipping'>
                          {/* ship to */}
                         </div>
-                        <div>
+                        <div className='order-card-info'>
                          {/* card info */}
                         </div>
-                        <div>
-                         {/* subtotal */}
+                        <div className='order-subtotal'>
+                        {
+                            subTotal
+                        }
                         </div>
-                        <div>
+                        <div className='order-shipping'>
                          {/* shipping */}
                         </div>
-                        <div>
+                        <div className='order-total'>
                          {/* total */}
                         </div>
-                        <br />
-                        <p></p>
                     </div>
                     {/* <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button> */}
                     <div className='network-links'>

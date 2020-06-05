@@ -3,9 +3,11 @@ import CartIndex from './cart_index';
 import { fetchCart, addCartItem, deleteCartItem } from '../../actions/cart_actions'
 
 const mSTP = state => {
+    let cartItems = Object.values(state.entities.cartItems)
+    
     return ({
-        cartItems: Object.values(state.entities.cartItems),
-
+        cartItems,
+        subTotal: cartItems.reduce((cnt, o) => (cnt + o.price ), 0)
     })
 }
 
