@@ -3,16 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SneakerItemIndex = ({ sneaker, search }) => {
-
-    if (search !== "" && sneaker.name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
+    if (search !== "" && (sneaker.name.toLowerCase().indexOf(search.toLowerCase()) === -1)) {
         return null;
-    }
+    } 
+    
 
+    
     return (
         <div className='sneakerItem'>
             <a href={`#/sneakers/${sneaker.id}`}><img src={sneaker.photoUrl}/></a>
-            <span>{sneaker.brand}</span>
+            <span className='sneaker-item-brand'>{sneaker.brand}</span>
             <Link className='sneakerLink' to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
+            {/* <span>{sneaker.price}</span> */}
         </div>
     )
 }

@@ -18,7 +18,6 @@ class ListingDetails extends React.Component {
             user_id: this.props.currentUser.id,
             listing_id: this.props.match.params.listingId
         }
-        // debugger
         this.props.addCartItem(cartItem);
         this.props.fetchCart();
     }

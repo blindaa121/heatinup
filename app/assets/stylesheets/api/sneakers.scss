@@ -219,7 +219,7 @@
 .show-all {
     display: grid;
     width: 935px;
-    padding-right: 380px;
+    padding-right: 280px;
     padding-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -232,21 +232,20 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 4rem;
-    width: 200px;
+    padding: 3rem;
+    width: 203px;
     height: 300px;
     border: 1px solid lightgrey;
 }
 
 .sneakerItem:hover {
-    text-decoration: underline;
     border: 1px solid darkslategray;
 }
 
 .sneakerLink {
     text-decoration: none;
     font-family: 'Heebo', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     color: black;
 }
 
@@ -256,6 +255,17 @@
 
 .sneakerItem img {
     width: 150px;
+}
+
+.sneaker-item-brand {
+    font-size: 12px;
+    font-family: 'Heebo';
+    color: grey;
+    text-decoration: none;
+}
+
+.sneaker-item-brand:hover {
+    text-decoration: none;
 }
 
 
@@ -272,7 +282,7 @@
     font-size: 30px;
     font-family: 'Heebo', sans-serif;
     padding-top: 80px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 :focus { 

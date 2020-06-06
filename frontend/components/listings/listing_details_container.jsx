@@ -6,7 +6,6 @@ import { addCartItem, fetchCart } from '../../actions/cart_actions'
 
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return ({
         listings: Object.values(state.entities.listings),
         listing: state.entities.listings[ownProps.match.params.listingId],

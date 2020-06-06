@@ -22,9 +22,7 @@ class SneakerIndex extends React.Component {
         const { search } = this.state;
         const { sneakers } = this.props;
         const { sneaker } = this.props;
-        // debugger
         if (!sneakers) return null;
-
 
         return (
             <div className="outerSneakerdiv">
@@ -32,9 +30,9 @@ class SneakerIndex extends React.Component {
                 
                 <div className='search-container'>
                     <i className="fas fa-search fa-3x"></i>
-                    <div class='col-3'>
+                    <div className='col-3'>
                         <input type='text' className='search-input effect-2' placeholder="TYPE TO SEARCH" onChange={this.onChange}/>
-                        <span class="focus-border"></span>
+                        <span className="focus-border"></span>
                     </div>
                 </div>
                  
