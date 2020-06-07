@@ -296,7 +296,13 @@
     position: relative;
 } /* necessary to give position: relative to parent. */
 
-input[type="text"] {
+.effect-1, 
+.effect-2, 
+.effect-3{  
+    border: 0;
+    padding: 7px 0;
+    width: 470px;
+    height: 50px;
     font-size: 50px;
     font-family: 'Arimo';
     color: #333; width: 100%; 
@@ -305,17 +311,18 @@ input[type="text"] {
     text-transform: uppercase;
 }
 
-.effect-1, 
-.effect-2, 
-.effect-3{  
-    border: 0;
-    padding: 7px 0;
-    width: 470px;
-    height: 50px;
+.effect-2 ~ .focus-border {
+    position: absolute; bottom: 0;
+    left: 50%; width: 0; height: 2px;
+    background-color: #9DC0BC;
+    transition: 0.4s;
 }
 
-.effect-2 ~ .focus-border{position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: #9DC0BC ; transition: 0.4s;}
-.effect-2:focus ~ .focus-border{width: 100%; transition: 0.4s; left: 0;}
+.effect-2:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
 
 ::placeholder {
     color: lightgrey;
