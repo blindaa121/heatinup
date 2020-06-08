@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default ({ currentUser, logout }) => {
     const loggedOutNav = () => (
@@ -8,11 +8,12 @@ export default ({ currentUser, logout }) => {
                 <Link className="logo" to="/">H E A T</Link>
             </div>
             <div className='links'>
-                <Link className="sneakers" to="/">Discover</Link>
-                <Link className="styles" to="/styles">Styles</Link>
-                <Link className="signup" to="/signup">Sign Up</Link>
-                <Link className="login" to="/login">Log In</Link>
-                <a href="#/sneakers"><i className="fas fa-search nav-search"></i></a>
+                <NavLink exact activeStyle={{ textDecoration: 'underline', color: 'black' }} className="sneakers" to="/">Discover</NavLink>
+                <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="styles" to="/styles">Styles</NavLink>
+                <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="signup" to="/signup">Sign Up</NavLink>
+                <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="login" to="/login">Log In</NavLink>
+                {/* <a href="#/sneakers"><i className="fas fa-search nav-search"></i></a> */}
+                <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} to="/sneakers"><i className="fas fa-search nav-search"></i></NavLink>
             </div>
         </div>
     )
@@ -25,8 +26,8 @@ export default ({ currentUser, logout }) => {
             </div>
 
             <div className='links'>
-                <Link className='sneakers' to="/">Discover</Link>
-                <Link className='styles' to="/styles">Styles</Link>
+                <NavLink exact activeStyle={{ textDecoration: 'underline', color: 'black' }} className="sneakers" to="/">Discover</NavLink>
+                <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="styles" to="/styles">Styles</NavLink>
                 <button className="logout" onClick={logout}><a>Logout</a></button>
                 <a className='cart-icon' href="#/cart"><i className="fas fa-shopping-cart"></i></a>
                 <a className='nav-search' href="#/sneakers"><i className="fas fa-search"></i></a>
