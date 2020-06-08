@@ -8,11 +8,11 @@ export default ({ currentUser, logout }) => {
                 <Link className="logo" to="/">H E A T</Link>
             </div>
             <div className='links'>
-                <Link className="sneakers" to="/">Sneakers</Link>
-                <Link className="shopall" to="/sneakers">Shop All</Link>
+                <Link className="sneakers" to="/">Discover</Link>
                 <Link className="styles" to="/styles">Styles</Link>
                 <Link className="signup" to="/signup">Sign Up</Link>
                 <Link className="login" to="/login">Log In</Link>
+                <a href="#/sneakers"><i className="fas fa-search nav-search"></i></a>
             </div>
         </div>
     )
@@ -25,11 +25,11 @@ export default ({ currentUser, logout }) => {
             </div>
 
             <div className='links'>
-                <Link className='sneakers' to="/">Sneakers</Link>
-                <Link className='shopall'to="/sneakers">Shop All</Link>
+                <Link className='sneakers' to="/">Discover</Link>
                 <Link className='styles' to="/styles">Styles</Link>
                 <button className="logout" onClick={logout}><a>Logout</a></button>
                 <a className='cart-icon' href="#/cart"><i className="fas fa-shopping-cart"></i></a>
+                <a className='nav-search' href="#/sneakers"><i className="fas fa-search"></i></a>
             </div>
         </div>
     )

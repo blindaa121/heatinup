@@ -29,7 +29,7 @@ class SneakerIndex extends React.Component {
                 <span className="shop-all">Shop All</span>
                 
                 <div className='search-container'>
-                    <i className="fas fa-search fa-3x"></i>
+                    <i className="fas fa-search fa-3x sneaker-search"></i>
                     <div className='col-3'>
                         <input type='text' className='search-input effect-2' placeholder="TYPE TO SEARCH" onChange={this.onChange}/>
                         <span className="focus-border"></span>
