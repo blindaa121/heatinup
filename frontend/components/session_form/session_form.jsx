@@ -85,8 +85,19 @@ class SessionForm extends React.Component {
                      <p className='sessionLink'>{this.props.navLink}</p>
 
                      <div className="session-buttons">
-                        <input className="session-submit" type="submit" value={this.props.formType === 'login' ? "LOG IN" : "SIGN UP"} />
-                        <button className='demo-user' onClick={() => this.demoUser()}>DEMO USER</button>
+                        <input className={this.props.formType === 'login' ? "session-submit" : "sign-up-btn"}
+                               type="submit"
+                               value={this.props.formType === 'login' ? "LOG IN" : "SIGN UP"}
+                        />
+                        
+                        {
+                           this.props.formType === 'login' ? (
+                              <button className='demo-user' onClick={() => this.demoUser()}>DEMO USER</button>
+                           ) : (
+                              null
+                           )
+                        }
+                        
                      </div>
                      
                   </form>

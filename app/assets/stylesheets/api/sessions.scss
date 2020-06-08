@@ -38,6 +38,7 @@
 
 .demo-user:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .demo-user:focus {
@@ -117,12 +118,28 @@
     border-bottom: none;
 }
 
+.sign-up-btn {
+    background-color: black;
+    color: white;
+    width: 600px;
+    height: 50px;
+    font-size: 12px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.sign-up-btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .session-submit:focus {
     outline: none;
 }
 
 .session-submit:hover {
     text-decoration: underline;
+    cursor: pointer;
     color: white;
 }
 
