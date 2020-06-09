@@ -19,3 +19,11 @@ export const removeCartItem = id => (
         method: 'DELETE'
     })
 )
+
+export const updateCartItem = cartItem => (
+    $.ajax({
+        url: `/api/cart_items/${cartItem.id}`,
+        method: 'PATCH',
+        data: { cartItem }
+    })
+)
