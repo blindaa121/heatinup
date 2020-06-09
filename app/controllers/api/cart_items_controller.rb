@@ -10,6 +10,16 @@ class Api::CartItemsController < ApplicationController
         end 
     end 
 
+    def update 
+        @cart_item = CartItem.find_by(id: params[:id])
+
+        if @cart_item.update(cart_item_params)
+            render :show
+        else
+            render json: @report.errors.full_messages, status: 422
+        end
+    end
+
     def index 
         @cart_items = current_user.cart_items
         render :index
