@@ -3,17 +3,11 @@ import CartIndexItem from './cart_index_item';
 
 class CartIndex extends React.Component {
     constructor(props) {
-        super(props)
-        this.subTotal = this.subTotal.bind(this)
+        super(props);
     }
 
     componentDidMount() {
         this.props.fetchCart();
-    }
-
-    subTotal(cost) {
-        let subTotal = 0;
-        return subTotal += cost;
     }
 
     render() {

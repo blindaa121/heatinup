@@ -5,7 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { fetchSneaker, fetchSneakers } from './actions/sneakers_actions';
 import { fetchListings, fetchListing } from './actions/listings_actions';
-import { fetchCart, addCartItem, deleteCartItem } from './actions/cart_actions';
+import { fetchCart, addCartItem, deleteCartItem, updateCartItem } from './actions/cart_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -39,5 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.fetchCart = fetchCart 
     window.addCartItem = addCartItem 
     window.deleteCartItem = deleteCartItem
+    window.updateCartItem = updateCartItem
 });
 
