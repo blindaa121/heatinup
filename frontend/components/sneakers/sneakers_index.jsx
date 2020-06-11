@@ -12,6 +12,7 @@ class SneakerIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchSneakers()
+        window.scrollTo(0,0)
     }
 
     onChange(e) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import CartIndexItem from './cart_index_item';
+import SneakerPanelIndex from '../sneaker_panel/random_panel/sneaker_panel_container'
 
 class CartIndex extends React.Component {
     constructor(props) {
@@ -84,10 +85,11 @@ class CartIndex extends React.Component {
                                 </div>
                             </a>
                     </div>
-
                 </div>
 
             </div>
+            <div style={{borderTop: "1px solid lightgrey", width: "100%", marginTop: "40px"}} className='cart-border'></div>
+            <SneakerPanelIndex />
         </div>
     ) 
 }

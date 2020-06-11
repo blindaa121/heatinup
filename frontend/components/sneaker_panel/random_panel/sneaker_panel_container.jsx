@@ -1,0 +1,23 @@
+import React from 'react'; 
+import { connect } from 'react-redux';
+import SneakerPanelIndex from './sneaker_panel_index'
+import { fetchSneakers } from '../../../actions/sneakers_actions'
+
+
+const mSTP = state => {
+    const shuffled = Object.values(state.entities.sneakers).sort(function () { return .5 - Math.random() });
+    
+    return ({
+        sneakers: Object.values(state.entities.sneakers).slice(0,5),
+        randomSneakers: shuffled.slice(0, 5)
+    })
+
+}
+
+
+
+const mDTP = dispatch => ({
+    fetchSneakers: () => dispatch(fetchSneakers())
+})
+
+export default connect(mSTP, mDTP)(SneakerPanelIndex)
