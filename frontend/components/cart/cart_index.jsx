@@ -9,6 +9,7 @@ class CartIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchCart();
+        window.scrollTo(0,0);
     }
 
     render() {
