@@ -13,10 +13,11 @@ import CollectionContainer1 from './collections/the_last_dance/sneakers_containe
 import CollectionContainer2 from './collections/fear_of_god/sneakers_container'
 import CollectionContainer3 from './collections/off_white/sneakers_container'
 import CartContainer from './cart/cart_index_container'
-import Footer from './footer/footer'
+import Footer from './footer/footer';
+
 
 const App = () => (
-    <div>
+    <div className='app-container'>
         <Route path='/' component={NavBarContainer} />
         <Switch> 
             <Route exact path="/sneakers/:sneakerId/listings/:listingId" component={ListingDetailsContainer} />

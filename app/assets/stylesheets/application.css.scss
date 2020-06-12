@@ -36,11 +36,12 @@ time, mark, audio, video {
 
 body {
     font-family: 'Arimo', sans-serif;
+}
+
+.app-container {
     width: 1440px;
-    align-self: center;
     border-left: 1px solid black;
     border-right: 1px solid black;
     margin: auto;
 }
-
 

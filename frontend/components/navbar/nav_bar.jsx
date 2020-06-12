@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+
 export default ({ currentUser, logout }) => {
     const loggedOutNav = () => (
         <div className='loggedOut-navbar'>
@@ -12,7 +13,6 @@ export default ({ currentUser, logout }) => {
                 <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="styles" to="/styles">Styles</NavLink>
                 <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="signup" to="/signup">Sign Up</NavLink>
                 <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="login" to="/login">Log In</NavLink>
-                {/* <a href="#/sneakers"><i className="fas fa-search nav-search"></i></a> */}
                 <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} to="/sneakers"><i className="fas fa-search nav-search"></i></NavLink>
             </div>
         </div>
