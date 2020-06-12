@@ -92,5 +92,5 @@ handleClick() {
 ---
 
 # Future Directions
-* Shopping Cart - allow the current user to add/remove items to their shopping cart
-* Search - allow the user to search for a particular product
+* ~~Shopping Cart - allow the current user to add/remove items to their shopping cart~~ Completed on 6/5/20
+* ~~Search - allow the user to search for a particular product~~ Completed on 6/5/20
