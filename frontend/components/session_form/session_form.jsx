@@ -23,10 +23,12 @@ class SessionForm extends React.Component {
       e.preventDefault();
       const user = Object.assign({}, this.state);
       this.props.processForm(user);
+      this.props.history.goBack();
    }
 
    demoUser() {
-      this.setState({ username: 'demo_user', password: 'password' })
+      this.setState({ username: 'demo_user', password: 'password' });
+      this.props.history.goBack();
    }
 
    componentWillUnmount() {
@@ -92,7 +94,7 @@ class SessionForm extends React.Component {
                         
                         {
                            this.props.formType === 'login' ? (
-                              <button className='demo-user' onClick={() => this.demoUser()}>DEMO USER</button>
+                           <button className='demo-user' onClick={() => this.demoUser()}>DEMO USER</button>
                            ) : (
                               null
                            )

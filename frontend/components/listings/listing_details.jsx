@@ -72,7 +72,7 @@ class ListingDetails extends React.Component {
                        
                         {
                             currentUser ? <a className='buy-new-btn' href="#/cart"><button onClick={() => this.handleClick()}>Add to Cart</button></a> : (
-                                                <a className='buy-new-btn' href="#/login"><button>Sign In</button></a> 
+                            <a className='buy-new-btn' href="#/login"><button>Sign In</button></a> 
                                             )
                         }
                         
