@@ -7,6 +7,7 @@ class ListingDetails extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        window.previousUrl = this.props.match.url
     }
     
     componentDidMount() {
