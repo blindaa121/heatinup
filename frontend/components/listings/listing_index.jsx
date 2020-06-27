@@ -1,6 +1,6 @@
 import React from 'react';
 import ListingIndexItem from './listing_index_item';
-import { Link } from 'react-router-dom';
+
 class ListingIndex extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +13,6 @@ class ListingIndex extends React.Component {
                 <div className='listings-header'>
                     <span>Buy New</span> 
                     <h1>US Sizes</h1>
-                    {/* <Link to={`#/sneakers/${sneaker.id}`}>X</Link> */}
                 </div>
                 
                 {
