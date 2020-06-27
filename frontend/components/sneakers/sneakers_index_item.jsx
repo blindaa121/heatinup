@@ -1,13 +1,9 @@
 import React from 'react';
-// import SneakerIndex from './sneakers_index/'
-import { Link } from 'react-router-dom';
 
 const SneakerItemIndex = ({ sneaker, search }) => {
     if (search !== "" && (sneaker.name.toLowerCase().indexOf(search.toLowerCase()) === -1)) {
         return null;
     } 
-    
-
     
     return (
         <a className='sneakerLink' href={`#/sneakers/${sneaker.id}`}> 

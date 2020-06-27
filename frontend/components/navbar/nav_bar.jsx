@@ -20,11 +20,9 @@ export default ({ currentUser, logout }) => {
 
     const loggedInNav = () => (
         <div className='loggedIn-navbar'>
-
             <div>
                 <Link className="logo" to="/">H E A T</Link>
             </div>
-
             <div className='links'>
                 <NavLink exact activeStyle={{ textDecoration: 'underline', color: 'black' }} className="sneakers" to="/">Discover</NavLink>
                 <NavLink activeStyle={{ textDecoration: 'underline', color: 'black' }} className="styles" to="/styles">Styles</NavLink>

@@ -22,7 +22,7 @@ class SneakerIndex extends React.Component {
     render () {
         const { search } = this.state;
         const { sneakers } = this.props;
-        const { sneaker } = this.props;
+        
         if (!sneakers) return null;
 
         return (
