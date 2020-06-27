@@ -1,6 +1,4 @@
 import React from 'react';
-import ListingIndex from './listing_index';
-import { Link } from 'react-redux';
 import { Route } from 'react-router-dom';
 import ListingDetailContainer from './listing_details_container';
 
