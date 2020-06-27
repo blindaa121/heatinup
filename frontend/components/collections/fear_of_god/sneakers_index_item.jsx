@@ -1,5 +1,4 @@
 import React from 'react';
-// import SneakerIndex from './sneakers_index/'
 import { Link } from 'react-router-dom';
 
 const SneakerItemIndex = ({ sneaker }) => {
