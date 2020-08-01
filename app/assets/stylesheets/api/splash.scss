@@ -1,3 +1,5 @@
+
+
 .splash-container {
     display: flex;
     position: relative;
@@ -20,7 +22,6 @@
 }
 
 .air-home {
-    padding-top: 50px;
     width: 100%;
     border-bottom: 2px solid lightgrey;
 }
@@ -61,9 +62,12 @@
 }
 
 .sneakerpanel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 65px 10px;
 }
 
 .sneakerpanel-item:hover {
@@ -97,5 +101,44 @@
 
 #sneaker-img {
     width: 220px;
+    transition: 300ms;
+}
+
+#sneaker-img:hover {
+    transform: scale(1.1);
+}
+
+.slider-wrapper {
+    /* margin: 0 auto; */
+    // align-items: baseline;
+    max-width: 1250px;
+    margin-bottom: 100px;
+}
+
+// .slick-track {
+//   display: flex;
+// }
+// .slick-track .slick-slide {
+//   display: flex !important;
+//   height: auto !important;
+//   align-items: center !important;
+//   justify-content: flex-start !important;
+// }
+
+.slick-track {
+    height: 245px !important;
+    /* margin-left: -70px !important; */
+    float: left !important;
+}
+
+.slick-list {
+    max-height: 245px !important;
+    margin-left: 10px !important;
+    vertical-align: baseline;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color: black !important;
+    font-size: 30px !important;
 }
 

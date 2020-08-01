@@ -5,7 +5,7 @@ const SneakerPanelIndexItem  = ({ sneaker }) => {
         <div className="sneakerpanel-item">
             <a href={`#/sneakers/${sneaker.id}`}><img id="sneaker-img"src={sneaker.photoUrl}></img></a>
             <br/>
-            <Link id="sneakerName" to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link>
+            {/* <Link id="sneakerName" to={`/sneakers/${sneaker.id}`}>{sneaker.name}</Link> */}
         </div>
     )
 }
