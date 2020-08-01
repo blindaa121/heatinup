@@ -4,7 +4,7 @@ import SneakerPanelIndex from './sneaker_panel_index'
 import { fetchSneakers } from '../../actions/sneakers_actions'
 
 const mSTP = state => ({
-    sneakers: Object.values(state.entities.sneakers).slice(0,15)
+    sneakers: Object.values(state.entities.sneakers).slice(0,5)
 })
 
 const mDTP = dispatch => ({

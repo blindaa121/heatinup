@@ -16,8 +16,9 @@ class Splash extends React.Component {
     render() {
         return (
             <div className="splash-container">
-                <a href="#/sneakers/94"><img className="air-home" style={{paddingTop: '10px'}}src={window.splashURL}></img></a>
+                <a href="#/sneakers/94"><img className="air-home" src={window.splashURL}></img></a>
                 <SneakerPanelContainer />
+                <br/>
                 <a href="#/sneakers/64"><img className="air-home" src={window.splashFOG}></img></a>
                 <SneakerPanelContainer2 />
                 <img className="air-home" src={window.splashTEN}></img>

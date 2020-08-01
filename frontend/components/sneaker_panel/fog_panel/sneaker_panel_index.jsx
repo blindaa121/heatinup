@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import SneakerPanelIndexItem from './sneaker_panel_index_item';
-import Slider from 'react-slick';
+import SneakerPanelIndexItem from './sneaker_panel_index_item'
 
 class SneakerPanelIndex3 extends React.Component {
     constructor(props) {
@@ -10,15 +9,6 @@ class SneakerPanelIndex3 extends React.Component {
 
     render () {
         const { sneakers } = this.props;
-        const fog = sneakers.map(sneaker => <SneakerPanelIndexItem key={sneaker.id} sneaker={sneaker} />);
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            slidesToScroll: 5
-        };
-
         return (
         <div className="sneaker-panel">
 
@@ -27,15 +17,10 @@ class SneakerPanelIndex3 extends React.Component {
                     <Link to="/collections/fog" className='see-all'>See All</Link>
                 </div>
 
-                {/* <div className="sneaker-panel-items">
+                <div className="sneaker-panel-items">
                         {sneakers.map(sneaker => <SneakerPanelIndexItem key={sneaker.id} sneaker={sneaker} />)}
-                </div>  */}
+                </div> 
                      
-                <div className='slider-wrapper'>
-                    <Slider {...settings}>
-                        {fog}
-                    </Slider>
-                </div>
         </div>
         )
     }
