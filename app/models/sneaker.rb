@@ -8,4 +8,8 @@ class Sneaker < ApplicationRecord
     has_many :listings,
         foreign_key: :sneaker_id,
         class_name: :Listing
+
+    has_many :reviews,
+        foreign_key: :sneaker_id,
+        class_name: :Review
 end
