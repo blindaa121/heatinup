@@ -1,18 +1,25 @@
 import { connect } from 'react-redux';
 import SneakerShow  from './sneaker_show'
-import { fetchSneaker } from '../../actions/sneakers_actions' 
+import { fetchSneaker, fetchReviews, createSneakerReview } from '../../actions/sneakers_actions' 
+// import { createSneakerReview } from '../../util/sneaker_api_util';
 
 const mSTP = (state, ownProps) => {
-    return (
-
-        {sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
-        listings: state.entities.listings}
-    )
+    console.log(state);
+    // if (!state.entities.sneakers[ownProps.match.params.sneakerId]) return null;
+    // console.log(Object.values(state.entities.reviews))
+    return ({
+        sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
+        listings: state.entities.listings,
+        reviews: Object.values(state.entities.reviews),
+        currentUser: state.entities.users[state.session.currentUserId]
+    })
 };
 
 
 const mDTP = dispatch => ({
-    fetchSneaker: (sneakerId) => dispatch(fetchSneaker(sneakerId))
+    fetchSneaker: (sneakerId) => dispatch(fetchSneaker(sneakerId)),
+    fetchReviews: (sneakerId) => dispatch(fetchReviews(sneakerId)),
+    createSneakerReview: (review) => dispatch(createSneakerReview(review))
 });
 
 export default connect(mSTP, mDTP)(SneakerShow); 

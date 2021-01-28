@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_27_213128) do
+ActiveRecord::Schema.define(version: 2021_01_27_224800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,8 +62,6 @@ ActiveRecord::Schema.define(version: 2021_01_27_213128) do
     t.text "review_text", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sneaker_id"], name: "index_reviews_on_sneaker_id", unique: true
-    t.index ["user_id"], name: "index_reviews_on_user_id", unique: true
   end
 
   create_table "sneakers", force: :cascade do |t|

@@ -12,7 +12,7 @@ end
 json.reviews do 
   @sneaker.reviews.each do |review|
     json.set! review.id do 
-      json.extract! review, :id, :sneaker_id, :user_id 
+      json.extract! review, :id, :sneaker_id, :user_id, :review_text
     end 
   end 
 end

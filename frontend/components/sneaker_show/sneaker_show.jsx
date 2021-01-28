@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import SneakerShowContainer from './sneaker_show_container';
+import ReviewIndex from '../review/ReviewIndex'
 import SneakerDetails from './sneaker_details';
 import ListingIndexContainer from '../listings/listing_container';
 import ListingDetailContainer from '../listings/listing_details_container';
@@ -17,7 +18,9 @@ class SneakerShow extends React.Component {
     };
 
     componentDidMount() {
+        console.log(this.props)
         this.props.fetchSneaker(this.props.match.params.sneakerId)
+        this.props.fetchReviews(this.props.match.params.sneakerId)
         window.scrollTo(0,0);
     };
 
@@ -26,7 +29,7 @@ class SneakerShow extends React.Component {
     }
     
     render () {
-        const { sneaker, listings } = this.props;
+        const { sneaker, listings, reviews, currentUser } = this.props;
         if (!sneaker) return null;
         if (!listings) return null;
         return (
@@ -60,6 +63,8 @@ class SneakerShow extends React.Component {
                     </div>
 
                     <SneakerDetails sneaker={sneaker}/>
+                    <ReviewIndex reviews={reviews} sneaker={sneaker} currentUser={currentUser}
+                    createSneakerReview={this.props.createSneakerReview}/>
                     <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
             </div>
             
