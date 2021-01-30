@@ -1,3 +1,117 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review-index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.review-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-form-input {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    resize: none;
+    transition: 0.25s;
+}
+
+.review-form-input:hover {
+    cursor: pointer;
+}
+
+.review-form-input:focus {
+    cursor: auto;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.review-submit-button, .review-signin-button {
+    width: 100%;
+    margin-top: 15px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    transition: 0.4s;
+    letter-spacing: 10px;
+}
+
+.review-submit-button:hover, .review-signin-button:hover {
+    cursor: pointer;
+    background-color: silver;
+    letter-spacing: 3px;
+}
+
+.review-header {
+    align-self: flex-start;
+}
+
+#review-count {
+    font-size: 80px;
+    border-bottom: 2px solid black;
+    width: 50%;
+}
+
+#review-title {
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+
+.review-signin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    background-color: #e7e7e7;
+}
+
+[data-letters]:before {
+  content:attr(data-letters);
+  display:inline-block;
+  font-size:1em;
+  width:2.5em;
+  height:2.5em;
+  line-height:2.5em;
+  text-align:center;
+  border-radius:50%;
+  background:silver;
+  vertical-align:middle;
+  margin-right:1em;
+  color:white;
+  text-transform: uppercase;
+}
+
+.review-index-item-container {
+    width: 100%;
+    margin-top: 15px;
+    max-height: 400px;
+    overflow: auto;
+    margin-bottom: 30px
+}
+
+.review-item-container {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid silver;
+}
+
+.review-content > h1 {
+    font-weight: bold;
+}

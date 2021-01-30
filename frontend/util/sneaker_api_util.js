@@ -19,7 +19,7 @@ export const fetchSneakerReviews = sneakerId => (
     })
 )
 
-export const deleteSneakerReview = (sneakerId, userId, reviewId) => (
+export const deleteSneakerReview = (sneakerId, reviewId) => (
     $.ajax({
         url: `/api/sneakers/${sneakerId}/reviews/${reviewId}`,
         method: 'DELETE'
@@ -34,10 +34,10 @@ export const createSneakerReview = (review) => (
     })
 )
 
-export const updateSneakerReview = sneakerReview => (
+export const updateSneakerReview = (review) => (
     $.ajax({
-        url: `/api/sneakers/${sneakerId}/reviews/${sneakerReview.id}`,
+        url: `/api/sneakers/${review.sneakerId}/reviews/${review.id}`,
         method: 'PATCH',
-        data: { sneakerReview }
+        data: { review }
     })
 )

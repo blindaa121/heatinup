@@ -1,4 +1,4 @@
-import {RECEIVE_REVIEW, RECEIVE_ALL_REVIEWS, REMOVE_REVIEW, RECEIVE_SNEAKER} from '../actions/sneakers_actions';
+import {RECEIVE_REVIEW, RECEIVE_ALL_REVIEWS, REMOVE_REVIEW} from '../actions/sneakers_actions';
 
 const reviewsReducer = (oldState={}, action) => {
     Object.freeze(oldState);
@@ -10,6 +10,10 @@ const reviewsReducer = (oldState={}, action) => {
         case RECEIVE_REVIEW:
             console.log('receive review hit')
             nextState[action.review.id] = action.review 
+            return nextState
+        case REMOVE_REVIEW:
+            console.log('remove action hit')
+            delete nextState[action.reviewId];
             return nextState
         default:
             return oldState;

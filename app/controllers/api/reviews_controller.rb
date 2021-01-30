@@ -10,20 +10,20 @@ class Api::ReviewsController < ApplicationController
     end 
 
     def index 
-        sneaker = Sneaker.find(params[:sneaker_id]);
+        sneaker = Sneaker.find(params[:sneaker_id])
         @reviews = sneaker.reviews 
-
+        @authors = User.all
         render :index
     end 
 
     def show 
-        @review = Review.find_by(id: params[:id]);
+        @review = Review.find_by(id: params[:id])
         render :show
     end 
 
     def update 
         @review = Review.find_by(id: params[:id])
-        if (@review.id == current_user().id) && @review.update(review_params)
+        if (@review.user_id == current_user().id) && @review.update(review_params)
             render :show 
         else 
             render json: @review.errors.full_messages, status: 422
@@ -33,7 +33,7 @@ class Api::ReviewsController < ApplicationController
     def destroy 
         @review = Review.find_by(id: params[:id])
         if (@review.user_id == current_user.id) && @review.destroy
-            render json: ["Successfully Deleted"]
+            render json: @review
         else 
             render json: ["Unauthorized request"], status: 422
         end

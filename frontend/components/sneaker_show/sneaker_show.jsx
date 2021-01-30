@@ -29,7 +29,7 @@ class SneakerShow extends React.Component {
     }
     
     render () {
-        const { sneaker, listings, reviews, currentUser } = this.props;
+        const { sneaker, listings, reviews, currentUser, createSneakerReview, deleteSneakerReview } = this.props;
         if (!sneaker) return null;
         if (!listings) return null;
         return (
@@ -63,8 +63,12 @@ class SneakerShow extends React.Component {
                     </div>
 
                     <SneakerDetails sneaker={sneaker}/>
-                    <ReviewIndex reviews={reviews} sneaker={sneaker} currentUser={currentUser}
-                    createSneakerReview={this.props.createSneakerReview}/>
+                    <ReviewIndex
+                        reviews={reviews}
+                        sneaker={sneaker}
+                        currentUser={currentUser}
+                        createSneakerReview={createSneakerReview}
+                        deleteSneakerReview={deleteSneakerReview}/>
                     <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
             </div>
             

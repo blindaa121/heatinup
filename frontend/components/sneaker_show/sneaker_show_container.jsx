@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SneakerShow  from './sneaker_show'
-import { fetchSneaker, fetchReviews, createSneakerReview } from '../../actions/sneakers_actions' 
+import { fetchSneaker, fetchReviews, createSneakerReview, deleteSneakerReview } from '../../actions/sneakers_actions' 
 // import { createSneakerReview } from '../../util/sneaker_api_util';
 
 const mSTP = (state, ownProps) => {
@@ -19,7 +19,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchSneaker: (sneakerId) => dispatch(fetchSneaker(sneakerId)),
     fetchReviews: (sneakerId) => dispatch(fetchReviews(sneakerId)),
-    createSneakerReview: (review) => dispatch(createSneakerReview(review))
+    createSneakerReview: (review) => dispatch(createSneakerReview(review)),
+    deleteSneakerReview: (sneakerId, reviewId) => dispatch(deleteSneakerReview(sneakerId, reviewId))
 });
 
 export default connect(mSTP, mDTP)(SneakerShow); 

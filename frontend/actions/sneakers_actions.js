@@ -2,6 +2,7 @@ export const RECEIVE_ALL_SNEAKERS = 'RECEIVE_ALL_SNEAKERS';
 export const RECEIVE_SNEAKER = 'RECEIVE_SNEAKER';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS';
+export const REMOVE_REVIEW = 'REMOVE_REVIEW'
 
 
 
@@ -33,6 +34,13 @@ const receiveReview = review => {
     })
 }
 
+const removeReview = (sneakerId, reviewId) => {
+    return ({
+        type: REMOVE_REVIEW,
+        reviewId
+    })
+}
+
 
 export const fetchSneakers = () => dispatch => (
     SneakerAPIUtil.fetchSneakers()
@@ -47,11 +55,16 @@ export const fetchSneaker = sneakerId => dispatch => (
 export const fetchReviews = (sneakerId) => dispatch => (
     SneakerAPIUtil.fetchSneakerReviews(sneakerId)
         .then(reviews => dispatch(receiveReviews(reviews)))
+
 )
 
 export const createSneakerReview = review => dispatch => (
     SneakerAPIUtil.createSneakerReview(review)
         .then(createdReview => dispatch(receiveReview(createdReview)))
-        .catch(err => console.log(err))
+)
+
+export const deleteSneakerReview = (sneakerId, reviewId) => dispatch => (
+    SneakerAPIUtil.deleteSneakerReview(sneakerId, reviewId)
+        .then(() => dispatch(removeReview(sneakerId, reviewId)))
 )
 
