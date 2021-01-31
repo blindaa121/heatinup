@@ -4,9 +4,6 @@ import { fetchSneaker, fetchReviews, createSneakerReview, deleteSneakerReview } 
 // import { createSneakerReview } from '../../util/sneaker_api_util';
 
 const mSTP = (state, ownProps) => {
-    console.log(state);
-    // if (!state.entities.sneakers[ownProps.match.params.sneakerId]) return null;
-    // console.log(Object.values(state.entities.reviews))
     return ({
         sneaker: state.entities.sneakers[ownProps.match.params.sneakerId],
         listings: state.entities.listings,

@@ -5,14 +5,11 @@ const reviewsReducer = (oldState={}, action) => {
     let nextState = Object.assign({}, oldState)
     switch (action.type) {
         case RECEIVE_ALL_REVIEWS:
-            console.log('receive all review hit')
             return action.reviews
         case RECEIVE_REVIEW:
-            console.log('receive review hit')
             nextState[action.review.id] = action.review 
             return nextState
         case REMOVE_REVIEW:
-            console.log('remove action hit')
             delete nextState[action.reviewId];
             return nextState
         default:

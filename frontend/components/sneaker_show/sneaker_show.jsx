@@ -18,7 +18,6 @@ class SneakerShow extends React.Component {
     };
 
     componentDidMount() {
-        console.log(this.props)
         this.props.fetchSneaker(this.props.match.params.sneakerId)
         this.props.fetchReviews(this.props.match.params.sneakerId)
         window.scrollTo(0,0);
