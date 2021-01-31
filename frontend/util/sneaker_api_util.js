@@ -34,9 +34,9 @@ export const createSneakerReview = (review) => (
     })
 )
 
-export const updateSneakerReview = (review) => (
+export const updateSneakerReview = (review, sneakerId, reviewId) => (
     $.ajax({
-        url: `/api/sneakers/${review.sneakerId}/reviews/${review.id}`,
+        url: `/api/sneakers/${sneakerId}/reviews/${reviewId}`,
         method: 'PATCH',
         data: { review }
     })

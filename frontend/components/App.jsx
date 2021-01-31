@@ -14,6 +14,7 @@ import CollectionContainer2 from './collections/fear_of_god/sneakers_container'
 import CollectionContainer3 from './collections/off_white/sneakers_container'
 import CartContainer from './cart/cart_index_container'
 import Footer from './footer/footer';
+import EditFormContainer from './review/EditReviewFormContainer';
 
 
 const App = () => (

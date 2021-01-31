@@ -19,8 +19,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
     fetchSneaker: (sneakerId) => dispatch(fetchSneaker(sneakerId)),
     fetchReviews: (sneakerId) => dispatch(fetchReviews(sneakerId)),
-    createSneakerReview: (review) => dispatch(createSneakerReview(review)),
-    deleteSneakerReview: (sneakerId, reviewId) => dispatch(deleteSneakerReview(sneakerId, reviewId))
 });
 
 export default connect(mSTP, mDTP)(SneakerShow); 

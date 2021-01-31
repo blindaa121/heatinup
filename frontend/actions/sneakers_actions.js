@@ -68,3 +68,8 @@ export const deleteSneakerReview = (sneakerId, reviewId) => dispatch => (
         .then(() => dispatch(removeReview(sneakerId, reviewId)))
 )
 
+export const updateSneakerReview = (review, sneakerId, reviewId) => dispatch => (
+    SneakerAPIUtil.updateSneakerReview(review, sneakerId, reviewId)
+        .then(updatedReview => dispatch(receiveReview(updatedReview)))
+)
+

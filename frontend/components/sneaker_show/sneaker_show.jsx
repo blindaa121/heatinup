@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import SneakerShowContainer from './sneaker_show_container';
-import ReviewIndex from '../review/ReviewIndex'
+import ReviewFormContainer from '../review/ReviewFormContainer'
 import SneakerDetails from './sneaker_details';
 import ListingIndexContainer from '../listings/listing_container';
 import ListingDetailContainer from '../listings/listing_details_container';
@@ -35,12 +35,10 @@ class SneakerShow extends React.Component {
         return (
             <div className='outer-sneakerComponent'>
                 <div className='sneakerComponent'>
-
                     <div className='leftShoe-pane'>
                         <img className='shoePane-img' src={sneaker.photoUrl}></img>
                         <span className='sneaker-footer'>{sneaker.brand} / {sneaker.silhouette} / {sneaker.name}</span>
                     </div>
-
                     <div className='rightShoe-pane'>
                             {
                             this.state.showListings ? <ListingIndexContainer listings={listings} sneaker={sneaker}/> : 
@@ -54,7 +52,6 @@ class SneakerShow extends React.Component {
                             }
                             <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
                     </div>
-                    
                 </div>
                     <div className='product-details'>
                         <h1>Product Details</h1>
@@ -63,12 +60,10 @@ class SneakerShow extends React.Component {
                     </div>
 
                     <SneakerDetails sneaker={sneaker}/>
-                    <ReviewIndex
-                        reviews={reviews}
+                    <ReviewFormContainer
                         sneaker={sneaker}
                         currentUser={currentUser}
-                        createSneakerReview={createSneakerReview}
-                        deleteSneakerReview={deleteSneakerReview}/>
+                        reviews={reviews}/>
                     <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
             </div>
             
