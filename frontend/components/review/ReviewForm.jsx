@@ -66,21 +66,34 @@ class ReviewForm extends Component {
   }
 
   renderButtonOptions() {
+    const { review_text, formType } = this.state;
       if (this.props.currentUser) {
-          return <input className="review-submit-button" type="submit" value="POST" />
+        if (review_text.length > 5) {
+          if (formType === 'create') {
+            return <input className="review-submit-button" type="submit" value="POST" />
+          } else {
+            return <input className="review-submit-button" type="submit" value="EDIT" />
+          }
+        } else {
+          return <input
+            type="submit"
+            disabled="true"
+            className="review-submit-button"
+            value="POST" />
+        }
       } else {
           return <a className="review-signin-button" href="#/login">SIGN IN</a>
       }
   }
 
   processUpdate(type, selectedReview) {
-      this.setState({ 
-          id: selectedReview.id,
-          review_text: selectedReview.reviewText,
-          user_id: selectedReview.userId,
-          sneaker_id: selectedReview.sneakerId,
-          formType: type
-      })
+    this.setState({ 
+      id: selectedReview.id,
+      review_text: selectedReview.reviewText,
+      user_id: selectedReview.userId,
+      sneaker_id: selectedReview.sneakerId,
+      formType: type
+    })
   }
 
   renderFormType(type) {
