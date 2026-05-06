@@ -35,13 +35,15 @@ time, mark, audio, video {
 }
 
 body {
-    font-family: 'Arimo', sans-serif;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .app-container {
-    width: 1440px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    margin: auto;
+    max-width: var(--container-max);
+    margin: 0 auto;
 }
 
