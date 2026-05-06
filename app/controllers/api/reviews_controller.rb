@@ -1,47 +1,54 @@
 class Api::ReviewsController < ApplicationController
+    before_action :require_logged_in, only: [:create, :update, :destroy]
+
     def create
-        @review = Review.new(review_params)
+        @review = current_user.reviews.build(review_params.merge(sneaker_id: params[:sneaker_id]))
 
-        if @review.save 
+        if @review.save
             render :show
-        else 
+        else
             render json: @review.errors.full_messages, status: 422
         end
-    end 
+    end
 
-    def index 
-        sneaker = Sneaker.find(params[:sneaker_id])
-        @reviews = sneaker.reviews 
-        @authors = User.all
+    def index
+        sneaker = Sneaker.find_by(id: params[:sneaker_id])
+        return head :not_found unless sneaker
+        @reviews = sneaker.reviews
+        @authors = User.where(id: @reviews.select(:user_id))
         render :index
-    end 
+    end
 
-    def show 
+    def show
         @review = Review.find_by(id: params[:id])
+        return head :not_found unless @review
         render :show
-    end 
+    end
 
-    def update 
+    def update
         @review = Review.find_by(id: params[:id])
-        if (@review.user_id == current_user().id) && @review.update(review_params)
-            render :show 
-        else 
+        return head :not_found unless @review
+        return head :forbidden unless @review.user_id == current_user.id
+
+        if @review.update(review_params)
+            render :show
+        else
             render json: @review.errors.full_messages, status: 422
         end
-    end 
+    end
 
-    def destroy 
+    def destroy
         @review = Review.find_by(id: params[:id])
-        if (@review.user_id == current_user.id) && @review.destroy
-            render json: @review
-        else 
-            render json: ["Unauthorized request"], status: 422
-        end
-    end 
+        return head :not_found unless @review
+        return head :forbidden unless @review.user_id == current_user.id
 
-    private 
+        @review.destroy
+        render json: @review
+    end
 
-    def review_params 
-        params.require(:review).permit(:user_id, :sneaker_id, :review_text)
-    end 
+    private
+
+    def review_params
+        params.require(:review).permit(:review_text)
+    end
 end

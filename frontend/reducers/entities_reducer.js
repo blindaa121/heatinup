@@ -6,11 +6,11 @@ import cartItemsReducer from './cart_items_reducer';
 import reviewsReducer from './reviews_reducer';
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
-    sneakers: sneakersReducer,
-    listings: listingsReducer,
-    cartItems: cartItemsReducer,
-    reviews: reviewsReducer
+  users: usersReducer,
+  sneakers: sneakersReducer,
+  listings: listingsReducer,
+  cartItems: cartItemsReducer,
+  reviews: reviewsReducer,
 });
 
 export default entitiesReducer;
