@@ -31,3 +31,7 @@ bundle.js*
 bundle.js.map
 
 /public/assets
+
+# OS metadata
+.DS_Store
+**/.DS_Store
