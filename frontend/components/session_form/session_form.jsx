@@ -1,113 +1,112 @@
 import React from 'react';
-import NavBarContainer from '../navbar/nav_bar_container';
 
 class SessionForm extends React.Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         username: '',
-         password: ''
-      };
+    constructor(props) {
+        super(props);
+        this.state = { username: '', password: '' };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoUser = this.demoUser.bind(this);
+    }
 
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.demoUser = this.demoUser.bind(this);
-   }
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
 
-   update(field) {
-      return e => this.setState({
-         [field]: e.currentTarget.value
-      });
-   }
+    update(field) {
+        return (e) => this.setState({ [field]: e.currentTarget.value });
+    }
 
-   handleSubmit(e) {
-      e.preventDefault();
-      const user = Object.assign({}, this.state);
-      this.props.processForm(user);
-      
-   }
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.processForm({ ...this.state });
+    }
 
-   demoUser() {
-      this.setState({ username: 'demo_user', password: 'password' });
-   }
+    demoUser() {
+        this.setState({ username: 'demo_user', password: 'password' });
+    }
 
-   componentWillUnmount() {
-      dispatch(this.props.clearErrors());
-   }
+    renderErrors() {
+        const { errors } = this.props;
+        if (!errors || errors.length === 0) return null;
+        return (
+            <ul className="auth__errors">
+                {errors.map((error) => (
+                    <li key={error}>{error}</li>
+                ))}
+            </ul>
+        );
+    }
 
-   renderErrors() {
-      return (
-         <ul className="error">
-               {this.props.errors.map((error, i) => (
-                  <li key={`error-${i}`} >
-                     {error}
-                  </li>
-               ))}
-         </ul>
-      );
-   }
+    render() {
+        const { formType, navLink } = this.props;
+        const isLogin = formType === 'login';
 
+        return (
+            <div className="auth">
+                <aside
+                    className="auth__visual"
+                    style={{ backgroundImage: `url(${window.bredURL})` }}
+                    aria-hidden="true"
+                />
 
-   render() {
-      return (
-         <div className='outer-div'>
+                <section className="auth__panel">
+                    <div className="auth__panel-inner">
+                        <span className="auth__brand">HEAT</span>
+                        <h1 className="auth__title">
+                            {isLogin ? 'Welcome back.' : 'Create your account.'}
+                        </h1>
+                        <p className="auth__subtitle">
+                            {isLogin
+                                ? 'Sign in to access your cart and listings.'
+                                : 'Set up an account to start collecting.'}
+                        </p>
 
-            <div className="shoe_pane">
-               <img className ="bred_login" src={window.bredURL} alt="bred"></img>
+                        <form className="auth__form" onSubmit={this.handleSubmit}>
+                            {this.renderErrors()}
+
+                            <label className="auth__field">
+                                <span className="auth__label">Username</span>
+                                <input
+                                    type="text"
+                                    className="auth__input"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    autoComplete="username"
+                                />
+                            </label>
+
+                            <label className="auth__field">
+                                <span className="auth__label">Password</span>
+                                <input
+                                    type="password"
+                                    className="auth__input"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    autoComplete={isLogin ? 'current-password' : 'new-password'}
+                                />
+                            </label>
+
+                            <button type="submit" className="auth__primary">
+                                {isLogin ? 'Sign In' : 'Sign Up'}
+                            </button>
+
+                            {isLogin && (
+                                <button
+                                    type="button"
+                                    className="auth__secondary"
+                                    onClick={this.demoUser}
+                                >
+                                    Use demo account
+                                </button>
+                            )}
+                        </form>
+
+                        <p className="auth__footnote">{navLink}</p>
+                    </div>
+                </section>
             </div>
-
-            <div className="session-form-container">
-               <h1 className="sessionHeader">{this.props.formType === 'login' ? "Log In" : "Create An Account" }</h1>
-                  <form className='session-form' onSubmit={this.handleSubmit}>
-                     <br />
-                     {this.renderErrors()}
-
-                     <div className="login-form">
-                        <br />
-                        <label className="username">Username
-                           <br />
-                           <input type="text"
-                                 value={this.state.username}
-                                 onChange={this.update('username')}
-                                 className="login-input"
-                           />
-                        </label>
-                        <br />
-                        <label className="password">Password
-                           <br />
-                           <input type="password"
-                                 value={this.state.password}
-                                 onChange={this.update('password')}
-                                 className="login-input"
-                           />
-                        </label>
-                        <br />
-                     </div>
-
-                     <p className='sessionLink'>{this.props.navLink}</p>
-
-                     <div className="session-buttons">
-                        <input className={this.props.formType === 'login' ? "session-submit" : "sign-up-btn"}
-                               type="submit"
-                               value={this.props.formType === 'login' ? "LOG IN" : "SIGN UP"}
-                        />
-                        
-                        {
-                           this.props.formType === 'login' ? (
-                           <button className='demo-user' onClick={() => this.demoUser()}>DEMO USER</button>
-                           ) : (
-                              null
-                           )
-                        }
-                        
-                     </div>
-                     
-                  </form>
-               </div>
-            </div>
-         // </div>
-         
-      );
-   }
+        );
+    }
 }
 
 export default SessionForm;
