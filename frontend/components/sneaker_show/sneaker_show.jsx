@@ -1,73 +1,110 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import SneakerShowContainer from './sneaker_show_container';
-import ReviewFormContainer from '../review/ReviewFormContainer'
-import SneakerDetails from './sneaker_details';
-import ListingIndexContainer from '../listings/listing_container';
-import ListingDetailContainer from '../listings/listing_details_container';
 import { Link } from 'react-router-dom';
+import ReviewFormContainer from '../review/ReviewFormContainer';
+import SneakerDetails from './sneaker_details';
+
+const formatPrice = (n) => `$${Number(n).toLocaleString()}`;
 
 class SneakerShow extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showListings: false
-        }
-
-        this.handleClick = this.handleClick.bind(this);
-    };
-
     componentDidMount() {
-        this.props.fetchSneaker(this.props.match.params.sneakerId)
-        this.props.fetchReviews(this.props.match.params.sneakerId)
-        window.scrollTo(0,0);
-    };
-
-    handleClick() {
-        this.setState({showListings: true})
+        const { sneakerId } = this.props.match.params;
+        this.props.fetchSneaker(sneakerId);
+        this.props.fetchReviews(sneakerId);
+        window.scrollTo(0, 0);
     }
-    
-    render () {
-        const { sneaker, listings, reviews, currentUser, createSneakerReview, deleteSneakerReview } = this.props;
+
+    componentDidUpdate(prevProps) {
+        const { sneakerId } = this.props.match.params;
+        if (sneakerId !== prevProps.match.params.sneakerId) {
+            this.props.fetchSneaker(sneakerId);
+            this.props.fetchReviews(sneakerId);
+        }
+    }
+
+    render() {
+        const { sneaker, listings, reviews, currentUser } = this.props;
         if (!sneaker) return null;
-        if (!listings) return null;
+
+        const sortedListings = (listings || [])
+            .slice()
+            .sort((a, b) => Number(a.size) - Number(b.size));
+        const lowestPrice = sortedListings.length
+            ? Math.min(...sortedListings.map((l) => l.price))
+            : null;
+
         return (
-            <div className='outer-sneakerComponent'>
-                <div className='sneakerComponent'>
-                    <div className='leftShoe-pane'>
-                        <img className='shoePane-img' src={sneaker.photoUrl}></img>
-                        <span className='sneaker-footer'>{sneaker.brand} / {sneaker.silhouette} / {sneaker.name}</span>
-                    </div>
-                    <div className='rightShoe-pane'>
-                            {
-                            this.state.showListings ? <ListingIndexContainer listings={listings} sneaker={sneaker}/> : 
-                                (
-                                    <div>
-                                        <h1>{sneaker.name}</h1>
-                                        <br/>
-                                        <p>SKU: {sneaker.sku}</p>
-                                    </div>
-                                )
-                            }
-                            <button onClick={() => this.handleClick()} className='buy-new-btn'>Buy New</button>
-                    </div>
-                </div>
-                    <div className='product-details'>
-                        <h1>Product Details</h1>
-                        <br/>
-                        {sneaker.description}
+            <div className="show">
+                <div className="show__primary">
+                    <div className="show__media">
+                        {sneaker.photoUrl
+                            ? <img src={sneaker.photoUrl} alt={sneaker.name} />
+                            : <div className="show__placeholder" />}
                     </div>
 
-                    <SneakerDetails sneaker={sneaker}/>
+                    <aside className="show__buy">
+                        <span className="show__brand">{sneaker.brand}</span>
+                        <h1 className="show__name">{sneaker.name}</h1>
+                        {sneaker.colorway && (
+                            <p className="show__sub">{sneaker.colorway}</p>
+                        )}
+
+                        <div className="ask-card">
+                            <span className="ask-card__label">Lowest Ask</span>
+                            <span className="ask-card__price">
+                                {lowestPrice !== null ? formatPrice(lowestPrice) : 'No listings'}
+                            </span>
+                        </div>
+
+                        <div className="size-grid">
+                            <div className="size-grid__head">
+                                <h3 className="size-grid__title">Available sizes</h3>
+                                <span className="size-grid__count">
+                                    {sortedListings.length} listing{sortedListings.length === 1 ? '' : 's'}
+                                </span>
+                            </div>
+
+                            {sortedListings.length > 0 ? (
+                                <ul className="size-grid__list">
+                                    {sortedListings.map((listing) => (
+                                        <li key={listing.id}>
+                                            <Link
+                                                to={`/sneakers/${sneaker.id}/listings/${listing.id}`}
+                                                className="size-btn"
+                                            >
+                                                <span className="size-btn__size">US {listing.size}</span>
+                                                <span className="size-btn__price">{formatPrice(listing.price)}</span>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="size-grid__empty">
+                                    No listings available right now.
+                                </p>
+                            )}
+                        </div>
+                    </aside>
+                </div>
+
+                <section className="show__info">
+                    <div className="show__description">
+                        <h2 className="show__section-title">Product Details</h2>
+                        <p>{sneaker.description}</p>
+                    </div>
+                    <SneakerDetails sneaker={sneaker} />
+                </section>
+
+                <section className="show__reviews">
+                    <h2 className="show__section-title">Reviews</h2>
                     <ReviewFormContainer
                         sneaker={sneaker}
                         currentUser={currentUser}
-                        reviews={reviews}/>
-                    <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} />
+                        reviews={reviews}
+                    />
+                </section>
             </div>
-            
-        ) 
-    };
+        );
+    }
 }
 
 export default SneakerShow;

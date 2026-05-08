@@ -1,84 +1,77 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartIndexItem from './cart_index_item';
-import SneakerPanelIndex from '../sneaker_panel/random_panel/sneaker_panel_container'
+
+const SHIPPING = 12;
+const formatPrice = (n) => `$${Number(n).toLocaleString()}`;
 
 class CartIndex extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         this.props.fetchCart();
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     }
 
     render() {
-      const { cartItems, deleteCartItem, subTotal } = this.props;
-    
-      return (
-      <div className='outer-sneakerComponent outer-cartComponent'>
-          <div className='sneakerComponent'>
-              <div className='leftCart-pane'>
-                  <div className='cart-items1'>
-                      <div className='cart-items'>
-                          <h1 className='cart-items-header'>Shopping Cart</h1>
-                          <h3 className='total-items'>Total Items: {cartItems.length}</h3>
-                      </div>
-                      <div className='cart-items-containter'>
-                          { cartItems.map(cartItem => (<CartIndexItem cartItem={cartItem} deleteCartItem={deleteCartItem} key={cartItem.id} />))}
-                      </div>
-                  </div>
-              </div>
+        const { cartItems, deleteCartItem, subTotal } = this.props;
+        const isEmpty = cartItems.length === 0;
+        const total = subTotal + (isEmpty ? 0 : SHIPPING);
 
-              <div className='rightCart-pane'>
-                  <div className='order-summary'>
-                      <h1 className='order-summary-header'>Order Summary</h1>
-                      <div className='order-shipping order-details'>
-                          <span>Ship To</span>
-                          <span>3960 Landmark St, Culver City</span>
-                      </div>
-                      <div className='order-card-info order-details'>
-                          <span>Payment</span>
-                              <span>
-                                  <i className="payment fab fa-cc-paypal"></i>
-                                  <i className="payment fab fa-cc-apple-pay"></i>
-                                  <i className="payment far fa-credit-card"></i>
-                                  2324
-                              </span>
-                      </div>
-                      <div className='order-subtotal order-details'>
-                          <span>Subtotal</span>
-                          <span>${subTotal}</span>
-                      </div>
-                      <div className='order-shipping order-details'>
-                          <span>Shipping</span>
-                          <span>$12</span>
-                      </div>
-                      <div className='order-total order-details'>
-                          <span>Total</span>
-                          <span>${subTotal + 12}</span>
-                      </div>
-                  </div>
-                  <div className='network-links'>
-                          <a className='linked-in' href="https://www.linkedin.com/in/bryan-linda-44389794/">
-                              <div className='linked-in-btn'>
-                              LinkedIn
-                              </div>
-                          </a>
-                          <a className='github' href="https://github.com/blindaa121/heatinup">
-                              <div className='github-btn'>
-                                  GitHub
-                              </div>
-                          </a>
-                  </div>
-              </div>
+        return (
+            <div className="cart">
+                <header className="cart__header">
+                    <h1 className="cart__title">Your Cart</h1>
+                    <span className="cart__count">
+                        {cartItems.length} item{cartItems.length === 1 ? '' : 's'}
+                    </span>
+                </header>
 
-          </div>
-          <div style={{borderTop: "1px solid lightgrey", width: "100%", marginTop: "40px"}} className='cart-border'></div>
-          <SneakerPanelIndex />
-      </div>
-  ) 
-}
+                {isEmpty ? (
+                    <div className="cart__empty">
+                        <p>Your cart is empty.</p>
+                        <Link to="/sneakers" className="cart__cta">Shop sneakers</Link>
+                    </div>
+                ) : (
+                    <div className="cart__layout">
+                        <ul className="cart__list">
+                            {cartItems.map((cartItem) => (
+                                <CartIndexItem
+                                    key={cartItem.id}
+                                    cartItem={cartItem}
+                                    deleteCartItem={deleteCartItem}
+                                />
+                            ))}
+                        </ul>
+
+                        <aside className="cart__summary">
+                            <h2 className="cart__summary-title">Order Summary</h2>
+
+                            <dl className="cart__summary-list">
+                                <div className="cart__summary-row">
+                                    <dt>Subtotal</dt>
+                                    <dd>{formatPrice(subTotal)}</dd>
+                                </div>
+                                <div className="cart__summary-row">
+                                    <dt>Shipping</dt>
+                                    <dd>{formatPrice(SHIPPING)}</dd>
+                                </div>
+                                <div className="cart__summary-row cart__summary-row--total">
+                                    <dt>Total</dt>
+                                    <dd>{formatPrice(total)}</dd>
+                                </div>
+                            </dl>
+
+                            <button type="button" className="cart__checkout">
+                                Checkout
+                            </button>
+                            <Link to="/sneakers" className="cart__continue">
+                                Continue shopping
+                            </Link>
+                        </aside>
+                    </div>
+                )}
+            </div>
+        );
+    }
 }
 
 export default CartIndex;

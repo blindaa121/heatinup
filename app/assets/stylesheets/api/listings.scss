@@ -1,57 +1,152 @@
-// Place all the styles related to the api/listings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Listing details — focused "confirm purchase" card */
 
-.listing-details {
+.confirm {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-4);
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+}
+
+.confirm__card {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+}
+
+.confirm__media {
+    aspect-ratio: 1 / 1;
+    background: var(--color-bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+}
+
+.confirm__placeholder {
+    width: 60%;
+    height: 60%;
+    background: var(--color-line-soft);
+}
+
+.confirm__body {
     display: flex;
     flex-direction: column;
-    // width: 450px;
 }
 
-.listing-item, .listing-sz, .listing-condition,
-.listing-box-condition {
+.confirm__brand {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--space-1);
+}
+
+.confirm__name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-black);
+    line-height: 1.25;
+    margin-bottom: var(--space-5);
+}
+
+.confirm__meta {
+    margin: 0 0 var(--space-6) 0;
+    border-top: 1px solid var(--color-line-soft);
+}
+
+.confirm__row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-left: 95px;
-    margin-right: 95px;
-    font-size: 11px;
-    font-family: 'Arimo';
-    text-transform: uppercase;
-    border-bottom: 1px solid grey;
-    height: 50px;
-    
+    justify-content: space-between;
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-line-soft);
+    font-size: 13px;
+
+    dt {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--color-muted);
+    }
+
+    dd {
+        margin: 0;
+        color: var(--color-ink);
+    }
+
+    &--total {
+        padding: var(--space-4) 0;
+        border-bottom: none;
+
+        dt { color: var(--color-ink); }
+
+        dd {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-black);
+        }
+    }
 }
 
-.listing-item {
-    margin-top: 30px;
-    border-top: 1px solid grey;
+.confirm__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: auto;
 }
 
-.listing-cat {
-    letter-spacing: 1.5px;
-    color: black;
-    font-size: 11px;
-}
-
-.listing-price > h3 {
-    color: grey;
-    font-size: 10px;
-    text-transform: uppercase;
-}
-
-.cancel-btn {
-    text-decoration: none;
-    color: black;
-    font-family: 'Arimo';
+.confirm__primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 var(--space-5);
+    background: var(--color-black);
+    color: var(--color-bg);
+    font-family: inherit;
     font-size: 14px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-top: 60px;
-    transition: .3s
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--color-black);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background var(--dur) var(--ease);
+
+    &:hover { background: var(--color-ink); }
 }
 
-.cancel-btn:hover {
-    color: red;
-    text-decoration: underline;
+.confirm__cancel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: var(--color-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color var(--dur) var(--ease);
+
+    &:hover { color: var(--color-black); }
+}
+
+@media (max-width: 720px) {
+    .confirm__card {
+        grid-template-columns: 1fr;
+        padding: var(--space-4);
+    }
+    .confirm__media {
+        max-width: 220px;
+        margin: 0 auto;
+    }
 }

@@ -1,61 +1,29 @@
-import React from 'react'
-import SneakerShow from './sneaker_show'
+import React from 'react';
 
-const SneakerDetails = ({ sneaker }) => {
-    return (
-        <div className='sneaker-details'>
-            <div id='releaseDate'>
-                <p>Release Date</p>
-                <br />
-                {sneaker.releaseDate}
-            </div>
-            <div id='sku'>
-                <p>SKU</p>
-                <br />
-                {sneaker.sku}
-            </div>
-            <div id='brand'>
-                <p>Brand</p>
-                <br />
-                {sneaker.brand}
-            </div>
-            <div id='upper-material'>
-                <p>Upper Material</p>
-                <br />
-                {sneaker.upperMaterial}
-            </div>
-            <div id='main-color'>
-                <p>Main Color</p>
-                <br />
-                {sneaker.mainColor}
-            </div>
-            <div id='colorway'>
-                <p>Colorway</p>
-                <br />
-                {sneaker.colorway}
-            </div>
-            <div id='designer'>
-                <p>Designer</p>
-                <br />
-                {sneaker.designer}
-            </div>
-            <div id='silhouette'>
-                <p>Silhouette</p>
-                <br />
-                {sneaker.silhouette}
-            </div>
-            <div id='technology'>
-                <p>Technology</p>
-                <br />
-                {sneaker.technology}
-            </div>
-            <div id='category'>
-                <p>Category</p>
-                <br />
-                {sneaker.category}
-            </div>
-        </div>
-    )
-}
+const FIELDS = [
+    { label: 'Release Date', key: 'releaseDate' },
+    { label: 'SKU', key: 'sku' },
+    { label: 'Brand', key: 'brand' },
+    { label: 'Silhouette', key: 'silhouette' },
+    { label: 'Designer', key: 'designer' },
+    { label: 'Upper Material', key: 'upperMaterial' },
+    { label: 'Main Color', key: 'mainColor' },
+    { label: 'Colorway', key: 'colorway' },
+    { label: 'Technology', key: 'technology' },
+    { label: 'Category', key: 'category' },
+];
 
-export default SneakerDetails
+const SneakerDetails = ({ sneaker }) => (
+    <dl className="spec-grid">
+        {FIELDS.map(({ label, key }) => (
+            sneaker[key] ? (
+                <div className="spec-grid__row" key={key}>
+                    <dt className="spec-grid__label">{label}</dt>
+                    <dd className="spec-grid__value">{sneaker[key]}</dd>
+                </div>
+            ) : null
+        ))}
+    </dl>
+);
+
+export default SneakerDetails;

@@ -1,169 +1,156 @@
-// Place all the styles related to the api/sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*SESSION FORM */
-.outer-div {
-    display: flex;
-    justify-content: center;
-    padding-top: 150px;
-    height: 630px;
-    padding-bottom: 70px;
-    border-bottom: 1px solid black;
+.auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - var(--nav-h));
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-bg);
 }
 
-.session-form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 600px;
-    border: 1px solid lightgray;
-    border-top-right-radius: 3px;
+.auth__visual {
+    background-color: var(--color-bg-card);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.session-buttons {
+.auth__panel {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: var(--space-7);
 }
 
-.demo-user {
-    background-color: black;
-    color: white;
-    height: 50px;
-    width: 300px;
-    font-size: 12px;
-    border-right: none;
-    border-bottom: none;
-}
-
-.demo-user:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.demo-user:focus {
-    outline: none;
-}
-
-.login-form-box {
-    width: 600px;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 55px;
-}
-
-.login-input {
-    border: none;
-    border-bottom: 1px solid black;
+.auth__panel-inner {
     width: 100%;
-    height: 25px;
-    font-size: 20px;
-    text-decoration: none;
+    max-width: 380px;
 }
 
-.login-input:focus {
-    outline: none;
+.auth__brand {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--color-black);
+    margin-bottom: var(--space-5);
 }
 
-.username {
-    color: grey
+.auth__title {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+    line-height: 1.15;
+    margin-bottom: var(--space-2);
 }
 
-.password {
-    color: grey
-}
-
-.sessionHeader {
-    font-family: 'Heebo', sans-serif;
-    font-weight: bold;
-    padding: 100px 50px 0px 50px;
-    font-size: 24px;
-    text-align: center;
+.auth__subtitle {
+    font-size: 14px;
+    color: var(--color-muted);
     line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: var(--space-7);
 }
 
-.sessionLink {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 110px;
-    text-decoration: none;
-}
-
-.sessionLink > a {
-    text-decoration: none;
-    color: grey;
-}
-
-.sessionLink > a:hover {
-    text-decoration: underline;
-    color: black;
-
-}
-
-.session-submit {
-    background-color: black;
-    color: white;
-    width: 300px;
-    height: 50px;
-    font-size: 12px;
-    border-left: none;
-    border-bottom: none;
-}
-
-.sign-up-btn {
-    background-color: black;
-    color: white;
-    width: 600px;
-    height: 50px;
-    font-size: 12px;
-    border-left: none;
-    border-bottom: none;
-}
-
-.sign-up-btn:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.session-submit:focus {
-    outline: none;
-}
-
-.session-submit:hover {
-    text-decoration: underline;
-    cursor: pointer;
-    color: white;
-}
-
-.error {
-    text-align: center;
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-
-/*LEFT SIDE PANE*/
-
-.shoe_pane {
+.auth__form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid lightgray;
-    border-right: none;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    width: 600px;
-    // height: 800px;
+    flex-direction: column;
+    gap: var(--space-4);
 }
 
-.bred_login {
-    width: 475px;
+.auth__errors {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-3);
+    background: #fdf2f2;
+    border: 1px solid #f3c1c1;
+    color: #8a1f1f;
+    font-size: 13px;
+    line-height: 1.5;
+
+    li + li { margin-top: var(--space-1); }
+}
+
+.auth__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.auth__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.auth__input {
+    height: 44px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--color-ink);
+    transition: border-color var(--dur) var(--ease);
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-black);
+    }
+}
+
+.auth__primary {
+    height: 48px;
+    margin-top: var(--space-3);
+    background: var(--color-black);
+    color: var(--color-bg);
+    border: 1px solid var(--color-black);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background var(--dur) var(--ease);
+
+    &:hover { background: var(--color-ink); }
+}
+
+.auth__secondary {
+    height: 44px;
+    background: transparent;
+    color: var(--color-ink);
+    border: 1px solid var(--color-line);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+
+    &:hover {
+        border-color: var(--color-black);
+        color: var(--color-black);
+    }
+}
+
+.auth__footnote {
+    margin-top: var(--space-5);
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-muted);
+
+    a {
+        color: var(--color-black);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover { text-decoration: underline; }
+    }
+}
+
+@media (max-width: 880px) {
+    .auth { grid-template-columns: 1fr; }
+    .auth__visual {
+        height: 240px;
+    }
+    .auth__panel { padding: var(--space-6) var(--space-4); }
 }

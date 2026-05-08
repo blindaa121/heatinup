@@ -1,22 +1,90 @@
-.footer-icon {
-    color: white;
-    width: 75px;
-    transition: .3s;
+.footer {
+    margin-top: var(--space-9);
+    border-top: 1px solid var(--color-line);
+    background: var(--color-bg);
+    font-family: var(--font-sans);
 }
 
-.footer-icon:hover {
-    color: grey;
-    transform: scale(1.1);
+.footer__inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-7);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-8);
 }
 
-// .fa-linkedin, .fa-github {
-//     width: 75px;
-// }
+.footer__brand-name {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-black);
+    margin-bottom: var(--space-3);
+}
 
-.footer-links {
+.footer__tagline {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-muted);
+    max-width: 280px;
+}
+
+.footer__cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+.footer__col {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    height: 89px;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer__col-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    margin-bottom: var(--space-2);
+}
+
+.footer__link {
+    font-size: 13px;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color var(--dur) var(--ease);
+
+    &:hover { color: var(--color-black); }
+}
+
+.footer__bar {
+    border-top: 1px solid var(--color-line-soft);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-5) var(--space-7);
+    font-size: 12px;
+    color: var(--color-faint);
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 880px) {
+    .footer__inner {
+        grid-template-columns: 1fr;
+        padding: var(--space-7) var(--space-4);
+        gap: var(--space-6);
+    }
+
+    .footer__cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__bar {
+        padding: var(--space-4);
+        flex-direction: column;
+        gap: var(--space-2);
+    }
 }

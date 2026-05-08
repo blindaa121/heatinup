@@ -14,13 +14,12 @@ import CollectionContainer2 from './collections/fear_of_god/sneakers_container'
 import CollectionContainer3 from './collections/off_white/sneakers_container'
 import CartContainer from './cart/cart_index_container'
 import Footer from './footer/footer';
-import EditFormContainer from './review/EditReviewFormContainer';
 
 
 const App = () => (
     <div className='app-container'>
-        <Route path='/' component={NavBarContainer} />
-        <Switch> 
+        <NavBarContainer />
+        <Switch>
             <Route exact path="/sneakers/:sneakerId/listings/:listingId" component={ListingDetailsContainer} />
             <Route path='/collections/thelastdance' component={CollectionContainer1} />
             <Route path='/collections/fog' component={CollectionContainer2} />
@@ -33,7 +32,7 @@ const App = () => (
             <Route exact path="/" component={SplashContainer} />
             <ProtectedRoute path='/cart' component={CartContainer} />
         </Switch>
-        <Route path='/' component={Footer} />
+        <Footer />
     </div>
 );
 

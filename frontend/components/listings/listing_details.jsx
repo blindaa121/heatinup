@@ -1,97 +1,89 @@
 import React from 'react';
-import SneakerDetails from '../sneaker_show/sneaker_details'
-import { addCartItem } from '../../actions/cart_actions';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+
+const formatPrice = (n) => `$${Number(n).toLocaleString()}`;
 
 class ListingDetails extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-        window.previousUrl = this.props.match.url
+        this.state = { added: false };
+        this.handleAddToCart = this.handleAddToCart.bind(this);
     }
-    
+
     componentDidMount() {
-        this.props.fetchSneaker(this.props.match.params.sneakerId)
+        const { sneakerId } = this.props.match.params;
+        this.props.fetchSneaker(sneakerId);
     }
-    
-    handleClick() {
-        let cartItem = {
-            user_id: this.props.currentUser.id,
-            listing_id: this.props.match.params.listingId
-        }
-        this.props.addCartItem(cartItem);
-        this.props.fetchCart();
+
+    handleAddToCart() {
+        const cartItem = {
+            listing_id: this.props.match.params.listingId,
+        };
+        this.props.addCartItem(cartItem)
+            .then(() => this.props.fetchCart())
+            .then(() => this.setState({ added: true }));
     }
 
     render() {
         const { sneaker, listing, currentUser } = this.props;
-        if (!sneaker) return null;
-        if (!listing) return null;
+        if (this.state.added) return <Redirect to="/cart" />;
+        if (!sneaker || !listing) return null;
+
         return (
-            <div className='outer-sneakerComponent'>
-                <div className='sneakerComponent'>
-
-                    <div className='leftShoe-pane'>
-                        <img className='shoePane-img' src={sneaker.photoUrl}></img>
-                        <span className='sneaker-footer'>{sneaker.brand} / {sneaker.silhouette} / {sneaker.name}</span>
+            <div className="confirm">
+                <div className="confirm__card">
+                    <div className="confirm__media">
+                        {sneaker.photoUrl
+                            ? <img src={sneaker.photoUrl} alt={sneaker.name} />
+                            : <div className="confirm__placeholder" />}
                     </div>
 
-                    <div className='rightShoe-pane'>
-                        <div className='listing-details'>
+                    <div className="confirm__body">
+                        <span className="confirm__brand">{sneaker.brand}</span>
+                        <h1 className="confirm__name">{sneaker.name}</h1>
 
-                            <div className='listing-price'>
-                                <h3>Lowest Price</h3>
-                                <br/>
-                                <span>${listing.price}</span>
+                        <dl className="confirm__meta">
+                            <div className="confirm__row">
+                                <dt>Size</dt>
+                                <dd>US {listing.size}</dd>
                             </div>
-
-                            <div className='listing-item'>
-                                <span className='listing-cat'>Item </span>
-                                <span>{sneaker.name}</span> 
+                            <div className="confirm__row">
+                                <dt>Condition</dt>
+                                <dd>New</dd>
                             </div>
-
-                            <div className='listing-sz'>
-                                <span className='listing-cat'>Size</span> 
-                                <span>{listing.size}</span>
-                                
+                            <div className="confirm__row">
+                                <dt>Box</dt>
+                                <dd>Good Condition</dd>
                             </div>
-
-                            <div className='listing-condition'>
-                                <span className='listing-cat'>Condition</span> 
-                                <span>New</span>
+                            <div className="confirm__row confirm__row--total">
+                                <dt>Lowest Ask</dt>
+                                <dd>{formatPrice(listing.price)}</dd>
                             </div>
+                        </dl>
 
-                            <div className='listing-box-condition'>
-                                <span className='listing-cat'>Box</span>
-                                <span>Good Condition</span>
-                            </div>
-
-                            <span className='cancel-btn'>
-                                <a className='cancel-btn' href={`#/sneakers/${sneaker.id}`}>Cancel</a>
-                            </span>
+                        <div className="confirm__actions">
+                            {currentUser ? (
+                                <button
+                                    type="button"
+                                    className="confirm__primary"
+                                    onClick={this.handleAddToCart}
+                                >
+                                    Add to Cart
+                                </button>
+                            ) : (
+                                <Link to="/login" className="confirm__primary">
+                                    Sign in to buy
+                                </Link>
+                            )}
+                            <Link to={`/sneakers/${sneaker.id}`} className="confirm__cancel">
+                                Cancel
+                            </Link>
                         </div>
-                       
-                        {
-                            currentUser ? <a className='buy-new-btn' href="#/cart"><button onClick={() => this.handleClick()}>Add to Cart</button></a> : (
-                            <a className='buy-new-btn' href="#/login"><button>Sign In</button></a> 
-                                            )
-                        }
-                        
                     </div>
-
                 </div>
-                <div className='product-details'>
-                    <h1>Product Details</h1>
-                    <br />
-                    {sneaker.description}
-                </div>
-
-                <SneakerDetails sneaker={sneaker} />
-                {/* <Route exact path="/sneakers/:sneakerId/listing/:listingId" component={ListingDetailContainer} /> */}
             </div>
-        )
+        );
     }
 }
-
 
 export default ListingDetails;
