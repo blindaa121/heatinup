@@ -1,34 +1,43 @@
 import React from 'react';
 import dateFormat from 'dateformat';
 
-const ReviewIndexItem = ({review, currentUser, deleteSneakerReview, processUpdate}) => {
-  const renderAuthButtons = (review) => {
-    if (currentUser && (currentUser.id === review.userId)) {
-      return (
-        <div className="review-edit-container">
-          <i class="far fa-trash-alt" id="delete" onClick={() => deleteSneakerReview(review.sneakerId, review.id)}></i>
-          <i class="far fa-edit" id="edit" onClick={() => processUpdate('update', review)}>
-          </i>
-        </div>
-      )
-    }
-  }
+const formatDate = (date) => dateFormat(date, 'mmm d, yyyy · h:MM TT');
 
-  const formatDate = (date) => {
-    return dateFormat(date, "dddd, mmmm dS yyyy, h:MM:ss TT")
-  }
+const ReviewIndexItem = ({ review, currentUser, deleteSneakerReview, processUpdate }) => {
+    const isOwner = currentUser && currentUser.id === review.userId;
+    const initial = (review.username || '?')[0];
 
-  return (
-    <div className="review-item-container">
-      <span data-letters={review.username[0]} className="review-user-avatar"></span>
-      <div className="review-content">
-        <h1>{review.username}</h1>
-        <p id="date">{formatDate(review.date)}</p>
-        <p>{review.reviewText}</p>
-        {renderAuthButtons(review)}
-      </div>
-    </div>
-  )
-}
+    return (
+        <article className="review-card">
+            <div className="review-card__avatar" aria-hidden="true">{initial}</div>
+            <div className="review-card__body">
+                <header className="review-card__head">
+                    <h3 className="review-card__user">{review.username}</h3>
+                    <time className="review-card__date">{formatDate(review.date)}</time>
+                </header>
+                <p className="review-card__text">{review.reviewText}</p>
 
-export default ReviewIndexItem
+                {isOwner && (
+                    <div className="review-card__actions">
+                        <button
+                            type="button"
+                            className="review-card__action"
+                            onClick={() => processUpdate('update', review)}
+                        >
+                            Edit
+                        </button>
+                        <button
+                            type="button"
+                            className="review-card__action review-card__action--danger"
+                            onClick={() => deleteSneakerReview(review.sneakerId, review.id)}
+                        >
+                            Delete
+                        </button>
+                    </div>
+                )}
+            </div>
+        </article>
+    );
+};
+
+export default ReviewIndexItem;

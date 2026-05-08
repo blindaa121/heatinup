@@ -1,185 +1,160 @@
-// Place all the styles related to the api/reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.review-index-container {
+.reviews {
+    max-width: 720px;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+}
+
+.reviews__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+}
+
+.reviews__count {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+}
+
+.reviews__title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.reviews__form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 600px;
+    gap: var(--space-3);
+    margin-bottom: var(--space-7);
 }
 
-.review-form {
+.reviews__input {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: var(--space-3);
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-ink);
+    resize: vertical;
+    transition: border-color var(--dur) var(--ease);
+
+    &::placeholder { color: var(--color-faint); }
+    &:focus { outline: none; border-color: var(--color-black); }
+    &:disabled {
+        background: var(--color-bg-soft);
+        cursor: not-allowed;
+    }
 }
 
-.review-form-input {
-    width: 100%;
-    height: 150px;
-    font-family: 'Arimo', sans-serif;
-    border-radius: 10px;
-    padding: 12px;
-    font-size: 15px;
-    resize: none;
-    transition: 0.25s;
-}
-
-.review-form-input:hover {
-    cursor: pointer;
-}
-
-.review-form-input:focus {
-    cursor: auto;
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
-
-.review-submit-button, .review-signin-button {
-    width: 100%;
-    margin-top: 15px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    font-size: 30px;
-    transition: 0.4s;
-    letter-spacing: 10px;
-}
-
-.review-submit-button:hover, .review-signin-button:hover {
-    cursor: pointer;
-    background-color: silver;
-    letter-spacing: 3px;
-}
-
-.review-header {
+.reviews__submit {
     align-self: flex-start;
-}
-
-#review-count {
-    font-size: 80px;
-    border-bottom: 2px solid black;
-    width: 50%;
-}
-
-#review-title {
-    font-size: 30px;
-    margin-top: 10px;
-    letter-spacing: 10px;
-    margin-bottom: 10px;
-}
-
-
-.review-signin-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+    height: 40px;
+    padding: 0 var(--space-5);
+    background: var(--color-black);
+    color: var(--color-bg);
+    border: 1px solid var(--color-black);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
     text-decoration: none;
-    background-color: #e7e7e7;
-}
-
-[data-letters]:before {
-  content:attr(data-letters);
-  display:inline-block;
-  font-size:1em;
-  width:2.5em;
-  height:2.5em;
-  line-height:2.5em;
-  text-align:center;
-  border-radius:50%;
-  background:silver;
-  vertical-align:middle;
-  margin-right:1em;
-  color:white;
-  text-transform: uppercase;
-}
-
-.review-index-item-container {
-    width: 105%;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    max-height: 700px;
-    overflow: auto;
-}
-
-.review-item-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    transition: background var(--dur) var(--ease);
+
+    &:hover:not(:disabled) { background: var(--color-ink); }
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
 }
 
-.review-content {
+.reviews__submit--link {
+    text-decoration: none;
+}
+
+.reviews__list {
     display: flex;
     flex-direction: column;
-	position: relative;
-    background: #e6e6e6;
-    border-radius: .4em;
-    height: 100%;
-    padding: 15px;
-    right: -10px;
-    top: 5px;
+    gap: var(--space-5);
+}
+
+.review-card {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-4);
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid var(--color-line-soft);
+
+    &:last-child { border-bottom: none; }
+}
+
+.review-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-bg-card);
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-card__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+.review-card__user {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.review-card__date {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.review-card__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
     overflow-wrap: break-word;
 }
 
-.review-content:after {
-	content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: 25px solid transparent;
-    border-right-color: #e6e6e6;
-    border-left: 0;
-    border-top: 0;
-    margin-top: -10px;
-    margin-left: -15px;
+.review-card__actions {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
 }
 
-.review-content > h1 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px
-}
-
-.review-content > p {
-    max-width: 500px;
-}
-
-.review-content > #date {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: grey;
-    text-transform: uppercase;
-    font-style: italic;
-}
-
-.review-edit-container {
-    align-self: flex-end;
-    font-size: 20px;
-    color: silver;
-    margin-top: 10px;
-}
-
-.review-edit-container > #delete {
-    transition: .5s
-}
-
-.review-edit-container > #delete:hover {
-    color: red;
+.review-card__action {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: 12px;
+    color: var(--color-muted);
     cursor: pointer;
-}
+    text-decoration: underline;
+    transition: color var(--dur) var(--ease);
 
-.review-edit-container > #edit {
-    transition: .5s;
-    margin-left: 10px;
-}
+    &:hover { color: var(--color-black); }
 
-.review-edit-container > #edit:hover {
-    color: lightseagreen;
-    cursor: pointer;
+    &--danger:hover { color: #c1121f; }
 }
