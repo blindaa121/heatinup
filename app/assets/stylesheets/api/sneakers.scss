@@ -1,203 +1,232 @@
-// Place all the styles related to the api/sneakers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Sneaker show — GOAT-inspired two-column buy page */
 
+.show {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-7) var(--space-7) var(--space-9);
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+}
 
-.sneakerComponent {
+.show__primary {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: var(--space-8);
+    align-items: start;
+}
+
+.show__media {
+    aspect-ratio: 1 / 1;
+    background: var(--color-bg-card);
     display: flex;
-    justify-content: space-between;
-    margin: 60px auto 30px auto;
-    width: 1201px;
-    height: 600px;
-    border: 1px solid lightgray;
-    border-radius: 2px;
-}
-
-.outer-sneakerComponent {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product-details {
-    text-align: center;
-    padding-bottom: 100px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    width: 800px
-}
-
-.product-details h1 {
-    margin: 100px 0 20px 0;
-    font-size: 30px;
-    font-family: 'Arimo', sans-serif;
-}
-
-.leftShoe-pane {
-    display: flex;
-    position: relative;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid lightgray;
-    border-top-left-radius: 50px;
-    width: 770px;
-    font-size: 25px;
+
+    img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
 }
 
-.sneaker-footer {
-    font-size: 11px;
-    color: grey;
-    flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    padding: 50px;
-    text-align: center;
+.show__placeholder {
+    width: 60%;
+    height: 60%;
+    background: var(--color-line-soft);
 }
 
-.shoePane-img {
-    width: 450px;
-}
-
-.rightShoe-pane {
+.show__buy {
+    position: sticky;
+    top: calc(var(--nav-h) + var(--space-5));
     display: flex;
-    position: relative;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    width: 770px;
 }
 
-.rightShoe-pane h1 {
-    font-size: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
-    font-family: 'Heebo', sans-serif;
-}
-
-.rightShoe-pane p {
+.show__brand {
     font-size: 12px;
-    color: grey;
-    letter-spacing: 1.0px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: var(--space-2);
 }
 
-// LISTING INDEX/ITEMS
+.show__name {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-black);
+    line-height: 1.2;
+    margin-bottom: var(--space-2);
+}
 
-.listing-container {
+.show__sub {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin-bottom: var(--space-5);
+}
+
+.ask-card {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    margin-bottom: var(--space-5);
+}
+
+.ask-card__label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.ask-card__price {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.size-grid__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: var(--space-3);
+}
+
+.size-grid__title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-ink);
+}
+
+.size-grid__count {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.size-grid__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+}
+
+.size-grid__empty {
+    padding: var(--space-5) 0;
+    color: var(--color-muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+.size-btn {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px 100px 20px;
-    overflow: auto;
-}
-
-.listings-header span {
-    color: grey;
-    height: 200px;
-    font-size: 10px;
-    letter-spacing: 1.0px;
-}
-
-.listings-header h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.listing-items {
-    display: flex;
     align-items: center;
-    padding-top: 22px;
-    padding-bottom: 22px;
     justify-content: center;
-    font-size: 20px;
-    border-top: 1px solid lightgrey;
-    font-family: 'Arimo', sans-serif;
-    color: black;
-    // border-bottom: 2px solid lightgrey;
-}
-
-.listing-container a {
+    gap: var(--space-1);
+    padding: var(--space-3);
+    border: 1px solid var(--color-line);
+    background: var(--color-bg);
     text-decoration: none;
+    color: var(--color-ink);
+    transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+
+    &:hover {
+        border-color: var(--color-black);
+        background: var(--color-bg-soft);
+    }
 }
 
-.listing-details > a {
-    text-decoration: none;
-}
-
-.listing-items:hover {
-    border: 1px solid black;
-}
-
-.listing-size {
-    font-weight: bold;
-    margin-right: 45px;
-    width: 30px;
-    text-align: right;
-    // justify-content: flex-end;
-}
-
-.buy-new-btn {
-    position: absolute;
-    bottom: 0;
-    width: 600px;
-    height: 50px;
-    background: white;
-    border-top: 1px solid lightgrey;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    padding: 0;
-    color: black;
+.size-btn__size {
     font-size: 14px;
-    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    color: var(--color-black);
 }
 
-.buy-new-btn > button {
-    width: 600px;
-    height: 50px;
+.size-btn__price {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+/* Below-the-fold sections */
+.show__info {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-8);
+    margin-top: var(--space-9);
+    padding-top: var(--space-7);
+    border-top: 1px solid var(--color-line);
+}
+
+.show__section-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-black);
+    margin-bottom: var(--space-4);
+}
+
+.show__description p {
     font-size: 14px;
-    font-family: 'Arimo', sans-serif;
-    text-decoration: none;
-    background-color: white;
-    border: none;
+    line-height: 1.7;
+    color: var(--color-text);
 }
 
-.buy-new-btn:hover, .buy-new-btn > button:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.show__reviews {
+    margin-top: var(--space-9);
+    padding-top: var(--space-7);
+    border-top: 1px solid var(--color-line);
 }
 
-.buy-new-btn:focus {
-    outline: none;
+/* Spec grid: two-column key/value listing of sneaker attributes */
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--color-line-soft);
 }
 
-.sneaker-details {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 200px;
-    width: 1200px;
-    border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
-    font-size: 16px;
-    font-family: 'Heebo', sans-serif;
+.spec-grid__row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-line-soft);
+    font-size: 13px;
 }
 
-#releaseDate, #sku, #brand, #upper-material, #main-color,
-#colorway {
-    // width: 120px;
-    height: 60px;
-}
-
-.sneaker-details p {
-    font-family: 'Heebo', sans-serif;
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: silver;
+.spec-grid__label {
+    font-weight: 600;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
+    font-size: 11px;
+    color: var(--color-muted);
+    align-self: center;
+}
+
+.spec-grid__value {
+    color: var(--color-ink);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .show__primary { grid-template-columns: 1fr; }
+    .show__buy { position: static; }
+    .show__info { grid-template-columns: 1fr; gap: var(--space-7); }
+}
+
+@media (max-width: 720px) {
+    .show { padding: var(--space-5) var(--space-4) var(--space-7); }
+    .show__name { font-size: 22px; }
+    .ask-card__price { font-size: 18px; }
+    .spec-grid__row { grid-template-columns: 110px 1fr; }
 }
 
 

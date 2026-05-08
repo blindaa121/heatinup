@@ -1,31 +1,35 @@
 import React from 'react';
-import SneakerIndexItem from './sneakers_index_item';
+import SneakerCard from '../../sneakers/sneakers_index_item';
 
-class SneakerIndex extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+class OffWhiteIndex extends React.Component {
     componentDidMount() {
         this.props.fetchSneakers();
         window.scrollTo(0, 0);
     }
 
-    render () {
-
+    render() {
         const { sneakers } = this.props;
         if (!sneakers) return null;
 
         return (
-            <div className="outerSneakerdiv">
-                <span className="collection-header">OFF-WHITE</span>
-                <p className="collection-description">Using RECONSTRUCT and GHOSTING approaches, Virgil shook the sneaker culture with his groundbreaking collaboration with Nike.</p>
-                <div className='show-all'>
-                    {sneakers.map(sneaker => <SneakerIndexItem key={sneaker.id} sneaker={sneaker} />)} 
+            <div className="collection">
+                <header className="collection__header">
+                    <span className="collection__eyebrow">Collection</span>
+                    <h1 className="collection__title">Off-White</h1>
+                    <p className="collection__description">
+                        Using RECONSTRUCT and GHOSTING approaches, Virgil shook sneaker
+                        culture with his groundbreaking collaboration with Nike.
+                    </p>
+                </header>
+
+                <div className="collection__grid">
+                    {sneakers.map((sneaker) => (
+                        <SneakerCard key={sneaker.id} sneaker={sneaker} />
+                    ))}
                 </div>
             </div>
-        )
+        );
     }
 }
 
-export default SneakerIndex
+export default OffWhiteIndex;
